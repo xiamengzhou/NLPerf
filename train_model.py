@@ -47,9 +47,16 @@ def fit_regressor(reg, train_feats, train_labels):
     reg.fit(train_feats, train_labels)
     return reg
 
+def get_valid_index(preds, labels):
+    return np.intersect1d(np.argwhere(~np.isnan(labels)), np.argwhere(~np.isnan(preds)))
+
 def calculate_rmse(preds, labels):
-    valid_index = np.intersect1d(np.argwhere(~np.isnan(labels)), np.argwhere(~np.isnan(preds)))
+    valid_index = get_valid_index(preds, labels)
     return np.sqrt(mean_squared_error(labels[valid_index], preds[valid_index]))
+
+def calculate_mean_bounds(lower_preds, upper_preds):
+    valid_index = get_valid_index(lower_preds, upper_preds)
+    return np.mean(upper_preds[valid_index], lower_preds[valid_index])
 
 # modify the function to get confidence band
 def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,

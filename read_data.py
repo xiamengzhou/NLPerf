@@ -109,18 +109,17 @@ def get_data_langs(task, shuffle=False):
     if task == "sf":
         data = convert_to_one_hot(data, "fam", 3)
         data = fix_sf(data)
-        langs = np.array(data.iloc[:, 1])
+        langs = data.iloc[:, 1:2]
         data = data.drop(axis=1, labels=headers[:3])
     elif task.startswith("tsf"):
         # should add target language
         data = convert_to_one_hot(data, "src", 0)
         data = convert_to_one_hot(data, "tsf", 1)
         data = data.dropna(axis=1, how="any")
-        langs = list(np.array(data.iloc[:, 0].drop_duplicates()))
         lang_pairs = data.iloc[:, 0:2]
         data = data.drop(axis=1, labels=headers[0:2] + headers[3:5])
     elif task == "monomt":
-        langs = list(np.array(data.iloc[:, 1]))
+        langs = data.iloc[:, 1:2]
         lang_pairs = data.iloc[:, 1:3]
         data = data.drop(axis=1, labels=headers[0:3])
     elif task == "bli":
@@ -218,6 +217,6 @@ def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt"):
                 k_fold_data[metric]["test_langs"].append(test_langs_k)
             train_feats, train_labels = pd.concat([feats.iloc[:start, :], feats.iloc[end:, :]], axis=0), \
                                         pd.concat([labels.iloc[:start, :], labels.iloc[end:, :]], axis=0)
-            test_feats, test_labels = feats.iloc[start:end, :], labels.iloc[start:end, :]
+            test_feats, test_labels = feats.iloc[start:end, :], labels.iloc[start:end, metric]
             augment(k_fold_data[metric], train_feats, train_labels, test_feats, test_labels)
     return k_fold_data

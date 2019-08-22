@@ -6,12 +6,15 @@ import numpy as np
 import xgboost as xgb
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
+import pandas as pd
+from gp import run_gp_train, run_gp_test, ExactGPModel
+from utils import recover
+import gpytorch
 
-def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95):
+def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None):
     if regressor == "xgboost":
         reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.2,
                                max_depth=5, n_estimators=200)
-
     elif regressor == "gp":
         kernel=1**2 + Matern(length_scale=2, nu=1.5) + WhiteKernel(noise_level=1)
         reg = gaussian_process.GaussianProcessRegressor(alpha=1e-10, copy_X_train=True, kernel=kernel,
@@ -37,10 +40,15 @@ def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.9
         reg = GradientBoostingRegressor(n_estimators=200, max_depth=5,
                                         learning_rate=.1, min_samples_leaf=9,
                                         min_samples_split=9)
+    elif regressor == "gpytorch":
+        assert paras is not None
+        mean_module = paras["mean_module"]; covar_module = paras["covar_module"]
+        reg = run_gp_train(train_feats, train_labels, mean_module, covar_module)
     else:
         print("Please specify a valid regressor!")
         return
-    fit_regressor(reg, train_feats, train_labels)
+    if len(reg) == 1: # not exactgp model
+        fit_regressor(reg, train_feats, train_labels)
     return reg
 
 def fit_regressor(reg, train_feats, train_labels):
@@ -48,7 +56,10 @@ def fit_regressor(reg, train_feats, train_labels):
     return reg
 
 def get_valid_index(preds, labels):
-    return np.intersect1d(np.argwhere(~np.isnan(labels)), np.argwhere(~np.isnan(preds)))
+    # legacy
+    preds = np.where(preds == None, np.nan, preds)
+    labels = np.where(labels == None, np.nan, labels)
+    return np.intersect1d(np.argwhere(~pd.isnull(labels)), np.argwhere(~pd.isnull(preds)))
 
 def calculate_rmse(preds, labels):
     valid_index = get_valid_index(preds, labels)
@@ -56,12 +67,15 @@ def calculate_rmse(preds, labels):
 
 def calculate_mean_bounds(lower_preds, upper_preds):
     valid_index = get_valid_index(lower_preds, upper_preds)
-    return np.mean(upper_preds[valid_index], lower_preds[valid_index])
+    return np.mean(upper_preds[valid_index] - lower_preds[valid_index])
 
 # modify the function to get confidence band
 def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
-                   get_ci=False, quantile=0.95, lower_reg=None, upper_reg=None):
+                   get_ci=False, quantile=0.95, lower_reg=None, upper_reg=None,
+                   mns=None, sstd=None):
     preds = None; lower_preds = None; upper_preds = None; rmse = None
+    # print(len(reg) == 2)
+    # print(isinstance(reg[0], ExactGPModel))
     if get_ci:
         if isinstance(reg, xgb.XGBRegressor):
             preds = reg.predict(test_feats)
@@ -75,11 +89,23 @@ def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
             preds = reg.predict(test_feats)
             lower_preds = lower_reg.predict(test_feats)
             upper_preds = upper_reg.predict(test_feats)
+        elif len(reg) == 2 and isinstance(reg[0], ExactGPModel):
+            # one percent of the times there are bugs
+            preds, lower_preds, upper_preds = run_gp_test(reg, test_feats)
         else:
             preds = reg.predict(test_feats)
             print("Confidence band not supported for {}.".format(type(reg)))
     else:
-        preds = reg.predict(test_feats)
+        if len(reg) == 1:
+            preds = reg.predict(test_feats)
+        else:
+            preds, _, _ = run_gp_test(reg, test_feats)
+    if mns is not None and sstd is not None: # recover standardization
+        preds = recover(mns, sstd, preds)
+        test_labels = recover(mns, sstd, test_labels)
+        if get_ci:
+            lower_preds = recover(mns, sstd, lower_preds)
+            upper_preds = recover(mns, sstd, upper_preds)
     if get_rmse:
         rmse = calculate_rmse(test_labels, preds)
     return preds, lower_preds, upper_preds, rmse

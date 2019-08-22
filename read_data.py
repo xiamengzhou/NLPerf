@@ -7,6 +7,7 @@ from task_feats import task_eval_metrics, task_att
 import pickle as pkl
 from lang2vec import lang2vec as l2v
 from copy import deepcopy
+from utils import standardize_feats_df
 
 @deprecated
 def read_group(file):
@@ -78,10 +79,10 @@ def load_l2v_features(task):
     return d
 
 langvec_lens = {"syntax": 103,
-            "phonology": 28,
-            "inventory": 158,
-            "geo": 299,
-            "fam": 3718}
+                "phonology": 28,
+                "inventory": 158,
+                "geo": 299,
+                "fam": 3718}
 
 # data file related manipulation
 def get_data_langs(task, shuffle=False):
@@ -89,8 +90,9 @@ def get_data_langs(task, shuffle=False):
     lang_pairs = None
     langs = None
     langvec_dict = None
-    # if task_att(task)[2]:
-    #     langvec_dict = load_l2v_features(task)
+
+    if task_att(task)[2]:
+        langvec_dict = load_l2v_features(task)
 
     # shuffle data
     if shuffle:
@@ -115,9 +117,9 @@ def get_data_langs(task, shuffle=False):
         # should add target language
         data = convert_to_one_hot(data, "src", 0)
         data = convert_to_one_hot(data, "tsf", 1)
-        data = data.dropna(axis=1, how="any")
+        data = data.dropna(axis=0, how="any")
         lang_pairs = data.iloc[:, 0:2]
-        data = data.drop(axis=1, labels=headers[0:2] + headers[3:5])
+        data = data.drop(axis=1, labels=list(headers[0:2]) + list(headers[3:5]))
     elif task == "monomt":
         langs = data.iloc[:, 1:2]
         lang_pairs = data.iloc[:, 1:3]
@@ -144,16 +146,23 @@ def get_data_langs(task, shuffle=False):
     langvecs = []
     if langvec_dict is not None:
         if lang_pairs is not None:
-            for src_lang, tgt_lang in lang_pairs:
+            for src_lang, tgt_lang in lang_pairs.values:
                 langvec = langvec_dict[src_lang][src_lang] + langvec_dict[tgt_lang][tgt_lang]
                 # replace missing values with -1 as an indicator (I don't think it's an appropriate way of doing so for gp)
-                langvec = [-1 if type(a) == "str" else a for a in langvec]
+                langvec = [-1 if isinstance(a, str) else a for a in langvec]
                 langvecs.append(langvec)
         langvecs = np.stack(langvecs, axis=0)
+        # for i in range(langvec.shape[0]):
+            # for j in range(langvec.shape[1]):
+                # if type(langvecs[i][j]) == "str":
+
+        print(langvecs.shape)
         print(len([a + "_" + str(i) for a in langvec_lens for i in range(langvec_lens[a])]))
         langvec_df = pd.DataFrame(data=langvecs,
-                                  index=[a + "_" + str(i) for a in langvec_lens for i in range(langvec_lens[a])])
+                                  columns=[a + "_" + str(i) for a in langvec_lens for i in range(langvec_lens[a] * 2)])
         feats = pd.concat([feats, langvec_df], axis=1)
+    if not task_att(task)[3]:
+        labels = labels * 100
     return feats, labels, langs, lang_pairs
 
 
@@ -161,9 +170,8 @@ def remove_na(df):
     return df.dropna(axis=0)
 
 
-
 @deprecated
-def get_transfer_data_by_group(data, lang, lang_pairs):
+def get_transfer_data_by_group(data, lang, lang_pairs, standardize=False):
     indexes = lang_pairs[lang_pairs.iloc[:, 0] == lang].index
     start = min(indexes)
     end = max(indexes) + 1
@@ -173,50 +181,74 @@ def get_transfer_data_by_group(data, lang, lang_pairs):
     # train_dmatrix = xgb.DMatrix(data=train_feats, label=train_labels)
     # test_dmatrix = xgb.DMatrix(data=test_feats, label=test_labels)
     # return train_dmatrix, test_dmatrix
-    return train_feats, train_labels, test_feats, test_labels
+    mns = None; sstd = None
+    if standardize:
+        train_feats, test_feats = standardize_feats_df(train_feats, test_feats)
+        train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
+    return train_feats, train_labels, test_feats, test_labels, mns, sstd
 
-def augment(k_fold_data, train_feats, train_labels, test_feats, test_labels):
+def augment(k_fold_data, train_feats, train_labels, test_feats, test_labels, *args):
     k_fold_data["train_feats"].append(train_feats)
     k_fold_data["train_labels"].append(train_labels)
     k_fold_data["test_feats"].append(test_feats)
     k_fold_data["test_labels"].append(test_labels)
+    k_fold_data["train_labels_mns"].append(args[0])
+    k_fold_data["train_labels_sstd"].append(args[1])
     return k_fold_data
 
 # get K fold data from features
-def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt"):
+def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt", standardize=False):
     """
         data format: {metric: {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": []}}
     """
     assert len(feats) == len(labels)
-    lens = len(feats)
-    ex_per_fold = int(np.ceil(lens / k))
     block = {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": [],
-             "test_lang_pairs": [], "test_langs": []}
+             "test_lang_pairs": [], "test_langs": [], "train_labels_mns": [], "train_labels_sstd": []}
     k_fold_data = {}
     metrics = task_eval_metrics(task)
-    for j in range(k):
-        start = ex_per_fold*j
-        end = ex_per_fold*(j+1)
-        for i, metric in enumerate(metrics):
-            if j == 0:
-                k_fold_data[metric] = deepcopy(block)
-            if lang_pairs is not None:
-                feats_labels_k = remove_na(pd.concat([lang_pairs, feats, labels], axis=1))
-                lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
-                                                  feats_labels_k.iloc[:, 2:-1], \
-                                                  feats_labels_k.iloc[:, -1:]
-                test_lang_pairs_k = lang_pairs_k.iloc[start:end, :]
-                k_fold_data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
-            else:
-                assert langs is not None
-                feats_labels_k = remove_na(pd.concat([langs, feats, labels], axis=1))
-                langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
-                                             feats_labels_k.iloc[:, 1:-1], \
-                                             feats_labels_k.iloc[:, -1:]
-                test_langs_k = langs_k.iloc[start:end, :]
-                k_fold_data[metric]["test_langs"].append(test_langs_k)
-            train_feats, train_labels = pd.concat([feats.iloc[:start, :], feats.iloc[end:, :]], axis=0), \
-                                        pd.concat([labels.iloc[:start, :], labels.iloc[end:, :]], axis=0)
-            test_feats, test_labels = feats.iloc[start:end, :], labels.iloc[start:end, metric]
-            augment(k_fold_data[metric], train_feats, train_labels, test_feats, test_labels)
+    for i, metric in enumerate(metrics):
+        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
+        if lang_pairs is not None:
+            feats_labels_k = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
+            lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
+                                              feats_labels_k.iloc[:, 2:-1], \
+                                              feats_labels_k.iloc[:, -1:]
+        else:
+            assert langs is not None
+            feats_labels_k = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
+            langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
+                                         feats_labels_k.iloc[:, 1:], \
+                                         feats_labels_k.iloc[:, -1:]
+        lens = len(feats_labels_k)
+        ex_per_fold = int(np.ceil(lens / k))
+        for j in range(k):
+            start = ex_per_fold * j
+            end = ex_per_fold * (j + 1)
+            if start < lens:
+                if j == 0:
+                    k_fold_data[metric] = deepcopy(block)
+                if lang_pairs is not None:
+                    test_lang_pairs_k = lang_pairs_k.iloc[start:end, :]
+                    k_fold_data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
+                    lang_count = len(test_lang_pairs_k)
+                else:
+                    test_langs_k = langs_k.iloc[start:end, :]
+                    k_fold_data[metric]["test_langs"].append(test_langs_k)
+                    lang_count = len(test_langs_k)
+                train_feats, train_labels = pd.concat([feats_k.iloc[:start, :], feats_k.iloc[end:, :]], axis=0), \
+                                            pd.concat([labels_k.iloc[:start, :], labels_k.iloc[end:, :]], axis=0)
+                test_feats, test_labels = feats_k.iloc[start:end, :], labels_k.iloc[start:end, :]
+                assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
+                assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
+                assert len(test_feats) == len(test_labels) == lang_count
+                assert len(test_labels) > 0
+                mns = None; sstd = None
+                if standardize:
+                    train_feats, test_feats = standardize_feats_df(train_feats, test_feats)
+                    train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
+                augment(k_fold_data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
     return k_fold_data
+
+
+
+

@@ -1,12 +1,12 @@
-# mono, multiple_metric,
-ATT = {"tsfmt": [False, False, False],
-       "tsfpos": [False, False, False],
-       "tsfparsing": [False, False, False],
-       "tsfel": [False, False, False],
-       "mi": [False, False, False],
-       "monomt": [False, False, True],
-       "bli": [False, True, False],
-       "sf": [True, True, False],}
+# mono, multiple_metric, lang_vec, percent
+ATT = {"tsfmt": [False, False, False, False],
+       "tsfpos": [False, False, False, False],
+       "tsfparsing": [False, False, False, True],
+       "tsfel": [False, False, False, False],
+       "mi": [False, False, False, True],
+       "monomt": [False, False, False, False],
+       "bli": [False, True, False, True],
+       "sf": [True, True, False, False],}
 
 def task_att(task):
     return ATT[task]
@@ -22,3 +22,6 @@ eval_metrics = {"sf": ["Keywords_Precision", "Keywords_Recall", "Keywords_F1", "
 
 def task_eval_metrics(task):
     return eval_metrics[task]
+
+
+

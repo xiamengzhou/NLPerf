@@ -2,8 +2,7 @@
 Performance Prediction for NLP Tasks
 
 ## Requirments 
-pytorch==1.2.0
-gpytorch=0.3.5
+pytorch==1.2.0 and gpytorch=0.3.5
 
 ## Running
 ```bash

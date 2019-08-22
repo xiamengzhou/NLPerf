@@ -1,9 +1,11 @@
 # NLPPerfPred
 Performance Prediction for NLP Tasks
 
-# Requirments 
+## Requirments 
 pytorch==1.2.0
 gpytorch=0.3.5
 
-# Running
-python3 main_code.py
+## Running
+```bash
+  python3 main_code.py
+```

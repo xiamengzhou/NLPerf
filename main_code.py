@@ -2,6 +2,8 @@ from xgboost import plot_importance
 import numpy as np
 from run_predictions import get_re_refactor
 from train_model import calculate_rmse
+from display_result import display_result, get_metric
+from utils import save_pkl_file
 
 def get_result(regressor="xgboost", tasks="all", k_fold_eval=True, get_rmse=True,
                get_ci=False, quantile=0.95, standardize=False, paras=None):
@@ -23,7 +25,7 @@ def plot(ree, type="weight", lang="ara", task="mt"):
     fig = ax.figure
     fig.set_size_inches(5, 30)
 
-def get_metric(re, metric="test_rmse"):
+def get_metric_deprecated(re, metric="test_rmse"):
     if metric == "mean_test_rmse":
         print("TSF_MT", np.mean(list(re["tsfmt"]["test_rmse"].values())))
         print("TSF_EL", np.mean(list(re["tsfel"]["test_rmse"].values())))
@@ -61,6 +63,18 @@ def get_metric_refactor(re, metric="test_rmse"):
                           calculate_rmse(re[task][eval_metric], re[task]["{}_labels".format(eval_metric[7:])]))
 
 
+
+if __name__ == '__main__':
+    paras = {"mean_module": {"name": "constant_mean", "paras": {}}, "covar_module": {"name": "rbf", "paras": {}}}
+    # regressor: gpytorch
+    gpytorch_re_std = get_result(regressor="gpytorch", tasks="all", get_ci=True, standardize=True, paras=paras)
+    # get metrics mrse mcb
+    re_gpytorch_std_metric = get_metric(gpytorch_re_std)
+    # print the results
+    display_result(re_gpytorch_std_metric)
+    # save the resulst
+    paras["des"] = "com1_version"
+    save_pkl_file(gpytorch_re_std, "pkl/gpytorch_re_std_v1", paras=paras)
 
 
 # parameters -> settings

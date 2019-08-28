@@ -18,7 +18,8 @@ eval_metrics = {"sf": ["Keywords_Precision", "Keywords_Recall", "Keywords_F1", "
                 "tsfel": ["Accuracy"],
                 "tsfmt": ["BLEU"],
                 "tsfparsing": ["Accuracy"],
-                "tsfpos": ["Accuracy"]}
+                "tsfpos": ["Accuracy"],
+                "wiki": ["BLEU"]}
 
 def task_eval_metrics(task):
     return eval_metrics[task]

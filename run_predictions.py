@@ -8,6 +8,77 @@ import pandas as pd
 import numpy as np
 import torch
 
+# make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
+def run_once(data, i, eval_metric, re,
+             regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None):
+    test_feats = data["test_feats"][i]
+    test_labels = data["test_labels"][i]
+    train_feats = data["train_feats"][i]
+    train_labels = data["train_labels"][i]
+
+    # convert label dataframe to np array
+    train_labels = convert_label(train_labels)
+    test_labels_ = convert_label(test_labels)
+    reg = train_regressor(train_feats, train_labels, regressor, quantile, paras)
+    lower_reg = None; upper_reg = None
+    if get_ci:
+        if isinstance(reg, xgb.XGBRegressor):
+            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_xgbq",
+                                        quantile=quantile)
+            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_xgbq",
+                                        quantile=quantile)
+        elif isinstance(reg, GradientBoostingRegressor):
+            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_gb",
+                                        quantile=quantile)
+            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
+                                        quantile=quantile)
+    mns = data["train_labels_mns"][i] if standardize else None
+    sstd = data["train_labels_sstd"][i] if standardize else None
+    _, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
+    test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
+                                                                               test_labels_,
+                                                                               get_rmse=get_rmse,
+                                                                               get_ci=get_ci,
+                                                                               quantile=quantile,
+                                                                               lower_reg=lower_reg,
+                                                                               upper_reg=upper_reg,
+                                                                               mns=mns, sstd=sstd)
+    if len(reg) == 2 and isinstance(reg[0], torch.nn.Module):
+        re[eval_metric]["reg"][i] = None
+    else:
+        re[eval_metric]["reg"][i] = reg
+
+    re[eval_metric]["train_rmse"][i] = train_rmse
+    re[eval_metric]["test_preds"][i] = test_preds
+    re[eval_metric]["test_rmse"][i] = test_rmse
+    if standardize:
+        re[eval_metric]["test_labels"][i] = recover(mns, sstd, test_labels_)
+    if get_ci:
+        re[eval_metric]["test_lower_preds"][i] = test_lower_preds
+        re[eval_metric]["test_upper_preds"][i] = test_upper_preds
+    # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
+    #                            "test_lower_preds": [], "test_upper_preds": []}}
+    return re
+
+
+def initialize_re_block(re, metrics, mono, *args):
+    # Initialization
+    for c in metrics:
+        re[c] = {}
+        re[c]["reg"] = {}
+        re[c]["train_rmse"] = {}
+        re[c]["test_rmse"] = {}
+        re[c]["test_preds"] = {}
+        re[c]["test_labels"] = {}
+        re[c]["test_lower_preds"] = {}
+        re[c]["test_upper_preds"] = {}
+        re[c]["test_langs"] = {}
+        re[c]["test_lang_pairs"] = {}
+    if mono:
+        re["ori_test_langs"] = args[0].sort_index()
+    else:
+        re["ori_test_lang_pairs"] = args[0].sort_index()
+
 def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
                     get_ci=False, quantile=0.95, standardize=False, paras=None):
     # when doing random k_fold_eval, we need to shuffle the data
@@ -29,22 +100,7 @@ def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
         k_fold_data = get_k_fold_data(feats, labels, lang_pairs, langs, k, task, standardize=standardize)
 
         # Initialization
-        for c in k_fold_data:
-            re[c] = {}
-            re[c]["reg"] = {}
-            re[c]["train_rmse"] = {}
-            re[c]["test_rmse"] = {}
-            re[c]["test_preds"] = {}
-            re[c]["test_labels"] = {}
-            re[c]["test_lower_preds"] = {}
-            re[c]["test_upper_preds"] = {}
-            re[c]["test_langs"] = {}
-            re[c]["test_lang_pairs"] = {}
-        if mono:
-            re["ori_test_langs"] = langs.sort_index()
-        else:
-            re["ori_test_lang_pairs"] = lang_pairs.sort_index()
-
+        initialize_re_block(re, list(k_fold_data.keys()), mono, langs if mono else lang_pairs)
 
         # iterate through each fold
         for eval_metric in k_fold_data:
@@ -58,58 +114,13 @@ def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
                 test_feats = data["test_feats"][i]
                 # in the case that there is less than 10 folds with limited data
                 if len(test_feats) > 0:
-                    # print(len(test_feats), len(data["test_labels"][i]), len(data["train_feats"][i]),
-                    #       len(data["train_labels"][i]))
-                    test_labels = data["test_labels"][i]
-                    train_feats = data["train_feats"][i]
-                    train_labels = data["train_labels"][i]
                     if mono:
                         test_langs = data["test_langs"][i]  # Series
                         re[eval_metric]["test_langs"][i] = test_langs # pd.DataFrame(test_langs.values, columns=["test_langs"])
                     else:
                         test_lang_pairs = data["test_lang_pairs"][i]
                         re[eval_metric]["test_lang_pairs"][i] = test_lang_pairs
-
-                    # convert label dataframe to np array
-                    train_labels = convert_label(train_labels)
-                    test_labels_ = convert_label(test_labels)
-                    reg = train_regressor(train_feats, train_labels, regressor, quantile, paras)
-                    lower_reg = None; upper_reg = None
-                    if get_ci:
-                        if isinstance(reg, xgb.XGBRegressor):
-                            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_xgbq",
-                                                        quantile=quantile)
-                            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_xgbq",
-                                                        quantile=quantile)
-                        elif isinstance(reg, GradientBoostingRegressor):
-                            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_gb",
-                                                        quantile=quantile)
-                            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
-                                                        quantile=quantile)
-                    mns = data["train_labels_mns"][i] if standardize else None
-                    sstd = data["train_labels_sstd"][i] if standardize else None
-                    _, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
-                    test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
-                                                                                               test_labels_,
-                                                                                               get_rmse=get_rmse,
-                                                                                               get_ci=get_ci,
-                                                                                               quantile=quantile,
-                                                                                               lower_reg=lower_reg,
-                                                                                               upper_reg=upper_reg,
-                                                                                               mns=mns, sstd=sstd)
-                    if not isinstance(reg, torch.nn.Module):
-                        re[eval_metric]["reg"][i] = reg
-                    else:
-                        re[eval_metric]["reg"][i] = None
-                    re[eval_metric]["train_rmse"][i] = train_rmse
-                    re[eval_metric]["test_preds"][i] = test_preds
-                    re[eval_metric]["test_rmse"][i] = test_rmse
-                    re[eval_metric]["test_labels"][i] = recover(mns, sstd, test_labels_)
-                    if get_ci:
-                        re[eval_metric]["test_lower_preds"][i] = test_lower_preds
-                        re[eval_metric]["test_upper_preds"][i] = test_upper_preds
-        # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
-        #                            "test_lower_preds": [], "test_upper_preds": []}}
+                    re = run_once(data, i, eval_metric, re, regressor, get_rmse, get_ci, quantile, standardize, paras)
         sort_pred_refactor({task: re}, task, langs, lang_pairs, k_fold_eval, get_ci=get_ci)
     return re
 
@@ -201,6 +212,7 @@ def bayesian_optimization(task, k_fold_eval=False, regressor="xgboost",
                           get_rmse=True, get_ci=False, quantile=0.95, standardize=False):
     data, langs, lang_pairs = get_data_langs(task, shuffle=k_fold_eval)
     re = {}
+
     for lang in langs:
         re[lang] = {"steps": 0, "langs": [], "ub": []}
         train_feats, train_labels, test_feats, test_labels, mns, sstd = \

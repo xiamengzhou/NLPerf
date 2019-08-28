@@ -1,9 +1,11 @@
 from xgboost import plot_importance
 import numpy as np
-from run_predictions import get_re_refactor
+from run_predictions import get_re_refactor, run_once, initialize_re_block
 from train_model import calculate_rmse
 from display_result import display_result, get_metric
 from utils import save_pkl_file
+from read_data import get_data_langs, random_split
+from task_feats import task_att
 
 def get_result(regressor="xgboost", tasks="all", k_fold_eval=True, get_rmse=True,
                get_ci=False, quantile=0.95, standardize=False, paras=None):
@@ -63,18 +65,33 @@ def get_metric_refactor(re, metric="test_rmse"):
                           calculate_rmse(re[task][eval_metric], re[task]["{}_labels".format(eval_metric[7:])]))
 
 
-
 if __name__ == '__main__':
     paras = {"mean_module": {"name": "constant_mean", "paras": {}}, "covar_module": {"name": "rbf", "paras": {}}}
-    # regressor: gpytorch
-    gpytorch_re_std = get_result(regressor="gpytorch", tasks="all", get_ci=True, standardize=True, paras=paras)
-    # get metrics mrse mcb
-    re_gpytorch_std_metric = get_metric(gpytorch_re_std)
-    # print the results
-    display_result(re_gpytorch_std_metric)
-    # save the resulst
-    paras["des"] = "com1_version"
-    save_pkl_file(gpytorch_re_std, "pkl/gpytorch_re_std_v1", paras=paras)
+    demo = False
+    if demo:
+        tasks = ["monomt"]
+        for task in tasks:
+            re = {}
+            feats, labels, langs, lang_pairs = get_data_langs(task, shuffle=True)
+            mono, _, _, _ = task_att(task)
+
+            # percentage: percentage of test data out of all the data we have
+            data = random_split(feats, labels, lang_pairs, langs, percentage=10, task=task, standardize=True)
+            initialize_re_block(re, list(data.keys()), mono, langs if mono else lang_pairs)
+            for metric in data:
+                data = data[metric]
+                re = run_once(data, 0, metric, re, "gpytorch", get_rmse=True, get_ci=True, quantile=0.95, standardize=True, paras=paras)
+                print(re)
+    else:
+        # regressor: gpytorch
+        gpytorch_re_std = get_result(regressor="gpytorch", tasks=["monomt"], get_ci=True, standardize=True, paras=paras)
+        # get metrics mrse mcb
+        re_gpytorch_std_metric = get_metric(gpytorch_re_std)
+        # print the results
+        display_result(re_gpytorch_std_metric)
+        # save the resulst
+        paras["des"] = "com1_version"
+        save_pkl_file(gpytorch_re_std, "pkl/gpytorch_re_std_v1", paras=paras)
 
 
 # parameters -> settings

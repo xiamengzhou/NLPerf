@@ -137,11 +137,12 @@ def get_data_langs(task, shuffle=False):
         data = data.drop(axis=1, labels=["BEST SCORE (Accuracy) from SIGMORPHON"])
         lang_pairs = pd.concat([data.iloc[:, 1], data.iloc[:, 3]], axis=1)
         data = data.drop(axis=1, labels=headers[0:4])
-    elif task == "wikimatrix":
+    elif task == "wiki":
         data = convert_to_one_hot(data, "Source", 0)
         data = convert_to_one_hot(data, "Target", 1)
-        data = data.drop(axis=0, labels=headers)
         lang_pairs = data.iloc[:, :2]
+        data = data.drop(axis=1, labels=headers[0:2])
+        data = data.dropna(axis=0, how="any")
 
     # extract the labels and drop the labels from data
     labels = data[task_eval_metrics(task)]
@@ -301,7 +302,3 @@ def random_split(feats, labels, lang_pairs, langs, percentage=10, task="tsfmt", 
             train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
         augment(data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
     return data
-
-
-
-

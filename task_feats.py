@@ -7,7 +7,7 @@ ATT = {"tsfmt": [False, False, False, False],
        "monomt": [False, False, False, False],
        "bli": [False, True, False, True],
        "sf": [True, True, False, False],
-       "wiki": [False, False, False, False]}
+       "wiki": [False, False, False, True]}
 
 def task_att(task):
     return ATT[task]

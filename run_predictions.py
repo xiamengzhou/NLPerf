@@ -60,6 +60,57 @@ def run_once(data, i, eval_metric, re,
     #                            "test_lower_preds": [], "test_upper_preds": []}}
     return re
 
+# make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
+def run_once_test(data, i, eval_metric, re,
+             regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None, verbose=True):
+    test_feats = data["test_feats"][i]
+    test_labels = data["test_labels"][i]
+    train_feats = data["train_feats"][i]
+    train_labels = data["train_labels"][i]
+
+    # convert label dataframe to np array
+    train_labels = convert_label(train_labels)
+    test_labels_ = convert_label(test_labels)
+    reg = train_regressor(train_feats, train_labels, regressor, quantile, paras, verbose)
+    lower_reg = None; upper_reg = None
+    if get_ci:
+        if isinstance(reg, xgb.XGBRegressor):
+            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_xgbq",
+                                        quantile=quantile)
+            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_xgbq",
+                                        quantile=quantile)
+        elif isinstance(reg, GradientBoostingRegressor):
+            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_gb",
+                                        quantile=quantile)
+            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
+                                        quantile=quantile)
+    mns = data["train_labels_mns"][i] if standardize else None
+    sstd = data["train_labels_sstd"][i] if standardize else None
+    #_, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
+    test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
+                                                                               test_labels_,
+                                                                               get_rmse=get_rmse,
+                                                                               get_ci=get_ci,
+                                                                               quantile=quantile,
+                                                                               lower_reg=lower_reg,
+                                                                               upper_reg=upper_reg,
+                                                                               mns=mns, sstd=sstd)
+    if len(reg) == 2 and isinstance(reg[0], torch.nn.Module):
+        re[eval_metric]["reg"][i] = None
+    else:
+        re[eval_metric]["reg"][i] = reg
+
+    #re[eval_metric]["train_rmse"][i] = train_rmse
+    re[eval_metric]["test_preds"][i] = test_preds
+    re[eval_metric]["test_rmse"][i] = test_rmse
+    if standardize:
+        re[eval_metric]["test_labels"][i] = recover(mns, sstd, test_labels_)
+    if get_ci:
+        re[eval_metric]["test_lower_preds"][i] = test_lower_preds
+        re[eval_metric]["test_upper_preds"][i] = test_upper_preds
+    # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
+    #                            "test_lower_preds": [], "test_upper_preds": []}}
+    return re
 
 def initialize_re_block(re, metrics, mono, *args):
     # Initialization

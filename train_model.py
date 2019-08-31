@@ -11,7 +11,7 @@ from gp import run_gp_train, run_gp_test, ExactGPModel
 from utils import recover
 import gpytorch
 
-def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None):
+def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None, verbose=True):
     if regressor == "xgboost":
         reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.2,
                                max_depth=5, n_estimators=200)
@@ -43,7 +43,7 @@ def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.9
     elif regressor == "gpytorch":
         assert paras is not None
         mean_module = paras["mean_module"]; covar_module = paras["covar_module"]
-        reg = run_gp_train(train_feats, train_labels, mean_module, covar_module)
+        reg = run_gp_train(train_feats, train_labels, mean_module, covar_module, verbose=verbose)
     else:
         print("Please specify a valid regressor!")
         return

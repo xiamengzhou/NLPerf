@@ -59,5 +59,9 @@ def zscore(a, axis=0, ddof=0, mns=None, sstd=None):
 
 
 def recover(mns, sstd, test_labels):
-    return test_labels * sstd + mns
+    if sstd:
+        return test_labels * sstd + mns
+    else:
+        return test_labels
+
 

@@ -302,3 +302,48 @@ def random_split(feats, labels, lang_pairs, langs, percentage=10, task="tsfmt", 
             train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
         augment(data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
     return data
+
+def specific_split(feats, labels, lang_pairs, langs, train_ids=[], test_ids=[], task="tsfmt", standardize=False):
+    """
+        data format: {metric: {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": []}}
+    """
+    assert len(feats) == len(labels)
+    block = {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": [],
+             "test_lang_pairs": [], "test_langs": [], "train_labels_mns": [], "train_labels_sstd": []}
+    data = {}
+    metrics = task_eval_metrics(task)
+    for i, metric in enumerate(metrics):
+        data[metric] = deepcopy(block)
+        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
+        if lang_pairs is not None:
+            feats_labels_k = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
+            lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
+                                              feats_labels_k.iloc[:, 2:-1], \
+                                              feats_labels_k.iloc[:, -1:]
+        else:
+            assert langs is not None
+            feats_labels_k = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
+            langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
+                                         feats_labels_k.iloc[:, 1:], \
+                                         feats_labels_k.iloc[:, -1:]
+        lens = len(feats_labels_k)
+        if lang_pairs is not None:
+            test_lang_pairs_k = lang_pairs_k.iloc[test_ids, :]
+            data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
+            lang_count = len(test_lang_pairs_k)
+        else:
+            test_langs_k = langs_k.iloc[test_ids, :]
+            data[metric]["test_langs"].append(test_langs_k)
+            lang_count = len(test_langs_k)
+        train_feats, train_labels = feats_k.iloc[train_ids, :], labels_k.iloc[train_ids, :]
+        test_feats, test_labels = feats_k.iloc[test_ids, :], labels_k.iloc[test_ids, :]
+        assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
+        assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
+        assert len(test_feats) == len(test_labels) == lang_count
+        assert len(test_labels) > 0
+        mns = None; sstd = None
+        if standardize:
+            train_feats, test_feats = standardize_feats_df(train_feats, test_feats)
+            train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
+        augment(data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
+    return data

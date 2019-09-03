@@ -64,7 +64,7 @@ class ExactGPModel(gp.models.ExactGP):
         return gp.distributions.MultivariateNormal(mean_x, covar_x)
 
 
-def run_gp_train(feats, labels, mean_module, covar_module):
+def run_gp_train(feats, labels, mean_module, covar_module, verbose=True):
     feats = tensorize_module(feats)
     labels = tensorize_module(labels)
 
@@ -89,12 +89,13 @@ def run_gp_train(feats, labels, mean_module, covar_module):
         # Calc loss and backprop gradients
         loss = -mll(output, labels)
         loss.backward()
-        print('Iter %d/%d - Loss: %.3f   lengthscale: %.3f   noise: %.3f' % (
-            i + 1, training_iter, loss.item(),
-            0,
-            # model.covar_module.base_kernel.lengthscale.mean(),
-            model.likelihood.noise.item()
-        ))
+        if verbose:
+            print('Iter %d/%d - Loss: %.3f   lengthscale: %.3f   noise: %.3f' % (
+                i + 1, training_iter, loss.item(),
+                0,
+                # model.covar_module.base_kernel.lengthscale.mean(),
+                model.likelihood.noise.item()
+            ))
         optimizer.step()
     return model, likelihood
 

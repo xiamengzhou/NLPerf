@@ -88,9 +88,17 @@ def build_index(main_dir, subdir_name):
 def get_word_count(vocab):
     return sum(vocab.values)
 
+def build_lc_converter(code_dir):
+    f = open("{}/data/files.txt".format(code_dir)).readlines()
+    d = {}
+    for line in f:
+        part2, part3 = line.split()
+        d[part3] = part2
+    return d
 
 if __name__ == '__main__':
-    data = pd.read_csv("/Users/mengzhouxia/东东/CMU/Neubig/nlppred/data/data_wiki.csv")
+    current_dir = sys.argv[1]
+    data = pd.read_csv("{}/data/data_wiki.csv".format(current_dir))
     columns = ["dataset size (sent)", "Source lang word TTR", "Source lang subword TTR",
                "Target lang word TTR", "Target lang subword TTR", "Source lang vocab size", "Source lang subword vocab size",
                "Target lang vocab size", "Target lang subword vocab size", "Source lang Average Sent. Length",
@@ -100,29 +108,41 @@ if __name__ == '__main__':
     for column in columns:
         data[column] = np.nan
 
-    main_path = sys.argv[1]
+    main_path = sys.argv[2]
     tok_index = build_index(main_dir=main_path, subdir_name="tok")
     subword_index = build_index(main_dir=main_path, subdir_name="spm5k")
 
     error_file = open(os.path.join(main_path, "error_file"), "w")
+    lc_converter = build_lc_converter(current_dir)
 
     lang_pairs = data.iloc[:, :2]
     for i, (src, tgt) in enumerate(lang_pairs.values):
-        src_lang = languages.get(part3=src)
-        tgt_lang = languages.get(part3=tgt)
-        src_part2 = src_lang.part2
-        tgt_part2 = tgt_lang.part2
+        # src_lang = languages.get(part3=src)
+        # tgt_lang = languages.get(part3=tgt)
+        # src_part2 = src_lang.part1
+        # tgt_part2 = tgt_lang.part1
 
-        src_file = tok_index[get_file_pattern("tok").format(src_part2, tgt_part2, src_part2)]
-        tgt_file = tok_index[get_file_pattern("tok").format(src_part2, tgt_part2, tgt_part2)]
-        src_bpe_file = subword_index[get_file_pattern("spm5k").format(src_part2, tgt_part2, src_part2)]
-        tgt_bpe_file = subword_index[get_file_pattern("spm5k").format(src_part2, tgt_part2, tgt_part2)]
-        if not os.path.exists(src_file) or not os.path.exists(tgt_file):
-            error_file.write(get_file_pattern("tok").format(src_part2, tgt_part2, src_part2) + " " + "tok")
+        if src not in lc_converter or tgt not in lc_converter:
             continue
-        if not os.path.exists(src_bpe_file) or not os.path.exists(tgt_bpe_file):
-            error_file.write(get_file_pattern("tok").format(src_part2, tgt_part2, src_part2) + " " + "spm5k")
+        src_part2 = lc_converter[src]
+        tgt_part2 = lc_converter[tgt]
+
+        src_file_name = get_file_pattern("tok").format(src_part2, tgt_part2, src_part2)
+        tgt_file_name = get_file_pattern("tok").format(src_part2, tgt_part2, tgt_part2)
+        if src_file_name not in tok_index or tgt_file_name not in tok_index:
+            error_file.write(get_file_pattern("v2").format(src_part2, tgt_part2, src_part2) + " " + "tok\n")
             continue
+        src_file = os.path.join(tok_index[src_file_name], src_file_name)
+        tgt_file = os.path.join(tok_index[tgt_file_name], tgt_file_name)
+
+        src_bpe_file_name = get_file_pattern("spm5k").format(src_part2, tgt_part2, src_part2)
+        tgt_bpe_file_name = get_file_pattern("spm5k").format(src_part2, tgt_part2, tgt_part2)
+        if src_bpe_file_name not in subword_index or tgt_bpe_file_name not in subword_index:
+            error_file.write(get_file_pattern("v2").format(src_part2, tgt_part2, src_part2) + " " + "spm5k\n")
+            continue
+        src_bpe_file = os.path.join(subword_index[src_bpe_file_name], src_bpe_file_name)
+        tgt_bpe_file = os.path.join(subword_index[tgt_bpe_file_name], tgt_bpe_file_name)
+
         src_lines, src_bpe_lines, tgt_lines, tgt_bpe_lines = read_file(src_file, src_bpe_file, tgt_file, tgt_bpe_file)
 
         src_vocab_file = os.path.join(main_path, "tok-vocab", get_file_pattern("tok-vocab").format(src_part2, tgt_part2, src_part2))
@@ -170,24 +190,5 @@ if __name__ == '__main__':
         data.loc[index_i, columns[12]] = src_bpe_word_count
         data.loc[index_i, columns[13]] = tgt_word_count
         data.loc[index_i, columns[14]] = tgt_bpe_word_count
-    data.to_csv("/Users/mengzhouxia/东东/CMU/Neubig/nlppred/data/data_wiki2.csv")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    data.to_csv("{}/data/data_wiki2.csv".format(current_dir))
 

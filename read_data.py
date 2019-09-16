@@ -8,6 +8,8 @@ import pickle as pkl
 from lang2vec import lang2vec as l2v
 from copy import deepcopy
 from utils import standardize_feats_df
+import sys
+import os
 
 @deprecated
 def read_group(file):
@@ -86,7 +88,7 @@ langvec_lens = {"syntax": 103,
 
 # data file related manipulation
 def get_data_langs(task, shuffle=False):
-    data = pd.read_csv("data/data_{}.csv".format(task), thousands=',')
+    data = pd.read_csv("{}/data/data_{}.csv".format(os.path.dirname(sys.argv[0]), task), thousands=',')
     lang_pairs = None
     langs = None
     langvec_dict = None
@@ -109,14 +111,11 @@ def get_data_langs(task, shuffle=False):
     headers = data.columns
 
     if task == "sf":
-        data = convert_to_one_hot(data, "fam", 3)
         data = fix_sf(data)
         langs = data.iloc[:, 1:2]
         data = data.drop(axis=1, labels=headers[:3])
     elif task.startswith("tsf"):
         # should add target language
-        data = convert_to_one_hot(data, "src", 0)
-        data = convert_to_one_hot(data, "tsf", 1)
         data = data.dropna(axis=0, how="any")
         lang_pairs = data.iloc[:, 0:2]
         data = data.drop(axis=1, labels=list(headers[0:2]) + list(headers[3:5]))
@@ -125,23 +124,19 @@ def get_data_langs(task, shuffle=False):
         lang_pairs = data.iloc[:, 1:3]
         data = data.drop(axis=1, labels=headers[0:3])
     elif task == "bli":
-        data = convert_to_one_hot(data, "src", 1)
-        data = convert_to_one_hot(data, "tsf", 2)
         data = fix_bli(data)
         lang_pairs = data.iloc[:, 1:3]
         data = data.drop(axis=1, labels=headers[0:3])
     elif task == "mi":
-        data = convert_to_one_hot(data, "src", 1)
-        data = convert_to_one_hot(data, "tsf", 3)
+        # data = convert_to_one_hot(data, "src", 1)
+        # data = convert_to_one_hot(data, "tsf", 3)
         data["Accuracy"] = data["BEST SCORE (Accuracy) from SIGMORPHON"]
         data = data.drop(axis=1, labels=["BEST SCORE (Accuracy) from SIGMORPHON"])
         lang_pairs = pd.concat([data.iloc[:, 1], data.iloc[:, 3]], axis=1)
         data = data.drop(axis=1, labels=headers[0:4])
     elif task == "wiki":
-        data = convert_to_one_hot(data, "Source", 0)
-        data = convert_to_one_hot(data, "Target", 1)
-        lang_pairs = data.iloc[:, :2]
-        data = data.drop(axis=1, labels=headers[0:2])
+        lang_pairs = data.iloc[:, 1:3]
+        data = data.drop(axis=1, labels=headers[0:3])
         data = data.dropna(axis=0, how="any")
 
     # extract the labels and drop the labels from data
@@ -169,7 +164,31 @@ def get_data_langs(task, shuffle=False):
         feats = pd.concat([feats, langvec_df], axis=1)
     if not task_att(task)[3]:
         labels = labels * 100
-    return feats, labels, langs, lang_pairs
+
+    # per metric
+    metrics = task_eval_metrics(task)
+    # for recover to spreadsheet
+    org_data = {"langs": langs, "lang_pairs": lang_pairs}
+    for metric in metrics:
+        org_data[metric] = {}
+        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
+        langs_ = None; lang_pairs_ = None
+        if lang_pairs is not None:
+            feats_labels = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
+            lang_pairs_, feats_, labels_ = feats_labels.iloc[:, :2], \
+                                        feats_labels.iloc[:, 2:-1], \
+                                        feats_labels.iloc[:, -1:]
+        else:
+            assert langs is not None
+            feats_labels = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
+            langs_, feats_, labels_ = feats_labels.iloc[:, :1], \
+                                         feats_labels.iloc[:, 1:], \
+                                         feats_labels.iloc[:, -1:]
+        org_data[metric]["feats"] = feats_
+        org_data[metric]["labels"] = labels_
+        org_data[metric]["langs"] = langs_
+        org_data[metric]["lang_pairs"] = lang_pairs_
+    return org_data
 
 
 def remove_na(df):
@@ -203,29 +222,20 @@ def augment(k_fold_data, train_feats, train_labels, test_feats, test_labels, *ar
     return k_fold_data
 
 # get K fold data from features
-def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt", standardize=False):
+def get_k_fold_data(org_data, k=10, task="tsfmt", standardize=False):
     """
         data format: {metric: {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": []}}
     """
-    assert len(feats) == len(labels)
     block = {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": [],
              "test_lang_pairs": [], "test_langs": [], "train_labels_mns": [], "train_labels_sstd": []}
     k_fold_data = {}
     metrics = task_eval_metrics(task)
     for i, metric in enumerate(metrics):
-        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
-        if lang_pairs is not None:
-            feats_labels_k = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
-            lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
-                                              feats_labels_k.iloc[:, 2:-1], \
-                                              feats_labels_k.iloc[:, -1:]
-        else:
-            assert langs is not None
-            feats_labels_k = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
-            langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
-                                         feats_labels_k.iloc[:, 1:], \
-                                         feats_labels_k.iloc[:, -1:]
-        lens = len(feats_labels_k)
+        metric_data = org_data[metric]
+        feats = metric_data["feats"]; labels = metric_data["labels"]
+        langs = metric_data["langs"]; lang_pairs = metric_data["lang_pairs"]
+        assert len(feats) == len(labels)
+        lens = len(feats)
         ex_per_fold = int(np.ceil(lens / k))
         for j in range(k):
             start = ex_per_fold * j
@@ -234,16 +244,16 @@ def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt", standa
                 if j == 0:
                     k_fold_data[metric] = deepcopy(block)
                 if lang_pairs is not None:
-                    test_lang_pairs_k = lang_pairs_k.iloc[start:end, :]
+                    test_lang_pairs_k = lang_pairs.iloc[start:end, :]
                     k_fold_data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
                     lang_count = len(test_lang_pairs_k)
                 else:
-                    test_langs_k = langs_k.iloc[start:end, :]
+                    test_langs_k = langs.iloc[start:end, :]
                     k_fold_data[metric]["test_langs"].append(test_langs_k)
                     lang_count = len(test_langs_k)
-                train_feats, train_labels = pd.concat([feats_k.iloc[:start, :], feats_k.iloc[end:, :]], axis=0), \
-                                            pd.concat([labels_k.iloc[:start, :], labels_k.iloc[end:, :]], axis=0)
-                test_feats, test_labels = feats_k.iloc[start:end, :], labels_k.iloc[start:end, :]
+                train_feats, train_labels = pd.concat([feats.iloc[:start, :], feats.iloc[end:, :]], axis=0), \
+                                            pd.concat([labels.iloc[:start, :], labels.iloc[end:, :]], axis=0)
+                test_feats, test_labels = feats.iloc[start:end, :], labels.iloc[start:end, :]
                 assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
                 assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
                 assert len(test_feats) == len(test_labels) == lang_count
@@ -257,41 +267,35 @@ def get_k_fold_data(feats, labels, lang_pairs, langs, k=10, task="tsfmt", standa
 
 
 # random_split for data
-def random_split(feats, labels, lang_pairs, langs, percentage=10, task="tsfmt", standardize=False):
+def random_split(org_data, percentage=10, task="tsfmt", standardize=False):
     """
         data format: {metric: {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": []}}
     """
-    assert len(feats) == len(labels)
+
     block = {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": [],
              "test_lang_pairs": [], "test_langs": [], "train_labels_mns": [], "train_labels_sstd": []}
     data = {}
     metrics = task_eval_metrics(task)
     for i, metric in enumerate(metrics):
+        metric_data = org_data[metric]
+        feats = metric_data["feats"]; labels = metric_data["labels"]
+        langs = metric_data["langs"]; lang_pairs = metric_data["lang_pairs"]
+        assert len(feats) == len(labels)
+
         data[metric] = deepcopy(block)
-        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
-        if lang_pairs is not None:
-            feats_labels_k = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
-            lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
-                                              feats_labels_k.iloc[:, 2:-1], \
-                                              feats_labels_k.iloc[:, -1:]
-        else:
-            assert langs is not None
-            feats_labels_k = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
-            langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
-                                         feats_labels_k.iloc[:, 1:], \
-                                         feats_labels_k.iloc[:, -1:]
-        lens = len(feats_labels_k)
+
+        lens = len(feats)
         test_lens = lens // percentage
         if lang_pairs is not None:
-            test_lang_pairs_k = lang_pairs_k.iloc[:test_lens, :]
+            test_lang_pairs_k = lang_pairs.iloc[:test_lens, :]
             data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
             lang_count = len(test_lang_pairs_k)
         else:
-            test_langs_k = langs_k.iloc[:test_lens, :]
+            test_langs_k = langs.iloc[:test_lens, :]
             data[metric]["test_langs"].append(test_langs_k)
             lang_count = len(test_langs_k)
-        train_feats, train_labels = feats_k.iloc[test_lens:, :], labels_k.iloc[test_lens:, :]
-        test_feats, test_labels = feats_k.iloc[:test_lens, :], labels_k.iloc[:test_lens, :]
+        train_feats, train_labels = feats.iloc[test_lens:, :], labels.iloc[test_lens:, :]
+        test_feats, test_labels = feats.iloc[:test_lens, :], labels.iloc[:test_lens, :]
         assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
         assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
         assert len(test_feats) == len(test_labels) == lang_count
@@ -303,47 +307,37 @@ def random_split(feats, labels, lang_pairs, langs, percentage=10, task="tsfmt", 
         augment(data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
     return data
 
-def specific_split(feats, labels, lang_pairs, langs, train_ids=[], test_ids=[], task="tsfmt", standardize=False):
+
+def specific_split(metric_data, train_ids=[], test_ids=[], task="tsfmt", standardize=False):
     """
         data format: {metric: {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": []}}
     """
-    assert len(feats) == len(labels)
     block = {"train_feats": [], "train_labels": [], "test_feats": [], "test_labels": [],
              "test_lang_pairs": [], "test_langs": [], "train_labels_mns": [], "train_labels_sstd": []}
-    data = {}
-    metrics = task_eval_metrics(task)
-    for i, metric in enumerate(metrics):
-        data[metric] = deepcopy(block)
-        metric_labels = pd.DataFrame(labels[metric], columns=[metric])
-        if lang_pairs is not None:
-            feats_labels_k = remove_na(pd.concat([lang_pairs, feats, metric_labels], axis=1))
-            lang_pairs_k, feats_k, labels_k = feats_labels_k.iloc[:, :2], \
-                                              feats_labels_k.iloc[:, 2:-1], \
-                                              feats_labels_k.iloc[:, -1:]
-        else:
-            assert langs is not None
-            feats_labels_k = remove_na(pd.concat([langs, feats, metric_labels], axis=1))
-            langs_k, feats_k, labels_k = feats_labels_k.iloc[:, :1], \
-                                         feats_labels_k.iloc[:, 1:], \
-                                         feats_labels_k.iloc[:, -1:]
-        lens = len(feats_labels_k)
-        if lang_pairs is not None:
-            test_lang_pairs_k = lang_pairs_k.iloc[test_ids, :]
-            data[metric]["test_lang_pairs"].append(test_lang_pairs_k)
-            lang_count = len(test_lang_pairs_k)
-        else:
-            test_langs_k = langs_k.iloc[test_ids, :]
-            data[metric]["test_langs"].append(test_langs_k)
-            lang_count = len(test_langs_k)
-        train_feats, train_labels = feats_k.iloc[train_ids, :], labels_k.iloc[train_ids, :]
-        test_feats, test_labels = feats_k.iloc[test_ids, :], labels_k.iloc[test_ids, :]
-        assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
-        assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
-        assert len(test_feats) == len(test_labels) == lang_count
-        assert len(test_labels) > 0
-        mns = None; sstd = None
-        if standardize:
-            train_feats, test_feats = standardize_feats_df(train_feats, test_feats)
-            train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
-        augment(data[metric], train_feats, train_labels, test_feats, test_labels, mns, sstd)
+    feats = metric_data["feats"]; labels = metric_data["labels"]
+    langs = metric_data["langs"]; lang_pairs = metric_data["lang_pairs"]
+    assert len(feats) == len(labels)
+
+    data = deepcopy(block)
+    if lang_pairs is not None:
+        test_lang_pairs_k = lang_pairs.iloc[test_ids, :]
+        data["test_lang_pairs"].append(test_lang_pairs_k)
+        lang_count = len(test_lang_pairs_k)
+    else:
+        test_langs_k = langs.iloc[test_ids, :]
+        data["test_langs"].append(test_langs_k)
+        lang_count = len(test_langs_k)
+
+    train_feats, train_labels = feats.iloc[train_ids, :], labels.iloc[train_ids, :]
+    test_feats, test_labels = feats.iloc[test_ids, :], labels.iloc[test_ids, :]
+
+    assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
+    assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
+    assert len(test_feats) == len(test_labels) == lang_count
+    assert len(test_labels) > 0
+    mns = None; sstd = None
+    if standardize:
+        train_feats, test_feats = standardize_feats_df(train_feats, test_feats)
+        train_labels, test_labels, mns, sstd = standardize_feats_df(train_labels, test_labels, True)
+        augment(data, train_feats, train_labels, test_feats, test_labels, mns, sstd)
     return data

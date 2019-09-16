@@ -7,6 +7,9 @@ from sklearn.ensemble import GradientBoostingRegressor
 import pandas as pd
 import numpy as np
 import torch
+from logging import getLogger
+
+logger = getLogger()
 
 # make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
 def run_once(data, i, eval_metric, re,
@@ -61,8 +64,7 @@ def run_once(data, i, eval_metric, re,
     return re
 
 # make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
-def run_once_test(data, i, eval_metric, re,
-             regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None, verbose=True):
+def run_once_test(data, i, eval_metric, re, regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None, verbose=False):
     test_feats = data["test_feats"][i]
     test_labels = data["test_labels"][i]
     train_feats = data["train_feats"][i]
@@ -134,10 +136,10 @@ def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
                     get_ci=False, quantile=0.95, standardize=False, paras=None):
     # when doing random k_fold_eval, we need to shuffle the data
     mono, multi_metric, _, _ = task_att(task)
-    feats, labels, langs, lang_pairs = get_data_langs(task, shuffle=k_fold_eval)
+    org_data = get_data_langs(task, shuffle=k_fold_eval)
     re = {}
     if not k_fold_eval:
-        for n, lang in enumerate(langs):
+        for n, lang in enumerate(org_data["langs"]):
             train_feats, train_labels, test_feats, test_labels = get_transfer_data_by_group(data, lang, lang_pairs)
             reg = train_regressor(train_feats, train_labels)
             _, train_rmse = test_regressor(reg, train_feats, convert_label(train_labels))
@@ -148,10 +150,10 @@ def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
             re["test_rmse"][lang] = test_rmse
     else:
         k = 10
-        k_fold_data = get_k_fold_data(feats, labels, lang_pairs, langs, k, task, standardize=standardize)
+        k_fold_data = get_k_fold_data(org_data, k, task, standardize=standardize)
 
         # Initialization
-        initialize_re_block(re, list(k_fold_data.keys()), mono, langs if mono else lang_pairs)
+        initialize_re_block(re, list(k_fold_data.keys()), mono, org_data["langs"] if mono else org_data["lang_pairs"])
 
         # iterate through each fold
         for eval_metric in k_fold_data:
@@ -172,7 +174,7 @@ def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
                         test_lang_pairs = data["test_lang_pairs"][i]
                         re[eval_metric]["test_lang_pairs"][i] = test_lang_pairs
                     re = run_once(data, i, eval_metric, re, regressor, get_rmse, get_ci, quantile, standardize, paras)
-        sort_pred_refactor({task: re}, task, langs, lang_pairs, k_fold_eval, get_ci=get_ci)
+        sort_pred_refactor({task: re}, task, org_data["langs"], org_data["lang_pairs"], k_fold_eval, get_ci=get_ci)
     return re
 
 def sort_pred_refactor(re_dict, task, langs, lang_pairs, k_fold_eval=False, get_ci=False):

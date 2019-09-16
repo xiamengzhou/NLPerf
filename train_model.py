@@ -10,8 +10,11 @@ import pandas as pd
 from gp import run_gp_train, run_gp_test, ExactGPModel
 from utils import recover
 import gpytorch
+from logging import getLogger
 
-def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None, verbose=True):
+logger = getLogger()
+
+def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None, verbose=False):
     if regressor == "xgboost":
         reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.2,
                                max_depth=5, n_estimators=200)
@@ -43,7 +46,7 @@ def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.9
     elif regressor == "gpytorch":
         assert paras is not None
         mean_module = paras["mean_module"]; covar_module = paras["covar_module"]
-        reg = run_gp_train(train_feats, train_labels, mean_module, covar_module, verbose=verbose)
+        reg = run_gp_train(train_feats, train_labels, mean_module, covar_module, verbose)
     else:
         print("Please specify a valid regressor!")
         return
@@ -51,9 +54,11 @@ def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.9
         fit_regressor(reg, train_feats, train_labels)
     return reg
 
+
 def fit_regressor(reg, train_feats, train_labels):
     reg.fit(train_feats, train_labels)
     return reg
+
 
 def get_valid_index(preds, labels):
     # legacy
@@ -61,13 +66,16 @@ def get_valid_index(preds, labels):
     labels = np.where(labels == None, np.nan, labels)
     return np.intersect1d(np.argwhere(~pd.isnull(labels)), np.argwhere(~pd.isnull(preds)))
 
+
 def calculate_rmse(preds, labels):
     valid_index = get_valid_index(preds, labels)
     return np.sqrt(mean_squared_error(labels[valid_index], preds[valid_index]))
 
+
 def calculate_mean_bounds(lower_preds, upper_preds):
     valid_index = get_valid_index(lower_preds, upper_preds)
     return np.mean(upper_preds[valid_index] - lower_preds[valid_index])
+
 
 # modify the function to get confidence band
 def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
@@ -109,6 +117,7 @@ def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
     if get_rmse:
         rmse = calculate_rmse(test_labels, preds)
     return preds, lower_preds, upper_preds, rmse
+
 
 # Copy from https://towardsdatascience.com/regression-prediction-intervals-with-xgboost-428e0a018b
 # quantile regression for xgboost

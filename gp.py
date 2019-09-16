@@ -2,7 +2,9 @@ import gpytorch as gp
 import torch
 import pandas as pd
 import numpy as np
+from logging import getLogger
 
+logger = getLogger()
 
 def get_mean_module(mean_module):
     mean_name = mean_module["name"]
@@ -64,7 +66,7 @@ class ExactGPModel(gp.models.ExactGP):
         return gp.distributions.MultivariateNormal(mean_x, covar_x)
 
 
-def run_gp_train(feats, labels, mean_module, covar_module, verbose=True):
+def run_gp_train(feats, labels, mean_module, covar_module, verbose=False):
     feats = tensorize_module(feats)
     labels = tensorize_module(labels)
 
@@ -100,18 +102,27 @@ def run_gp_train(feats, labels, mean_module, covar_module, verbose=True):
     return model, likelihood
 
 
-def run_gp_test(reg, test_feats, get_ci=True):
-    test_feats = tensorize_module(test_feats)
+def run_gp_test(reg, test_feats, get_ci=True, batch_size=100):
+    generator = batch_generator(test_feats, batch_size=batch_size)
     model, likelihood = reg
     model.eval()
     likelihood.eval()
-    observed_pred = likelihood(model(test_feats))
-    lower = None; upper = None; rmse = None
-    if get_ci:
-        lower, upper = observed_pred.confidence_region()
-        lower = lower.detach().numpy(); upper = upper.detach().numpy()
-    preds = observed_pred.mean.detach().numpy()
-    return preds, lower, upper
+
+    preds_com = []
+    lower_com = []
+    upper_com = []
+    for batch in generator:
+        batch = tensorize_module(batch)
+        observed_pred = likelihood(model(batch))
+        if get_ci:
+            lower, upper = observed_pred.confidence_region()
+            lower = lower.detach().numpy(); upper = upper.detach().numpy()
+            lower_com.append(lower); upper_com.append(upper)
+        preds = observed_pred.mean.detach().numpy()
+        preds_com.append(preds)
+    return np.concatenate(preds_com), \
+           np.concatenate(lower_com) if lower_com else None, \
+           np.concatenate(upper_com) if upper_com else None
 
 
 def tensorize_module(feats):
@@ -123,6 +134,15 @@ def tensorize_module(feats):
         tensor = torch.Tensor(feats)
     else:
         print("The type of the coming data is {}, which is not supported ...".format(ttt))
-    print("The shape of the tensor is {} ..".format(tensor.shape))
     return tensor
 
+
+def batch_generator(feats, batch_size):
+    ttt = type(feats)
+    if ttt == pd.DataFrame:
+        feats = feats.values
+    lens = len(feats)
+    for i in range(0, lens // batch_size):
+        start = i * batch_size
+        end = (i+1) * batch_size
+        yield feats[start:end]

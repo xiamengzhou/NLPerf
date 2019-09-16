@@ -3,6 +3,12 @@ import numpy as np
 from copy import deepcopy
 import warnings
 from gp import ExactGPModel
+import lang2vec.lang2vec as l2v
+import glob
+import pandas as pd
+from logging import getLogger
+
+logger = getLogger()
 
 def p2f(x):
     return float(x.strip('%'))/100
@@ -37,7 +43,7 @@ def standardize_feats_df(train_feats, test_feats, return_mean_var=False):
                     train_feats[c] = values
                     test_feats[c] = zscore(test_feats[c].values, mns=mns, sstd=sstd)[0]
         except Warning:
-            print("Standardization goes wrong for column {} ...".format(c))
+            logger.warning("Standardization goes wrong for column {} ...".format(c))
     if return_mean_var:
         assert len(columns) == 1
         return train_feats, test_feats, mns, sstd
@@ -65,3 +71,36 @@ def recover(mns, sstd, test_labels):
         return test_labels
 
 
+def uriel_distance_vec(languages):
+    print('...geographic')
+    geographic = l2v.geographic_distance(languages)
+    print('...genetic')
+    genetic = l2v.genetic_distance(languages)
+    print('...inventory')
+    inventory = l2v.inventory_distance(languages)
+    print('...syntactic')
+    syntactic = l2v.syntactic_distance(languages)
+    print('...phonological')
+    phonological = l2v.phonological_distance(languages)
+    print('...featural')
+    featural = l2v.featural_distance(languages)
+    uriel_features = [genetic, syntactic, featural, phonological, inventory, geographic]
+    print("-".join(languages) + " done!")
+    return uriel_features
+
+
+def merge_csv(prefix, output):
+    extension = 'csv'
+    all_filenames = [i for i in glob.glob('{}*.{}'.format(prefix, extension))]
+    combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames])
+    combined_csv = combined_csv.set_index("Unnamed: 0").sort_index()
+    # combined_csv.drop(columns=["Unnamed: 0"], inplace=True)
+    combined_csv.to_csv(output)
+    print("Output the dataframe with size {} to {}.".format(len(combined_csv), output))
+
+
+def log_args(args):
+    args_dict = args.__dict__
+    for key in args_dict.keys():
+        value = args_dict[key]
+        logger.info("{}: {}".format(key, value))

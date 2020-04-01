@@ -1,28 +1,44 @@
 from train_model import train_regressor, test_regressor
 from utils import convert_label, recover
 from task_feats import task_att
-from read_data import get_data_langs, get_k_fold_data, get_transfer_data_by_group
+from read_data import read_data, K_Fold_Spliter, Random_Spliter, Specific_Spliter
 import xgboost as xgb
 from sklearn.ensemble import GradientBoostingRegressor
 import pandas as pd
 import numpy as np
 import torch
 from logging import getLogger
+from collections import Counter
+from train_model import calculate_rmse
+from deprecated import deprecated
 
 logger = getLogger()
 
 # make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
-def run_once(data, i, eval_metric, re,
-             regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None):
-    test_feats = data["test_feats"][i]
-    test_labels = data["test_labels"][i]
-    train_feats = data["train_feats"][i]
-    train_labels = data["train_labels"][i]
+def run_once(train_feats,
+             train_labels,
+             test_feats,
+             test_labels,
+             mns,
+             sstd,
+             regressor="xgboost",
+             get_ci=True,
+             quantile=0.95,
+             **kwarg):
 
-    # convert label dataframe to np array
+    # convert label data frame to np array
     train_labels = convert_label(train_labels)
-    test_labels_ = convert_label(test_labels)
-    reg = train_regressor(train_feats, train_labels, regressor, quantile, paras)
+    test_labels = convert_label(test_labels)
+
+    # training a regressor
+    reg = train_regressor(train_feats=train_feats,
+                          train_labels=train_labels,
+                          regressor=regressor,
+                          quantile=quantile,
+                          verbose=False,
+                          kwarg=kwarg)
+
+    # get lower and upper bounds for boosting tree regressors
     lower_reg = None; upper_reg = None
     if get_ci:
         if isinstance(reg, xgb.XGBRegressor):
@@ -35,88 +51,40 @@ def run_once(data, i, eval_metric, re,
                                         quantile=quantile)
             upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
                                         quantile=quantile)
-    mns = data["train_labels_mns"][i] if standardize else None
-    sstd = data["train_labels_sstd"][i] if standardize else None
-    _, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
+
+    train_preds, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
     test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
-                                                                               test_labels_,
-                                                                               get_rmse=get_rmse,
-                                                                               get_ci=get_ci,
+                                                                               test_labels,
                                                                                quantile=quantile,
                                                                                lower_reg=lower_reg,
                                                                                upper_reg=upper_reg,
                                                                                mns=mns, sstd=sstd)
-    if len(reg) == 2 and isinstance(reg[0], torch.nn.Module):
-        re[eval_metric]["reg"][i] = None
-    else:
-        re[eval_metric]["reg"][i] = reg
 
-    re[eval_metric]["train_rmse"][i] = train_rmse
-    re[eval_metric]["test_preds"][i] = test_preds
-    re[eval_metric]["test_rmse"][i] = test_rmse
-    if standardize:
-        re[eval_metric]["test_labels"][i] = recover(mns, sstd, test_labels_)
-    if get_ci:
-        re[eval_metric]["test_lower_preds"][i] = test_lower_preds
-        re[eval_metric]["test_upper_preds"][i] = test_upper_preds
-    # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
-    #                            "test_lower_preds": [], "test_upper_preds": []}}
-    return re
+    return train_rmse, train_preds, test_rmse, test_preds, train_labels, test_labels, \
+           test_upper_preds, test_lower_preds, reg
 
-# make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
-def run_once_test(data, i, eval_metric, re, regressor="xgboost", get_rmse=True, get_ci=True, quantile=0.95, standardize=False, paras=None, verbose=False):
-    test_feats = data["test_feats"][i]
-    test_labels = data["test_labels"][i]
-    train_feats = data["train_feats"][i]
-    train_labels = data["train_labels"][i]
 
-    # convert label dataframe to np array
-    train_labels = convert_label(train_labels)
-    test_labels_ = convert_label(test_labels)
-    reg = train_regressor(train_feats, train_labels, regressor, quantile, paras, verbose)
-    lower_reg = None; upper_reg = None
-    if get_ci:
-        if isinstance(reg, xgb.XGBRegressor):
-            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_xgbq",
-                                        quantile=quantile)
-            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_xgbq",
-                                        quantile=quantile)
-        elif isinstance(reg, GradientBoostingRegressor):
-            lower_reg = train_regressor(train_feats, train_labels, regressor="lower_gb",
-                                        quantile=quantile)
-            upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
-                                        quantile=quantile)
-    mns = data["train_labels_mns"][i] if standardize else None
-    sstd = data["train_labels_sstd"][i] if standardize else None
-    #_, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
-    test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
-                                                                               test_labels_,
-                                                                               get_rmse=get_rmse,
-                                                                               get_ci=get_ci,
-                                                                               quantile=quantile,
-                                                                               lower_reg=lower_reg,
-                                                                               upper_reg=upper_reg,
-                                                                               mns=mns, sstd=sstd)
-    if len(reg) == 2 and isinstance(reg[0], torch.nn.Module):
-        re[eval_metric]["reg"][i] = None
-    else:
-        re[eval_metric]["reg"][i] = reg
+def augment_re(re, model, train_rmse, train_preds, test_rmse, test_preds, train_labels, test_labels,
+               test_upper_preds, test_lower_preds, reg):
+    re[model]["train_rmse"] = train_rmse
+    re[model]["train_preds"] = train_preds
+    re[model]["test_rmse"] = test_rmse
+    re[model]["test_preds"] = test_preds
+    re[model]["train_labels"] = train_labels
+    re[model]["test_labels"] = test_labels
+    re[model]["test_upper_preds"] = test_upper_preds
+    re[model]["test_lower_preds"] = test_lower_preds
+    re[model]["reg"] = reg
 
-    #re[eval_metric]["train_rmse"][i] = train_rmse
-    re[eval_metric]["test_preds"][i] = test_preds
-    re[eval_metric]["test_rmse"][i] = test_rmse
-    if standardize:
-        re[eval_metric]["test_labels"][i] = recover(mns, sstd, test_labels_)
-    if get_ci:
-        re[eval_metric]["test_lower_preds"][i] = test_lower_preds
-        re[eval_metric]["test_upper_preds"][i] = test_upper_preds
-    # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
-    #                            "test_lower_preds": [], "test_upper_preds": []}}
-    return re
+    # gpexact can't be serialized
+    if type(reg) == tuple and isinstance(reg[0], torch.nn.Module):
+        pass
 
-def initialize_re_block(re, metrics, mono, *args):
+
+def initialize_re_block(models):
     # Initialization
-    for c in metrics:
+    re = {}
+    for c in models:
         re[c] = {}
         re[c]["reg"] = {}
         re[c]["train_rmse"] = {}
@@ -125,59 +93,64 @@ def initialize_re_block(re, metrics, mono, *args):
         re[c]["test_labels"] = {}
         re[c]["test_lower_preds"] = {}
         re[c]["test_upper_preds"] = {}
-        re[c]["test_langs"] = {}
-        re[c]["test_lang_pairs"] = {}
-    if mono:
-        re["ori_test_langs"] = args[0].sort_index()
-    else:
-        re["ori_test_lang_pairs"] = args[0].sort_index()
-
-def get_re_refactor(task, k_fold_eval=False, regressor="xgboost", get_rmse=True,
-                    get_ci=False, quantile=0.95, standardize=False, paras=None):
-    # when doing random k_fold_eval, we need to shuffle the data
-    mono, multi_metric, _, _ = task_att(task)
-    org_data = get_data_langs(task, shuffle=k_fold_eval)
-    re = {}
-    if not k_fold_eval:
-        for n, lang in enumerate(org_data["langs"]):
-            train_feats, train_labels, test_feats, test_labels = get_transfer_data_by_group(data, lang, lang_pairs)
-            reg = train_regressor(train_feats, train_labels)
-            _, train_rmse = test_regressor(reg, train_feats, convert_label(train_labels))
-            test_preds, test_rmse = test_regressor(reg, test_feats, convert_label(test_labels))
-            re["reg"][lang] = reg
-            re["train_rmse"][lang] = train_rmse
-            re["test_preds"][lang] = test_preds
-            re["test_rmse"][lang] = test_rmse
-    else:
-        k = 10
-        k_fold_data = get_k_fold_data(org_data, k, task, standardize=standardize)
-
-        # Initialization
-        initialize_re_block(re, list(k_fold_data.keys()), mono, org_data["langs"] if mono else org_data["lang_pairs"])
-
-        # iterate through each fold
-        for eval_metric in k_fold_data:
-            data = k_fold_data[eval_metric]
-
-            # update k after segmenting the data in case the folder is less than k
-            k = len(data["test_feats"])
-            print("Data is segmented into {} folds for metric {}..".format(k, eval_metric))
-
-            for i in range(k):
-                test_feats = data["test_feats"][i]
-                # in the case that there is less than 10 folds with limited data
-                if len(test_feats) > 0:
-                    if mono:
-                        test_langs = data["test_langs"][i]  # Series
-                        re[eval_metric]["test_langs"][i] = test_langs # pd.DataFrame(test_langs.values, columns=["test_langs"])
-                    else:
-                        test_lang_pairs = data["test_lang_pairs"][i]
-                        re[eval_metric]["test_lang_pairs"][i] = test_lang_pairs
-                    re = run_once(data, i, eval_metric, re, regressor, get_rmse, get_ci, quantile, standardize, paras)
-        sort_pred_refactor({task: re}, task, org_data["langs"], org_data["lang_pairs"], k_fold_eval, get_ci=get_ci)
     return re
 
-def sort_pred_refactor(re_dict, task, langs, lang_pairs, k_fold_eval=False, get_ci=False):
+
+def get_split_data(org_data, split_method="k_fold_split", **kwargs):
+    if split_method == "random_split":
+        splitter = Random_Spliter(org_data, percentage=kwargs["percentage"])
+    elif split_method == "k_fold_split":
+        splitter = K_Fold_Spliter(org_data, k=kwargs["k"])
+    elif split_method == "specific_split":
+        splitter = Specific_Spliter(org_data, kwargs["train_ids"], kwargs["test_ids"])
+    else:
+        return
+    return splitter.split()
+
+
+def get_result(split_data,
+               task,
+               regressor="xgboost",
+               get_ci=False,
+               quantile=0.95,
+               **kwargs):
+    mono, multi_model, _, _, _ = task_att(task)
+
+    # Initialization
+    re = initialize_re_block(list(split_data.keys()))
+
+    # iterate through each fold
+    for model in split_data:
+        model_data = split_data[model]
+
+        folds = len(model_data["train_feats"])
+
+        for i in range(folds):
+            train_feats = model_data["train_feats"][i]
+            train_labels = model_data["train_labels"][i]
+
+            test_feats = model_data["test_feats"][i]
+            test_labels = model_data["test_labels"][i]
+
+            mns = model_data["mns"][i]
+            sstd = model_data["sstd"][i]
+
+            train_rmse, train_preds, test_rmse, test_preds, train_labels_np, test_labels_np, \
+                test_upper_preds, test_lower_preds, reg = \
+                    run_once(train_feats, train_labels, test_feats, test_labels,
+                             mns, sstd, regressor, get_ci, quantile)
+
+            augment_re(re, model, train_rmse, train_preds, test_rmse, test_preds, train_labels_np, test_labels_np,
+                       test_upper_preds, test_lower_preds, reg)
+
+
+
+
+    sort_pred_refactor({task: re}, task, get_ci=get_ci)
+    return re
+
+@deprecated
+def sort_pred_refactor(re_dict, task, get_ci=False):
     # before sort {eval_metric: {"reg": [], "train_rmse": [], "test_preds": [], "test_rmse": [], "test_labels": [],
     #                            "test_lower_preds": [], "test_upper_preds": [],
     #                            "test_langs": [] or "test_lang_pairs": []}}
@@ -191,85 +164,81 @@ def sort_pred_refactor(re_dict, task, langs, lang_pairs, k_fold_eval=False, get_
     #                                  "test_langs_sorted": [sorted] or "test_lang_pairs_sorted": [sorted],
     #                                  "result_metric": [sorted], "metric_labels": [sorted],
     #                                  "metric_lower_preds: [sorted], "metric_upper_preds": [sorted]}}}
-    mono, multi_metric, _, _ = task_att(task)
-    if not k_fold_eval:
-        for lang in langs:
-            preds = re_dict[task]["test_preds"][lang]
-            for p in preds:
-                print(p)
-    else:
-        for eval_metric in re_dict[task]:
-            if eval_metric != "ori_test_langs" and eval_metric != "ori_test_lang_pairs":
-                test_preds = []
-                reee = re_dict[task][eval_metric]
-                k = len(re_dict[task][eval_metric]["test_langs"]) if mono else len(re_dict[task][eval_metric]["test_lang_pairs"])
-                for i in range(k):
-                    test_pred = re_dict[task][eval_metric]["test_langs"][i] if mono \
-                        else re_dict[task][eval_metric]["test_lang_pairs"][i]
-                    test_pred["preds"] = reee["test_preds"][i]
-                    test_pred["test_labels"] = reee["test_labels"][i]
-                    if get_ci:
-                        test_pred["test_upper_preds"] = reee["test_upper_preds"][i]
-                        test_pred["test_lower_preds"] = reee["test_lower_preds"][i]
-                    test_preds.append(test_pred)
-                test_preds = pd.concat(test_preds)
-                result = []
-                labels = []
+    mono, multi_metric, _, _, _ = task_att(task)
+    for eval_metric in re_dict[task]:
+        print(re_dict[task].keys())
+        if eval_metric != "ori_test_langs" and eval_metric != "ori_test_lang_pairs":
+            test_preds = []
+            reee = re_dict[task][eval_metric]
+            k = len(re_dict[task][eval_metric]["test_langs"]) if mono else len(re_dict[task][eval_metric]["test_lang_pairs"])
+            for i in range(k):
+                test_pred = re_dict[task][eval_metric]["test_langs"][i] if mono \
+                    else re_dict[task][eval_metric]["test_lang_pairs"][i]
+                test_pred["preds"] = reee["test_preds"][i]
+                test_pred["test_labels"] = reee["test_labels"][i]
                 if get_ci:
-                    lower_preds = []
-                    upper_preds = []
-                if mono:
-                    column = langs.columns[0]
-                    for lang in re_dict[task]["ori_test_langs"][column]:
-                        se = test_preds[(test_preds.iloc[:, 0] == lang)]
-                        if len(se) == 0:
-                            result.append(np.nan)
-                            labels.append(np.nan)
-                            if get_ci:
-                                lower_preds.append(np.nan)
-                                upper_preds.append(np.nan)
-                        else:
-                            result.append(se["preds"].values[0])
-                            labels.append(se["test_labels"].values[0])
-                            if get_ci:
-                                lower_preds.append(se["test_lower_preds"].values[0])
-                                upper_preds.append(se["test_upper_preds"].values[0])
-                else:
-                    for l1, l2 in re_dict[task]["ori_test_lang_pairs"].values:
-                        se = test_preds[(test_preds.iloc[:, 0] == l1) & (test_preds.iloc[:, 1] == l2)]
-                        if len(se) == 0:
-                            result.append(np.nan)
-                            labels.append(np.nan)
-                            if get_ci:
-                                lower_preds.append(np.nan)
-                                upper_preds.append(np.nan)
-                        else:
-                            result.append(se["preds"].values[0])
-                            labels.append(se["test_labels"].values[0])
-                            if get_ci:
-                                lower_preds.append(se["test_lower_preds"].values[0])
-                                upper_preds.append(se["test_upper_preds"].values[0])
+                    test_pred["test_upper_preds"] = reee["test_upper_preds"][i]
+                    test_pred["test_lower_preds"] = reee["test_lower_preds"][i]
+                test_preds.append(test_pred)
+            test_preds = pd.concat(test_preds)
+            result = []
+            labels = []
+            if get_ci:
+                lower_preds = []
+                upper_preds = []
+            if mono:
+                langs = re_dict[task]["ori_test_langs"].values
+                langs = langs.reshape(len(langs))
+                for lang in langs:
+                    se = test_preds[test_preds.iloc[:, 0] == lang]
+                    if len(se) == 0:
+                        result.append(np.nan)
+                        labels.append(np.nan)
+                        if get_ci:
+                            lower_preds.append(np.nan)
+                            upper_preds.append(np.nan)
+                    else:
+                        result.append(se["preds"].values[0])
+                        labels.append(se["test_labels"].values[0])
+                        if get_ci:
+                            lower_preds.append(se["test_lower_preds"].values[0])
+                            upper_preds.append(se["test_upper_preds"].values[0])
+            else:
+                for l1, l2 in re_dict[task]["ori_test_lang_pairs"].values:
+                    se = test_preds[(test_preds.iloc[:, 0] == l1) & (test_preds.iloc[:, 1] == l2)]
+                    if len(se) == 0:
+                        result.append(np.nan)
+                        labels.append(np.nan)
+                        if get_ci:
+                            lower_preds.append(np.nan)
+                            upper_preds.append(np.nan)
+                    else:
+                        result.append(se["preds"].values[0])
+                        labels.append(se["test_labels"].values[0])
+                        if get_ci:
+                            lower_preds.append(se["test_lower_preds"].values[0])
+                            upper_preds.append(se["test_upper_preds"].values[0])
 
-                re_dict[task][eval_metric]["result_{}".format(eval_metric)] = np.array(result)
-                re_dict[task][eval_metric]["{}_labels".format(eval_metric)] = np.array(labels)
+            re_dict[task][eval_metric]["result_{}".format(eval_metric)] = np.array(result)
+            re_dict[task][eval_metric]["{}_labels".format(eval_metric)] = np.array(labels)
 
-                if get_ci:
-                    re_dict[task][eval_metric]["{}_lower_preds".format(eval_metric)] = np.array(lower_preds)
-                    re_dict[task][eval_metric]["{}_upper_preds".format(eval_metric)] = np.array(upper_preds)
+            if get_ci:
+                re_dict[task][eval_metric]["{}_lower_preds".format(eval_metric)] = np.array(lower_preds)
+                re_dict[task][eval_metric]["{}_upper_preds".format(eval_metric)] = np.array(upper_preds)
 
 
 # currently only supports for tsf tasks
 # bayesian optimization for finding the best transfer dataset
 # settings -> parameters
+@deprecated
 def bayesian_optimization(task, k_fold_eval=False, regressor="xgboost",
                           get_rmse=True, get_ci=False, quantile=0.95, standardize=False):
-    data, langs, lang_pairs = get_data_langs(task, shuffle=k_fold_eval)
+    data, langs, lang_pairs = read_data(task, shuffle=k_fold_eval)
     re = {}
 
     for lang in langs:
         re[lang] = {"steps": 0, "langs": [], "ub": []}
-        train_feats, train_labels, test_feats, test_labels, mns, sstd = \
-            get_transfer_data_by_group(data, lang, lang_pairs)
+        train_feats, train_labels, test_feats, test_labels, mns, sstd = (data, lang, lang_pairs)
         optimal_row = test_feats.iloc[[np.argmax(test_labels.values)]]
         optimal_lang = get_lang_from_feats(optimal_row)
         tsf_lang = -1
@@ -296,7 +265,7 @@ def bayesian_optimization(task, k_fold_eval=False, regressor="xgboost",
             print("Found {}!".format(tsf_lang))
     return re
 
-
+@deprecated
 def get_lower_upper_reg(reg, train_feats, train_labels, quantile):
     if isinstance(reg, xgb.XGBRegressor):
         lower_reg = train_regressor(train_feats, train_labels, regressor="lower_xgbq",
@@ -312,7 +281,7 @@ def get_lower_upper_reg(reg, train_feats, train_labels, quantile):
         raise KeyError
     return upper_reg, lower_reg
 
-
+@deprecated
 def get_lang_from_feats(row, ttt="tsf"):
     return [key[4:] for key in row.columns if key.startswith(ttt) and row[key].values[0] == 1.0][0]
 

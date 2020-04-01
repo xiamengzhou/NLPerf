@@ -9,15 +9,16 @@ from sklearn.metrics import mean_squared_error
 import pandas as pd
 from gp import run_gp_train, run_gp_test, ExactGPModel
 from utils import recover
-import gpytorch
 from logging import getLogger
+from sklearn.linear_model import LinearRegression
 
 logger = getLogger()
 
-def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, paras=None, verbose=False):
+def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, verbose=False, **kwargs):
+    logger.info(f"Training a {regressor} model with training data of shape [{', '.join(train_feats.shape)}]")
     if regressor == "xgboost":
-        reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.2,
-                               max_depth=5, n_estimators=200)
+        reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.1,
+                               max_depth=10, n_estimators=100)
     elif regressor == "gp":
         kernel=1**2 + Matern(length_scale=2, nu=1.5) + WhiteKernel(noise_level=1)
         reg = gaussian_process.GaussianProcessRegressor(alpha=1e-10, copy_X_train=True, kernel=kernel,
@@ -44,13 +45,16 @@ def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.9
                                         learning_rate=.1, min_samples_leaf=9,
                                         min_samples_split=9)
     elif regressor == "gpytorch":
-        assert paras is not None
+        assert "paras" in kwargs
+        paras = kwargs["params"]
         mean_module = paras["mean_module"]; covar_module = paras["covar_module"]
         reg = run_gp_train(train_feats, train_labels, mean_module, covar_module, verbose)
+    elif regressor == "lr": # linear regression
+        reg = LinearRegression()
     else:
         print("Please specify a valid regressor!")
         return
-    if len(reg) == 1: # not exactgp model
+    if type(reg) != tuple: # not exactgp model
         fit_regressor(reg, train_feats, train_labels)
     return reg
 
@@ -76,7 +80,6 @@ def calculate_mean_bounds(lower_preds, upper_preds):
     valid_index = get_valid_index(lower_preds, upper_preds)
     return np.mean(upper_preds[valid_index] - lower_preds[valid_index])
 
-
 # modify the function to get confidence band
 def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
                    get_ci=False, quantile=0.95, lower_reg=None, upper_reg=None,
@@ -97,21 +100,21 @@ def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
             preds = reg.predict(test_feats)
             lower_preds = lower_reg.predict(test_feats)
             upper_preds = upper_reg.predict(test_feats)
-        elif len(reg) == 2 and isinstance(reg[0], ExactGPModel):
+        elif type(reg) == tuple and isinstance(reg[0], ExactGPModel):
             # one percent of the times there are bugs
             preds, lower_preds, upper_preds = run_gp_test(reg, test_feats)
         else:
             preds = reg.predict(test_feats)
             print("Confidence band not supported for {}.".format(type(reg)))
     else:
-        if len(reg) == 1:
+        if type(reg) != tuple:
             preds = reg.predict(test_feats)
         else:
             preds, _, _ = run_gp_test(reg, test_feats)
     if mns is not None and sstd is not None: # recover standardization
         preds = recover(mns, sstd, preds)
         test_labels = recover(mns, sstd, test_labels)
-        if get_ci:
+        if get_ci and lower_preds is not None and upper_preds is not None:
             lower_preds = recover(mns, sstd, lower_preds)
             upper_preds = recover(mns, sstd, upper_preds)
     if get_rmse:

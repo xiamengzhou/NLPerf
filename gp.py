@@ -82,7 +82,7 @@ def run_gp_train(feats, labels, mean_module, covar_module, verbose=False):
 
     mll = gp.mlls.ExactMarginalLogLikelihood(likelihood, model)
 
-    training_iter = 50
+    training_iter = 100
     for i in range(training_iter):
         # Zero gradients from previous iteration
         optimizer.zero_grad()
@@ -142,7 +142,8 @@ def batch_generator(feats, batch_size):
     if ttt == pd.DataFrame:
         feats = feats.values
     lens = len(feats)
-    for i in range(0, lens // batch_size):
+    for i in range(0, lens // batch_size + 1):
         start = i * batch_size
         end = (i+1) * batch_size
-        yield feats[start:end]
+        if start < lens:
+            yield feats[start:end]

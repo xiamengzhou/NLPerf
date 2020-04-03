@@ -102,10 +102,8 @@ def read_data(task,
     #
     # return a data dictionary
 
-    data_folder = os.path.dirname(sys.argv[0]) if folder is None else folder
-    data = pd.read_csv("{}/data/data_{}.csv".format(
-        data_folder, task),
-        thousands=',')
+    data_folder = os.path.dirname(__file__) if folder is None else folder
+    data = pd.read_csv("{}/data/data_{}.csv".format(data_folder, task), thousands=',')
 
     eval_columns = task_eval_columns(task)
 
@@ -114,6 +112,7 @@ def read_data(task,
         data["word type ratio"] = data["word num"] / data["word type"]
 
     if task == "ud":
+        data = data.drop(axis=1, columns=["iParse", "HUJI", "ArmParser"])
         # add dependency arcs matching WALS features
         feats_ud = pd.read_csv("{}/data/UD_BERT.csv".format(data_folder))
         cc = feats_ud.columns[3:-1]
@@ -182,10 +181,10 @@ def read_data(task,
         langs = pd.concat([data.iloc[:, 1], data.iloc[:, 3]], axis=1)
         data = data.drop(axis=1, labels=headers[0:4])
     elif task == "wiki":
-        langs = data.iloc[:, 1:3]
-        data = data.drop(axis=1, labels=headers[0:3])
         # TODO: check!
         data = data.dropna(axis=0, how="any")
+        langs = data.iloc[:, 0:2]
+        data = data.drop(axis=1, labels=headers[0:2])
     elif task == "lemma":
         langs = data.loc[:, "language"].to_frame()
         data.drop(axis=1, labels=headers[:3], inplace=True)
@@ -252,7 +251,7 @@ def read_data(task,
         feats_labels.reset_index(drop=True, inplace=True)
         langs_, feats_, labels_ = feats_labels.loc[:, langs.columns], \
                                feats_labels.loc[:, feats.columns], \
-                               feats_labels.loc[:, labels.columns]
+                               feats_labels.loc[:, [model]]
 
         org_data[model]["feats"] = feats_
         org_data[model]["labels"] = labels_
@@ -293,11 +292,12 @@ def read_data(task,
 
     logger.info(f"Loaded {len(org_data[list(org_data.keys())[0]]['feats'])} experiment records "
                 f"for {len(org_data)} models: {', '.join(org_data.keys())}")
+
     for model in org_data:
         logger.info(f"Loaded {len(org_data[model]['feats'])} experiment records from {model}.")
+        logger.info(f"{len(org_data[model]['feats'].columns)} feats: {', '.join(org_data[model]['feats'].columns)}")
         for lang in org_data[model]["langs"].columns:
             logger.info(f"{lang}: {len(org_data[model]['langs'][lang].unique())}")
-            logger.info(f"{len(org_data[model]['feats'].columns)} feats: {', '.join(org_data[model]['feats'].columns)}")
     return org_data
 
 
@@ -503,25 +503,26 @@ class Specific_Spliter(Spliter):
             langs = model_data["langs"]
             assert len(feats) == len(labels)
 
-            train_feats, train_labels, train_langs = feats.loc[self.train_ids, :], labels.loc[self.train_ids, :], \
-                                                     langs.loc[self.train_ids, :]
-            test_feats, test_labels, test_langs = feats.loc[self.test_ids, :], labels.loc[self.test_ids, :], \
-                                                  langs.loc[self.test_ids, :]
-            lens = len(feats)
-            test_lang_count = len(test_langs)
+            for train_id, test_id in zip(self.train_ids, self.test_ids):
+                train_feats, train_labels, train_langs = feats.loc[train_id, :], labels.loc[train_id, :], \
+                                                         langs.loc[train_id, :]
+                test_feats, test_labels, test_langs = feats.loc[test_id, :], labels.loc[test_id, :], \
+                                                      langs.loc[test_id, :]
+                lens = len(feats)
+                test_lang_count = len(test_langs)
 
-            logger.info(f"Specific splitter splitting {lens} experimental records for model {model} into "
-                        f"{lens - test_lang_count} training experimental records and {test_lang_count} experimental records.")
+                logger.info(f"Specific splitter splitting {lens} experimental records for model {model} into "
+                            f"{lens - test_lang_count} training experimental records and {test_lang_count} experimental records.")
 
-            # same as other spliter methods
-            self.run_assertion(train_feats, train_labels, test_feats, test_labels, test_lang_count)
+                # same as other spliter methods
+                self.run_assertion(train_feats, train_labels, test_feats, test_labels, test_lang_count)
 
-            train_feats, train_labels, test_feats, test_labels, mns, sstd = \
-                self.standardize_data(train_feats, train_labels, test_feats, test_labels)
+                train_feats, train_labels, test_feats, test_labels, mns, sstd = \
+                    self.standardize_data(train_feats, train_labels, test_feats, test_labels)
 
-            # place all the k folds data
-            self.augment(data[model], train_feats, train_labels, test_feats, test_labels,
-                         train_langs, test_langs, mns, sstd)
+                # place all the k folds data
+                self.augment(data[model], train_feats, train_labels, test_feats, test_labels,
+                             train_langs, test_langs, mns, sstd)
 
         return data
 

@@ -8,11 +8,10 @@ import pandas as pd
 import numpy as np
 import torch
 from logging import getLogger
-from collections import Counter
-from train_model import calculate_rmse
 from deprecated import deprecated
 
 logger = getLogger()
+
 
 # make sure that train_feats, train_labels, test_feats and test_labels are all data_frames
 def run_once(train_feats,
@@ -52,8 +51,8 @@ def run_once(train_feats,
             upper_reg = train_regressor(train_feats, train_labels, regressor="upper_gb",
                                         quantile=quantile)
 
-    train_preds, _, _, train_rmse = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
-    test_preds, test_lower_preds, test_upper_preds, test_rmse = test_regressor(reg, test_feats,
+    train_preds, _, _, train_rmse, train_labels = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
+    test_preds, test_lower_preds, test_upper_preds, test_rmse, test_labels = test_regressor(reg, test_feats,
                                                                                test_labels,
                                                                                quantile=quantile,
                                                                                lower_reg=lower_reg,
@@ -66,15 +65,15 @@ def run_once(train_feats,
 
 def augment_re(re, model, train_rmse, train_preds, test_rmse, test_preds, train_labels, test_labels,
                test_upper_preds, test_lower_preds, reg):
-    re[model]["train_rmse"] = train_rmse
-    re[model]["train_preds"] = train_preds
-    re[model]["test_rmse"] = test_rmse
-    re[model]["test_preds"] = test_preds
-    re[model]["train_labels"] = train_labels
-    re[model]["test_labels"] = test_labels
-    re[model]["test_upper_preds"] = test_upper_preds
-    re[model]["test_lower_preds"] = test_lower_preds
-    re[model]["reg"] = reg
+    re[model]["train_rmse"].append(train_rmse)
+    re[model]["train_preds"].append(train_preds)
+    re[model]["test_rmse"].append(test_rmse)
+    re[model]["test_preds"].append(test_preds)
+    re[model]["train_labels"].append(train_labels)
+    re[model]["test_labels"].append(test_labels)
+    re[model]["test_upper_preds"].append(test_upper_preds)
+    re[model]["test_lower_preds"].append(test_lower_preds)
+    re[model]["reg"].append(reg)
 
     # gpexact can't be serialized
     if type(reg) == tuple and isinstance(reg[0], torch.nn.Module):
@@ -86,13 +85,15 @@ def initialize_re_block(models):
     re = {}
     for c in models:
         re[c] = {}
-        re[c]["reg"] = {}
-        re[c]["train_rmse"] = {}
-        re[c]["test_rmse"] = {}
-        re[c]["test_preds"] = {}
-        re[c]["test_labels"] = {}
-        re[c]["test_lower_preds"] = {}
-        re[c]["test_upper_preds"] = {}
+        re[c]["reg"] = []
+        re[c]["train_rmse"] = []
+        re[c]["test_rmse"] = []
+        re[c]["train_preds"] = []
+        re[c]["test_preds"] = []
+        re[c]["train_labels"] = []
+        re[c]["test_labels"] = []
+        re[c]["test_lower_preds"] = []
+        re[c]["test_upper_preds"] = []
     return re
 
 
@@ -108,14 +109,79 @@ def get_split_data(org_data, split_method="k_fold_split", **kwargs):
     return splitter.split()
 
 
+def get_baselines(split_data):
+    baseline_re = {}
+    for model in split_data:
+        baseline_re[f"{model}"] = {}
+
+    for model in split_data:
+        model_data = split_data[model]
+        baseline_re[f"{model}"] = {"test_preds": {}, "test_labels": []}
+        test_preds = baseline_re[f"{model}"]["test_preds"]
+
+        folds = len(model_data["train_feats"])
+
+        # initialization for different types of baselines
+        test_preds["k_split"] = []
+        for lang_type in model_data["test_langs"][0].columns:
+            test_preds[f"{lang_type}"] = []
+
+        if len(split_data) > 1:
+            test_preds["multi_model"] = []
+
+        for i in range(folds):
+            train_labels = model_data["train_labels"][i]
+            test_labels = model_data["test_labels"][i]
+
+            train_langs = model_data["train_langs"][i]
+            test_langs = model_data["test_langs"][i]
+
+            mns = model_data["train_labels_mns"][i]
+            sstd = model_data["train_labels_sstd"][i]
+
+            test_lens = len(test_labels)
+
+            # k_split baseline
+            k_split_test_preds = train_labels[model].mean()
+            test_preds["k_split"].append(np.ones(test_lens) * k_split_test_preds)
+
+            # lang wise baseline, source language, target language, transfer language
+            lang_result_df = pd.DataFrame(columns=test_langs.columns, data=np.zeros(shape=(len(test_langs), len(test_langs.columns))))
+            lang_result_df = lang_result_df.set_index(test_langs.index)
+            for lang_type in test_langs.columns:
+                for lang in test_langs[lang_type]:
+                    lang_index = test_langs[test_langs[lang_type] == lang].index
+                    langwise_mean = train_labels[train_langs[lang_type] == lang][model].mean()
+                    # if no training data sharing the same language
+                    if pd.isna(langwise_mean):
+                        lang_result_df.loc[lang_index, lang_type] = k_split_test_preds
+                    else:
+                        lang_result_df.loc[lang_index, lang_type] = langwise_mean
+                test_preds[lang_type].append(lang_result_df[lang_type].to_numpy())
+
+            # model wise baseline
+            if len(split_data) > 1:
+                all_test_labels = [split_data[m]["test_labels"][i] for m in split_data if m != model]
+                all_test_labels = pd.concat(all_test_labels, axis=1)
+                multi_model_mean = all_test_labels.mean(axis=1).fillna(k_split_test_preds)
+                test_preds["multi_model"].append(multi_model_mean.to_numpy())
+
+            if mns is not None and sstd is not None:  # recover standardization
+                for baseline_type in test_preds:
+                    for i in range(test_preds[baseline_type]):
+                        test_preds[baseline_type][i] = recover(mns, sstd, test_preds[baseline_type][i])
+                test_labels = recover(mns, sstd, test_labels)
+
+            baseline_re[f"{model}"]["test_labels"].append(test_labels)
+
+    return baseline_re
+
+
 def get_result(split_data,
-               task,
                regressor="xgboost",
                get_ci=False,
                quantile=0.95,
                **kwargs):
-    mono, multi_model, _, _, _ = task_att(task)
-
     # Initialization
     re = initialize_re_block(list(split_data.keys()))
 
@@ -132,22 +198,18 @@ def get_result(split_data,
             test_feats = model_data["test_feats"][i]
             test_labels = model_data["test_labels"][i]
 
-            mns = model_data["mns"][i]
-            sstd = model_data["sstd"][i]
+            mns = model_data["train_labels_mns"][i]
+            sstd = model_data["train_labels_sstd"][i]
 
             train_rmse, train_preds, test_rmse, test_preds, train_labels_np, test_labels_np, \
                 test_upper_preds, test_lower_preds, reg = \
                     run_once(train_feats, train_labels, test_feats, test_labels,
-                             mns, sstd, regressor, get_ci, quantile)
+                             mns, sstd, regressor, get_ci, quantile, kwargs=kwargs)
 
             augment_re(re, model, train_rmse, train_preds, test_rmse, test_preds, train_labels_np, test_labels_np,
                        test_upper_preds, test_lower_preds, reg)
-
-
-
-
-    sort_pred_refactor({task: re}, task, get_ci=get_ci)
     return re
+
 
 @deprecated
 def sort_pred_refactor(re_dict, task, get_ci=False):
@@ -265,6 +327,7 @@ def bayesian_optimization(task, k_fold_eval=False, regressor="xgboost",
             print("Found {}!".format(tsf_lang))
     return re
 
+
 @deprecated
 def get_lower_upper_reg(reg, train_feats, train_labels, quantile):
     if isinstance(reg, xgb.XGBRegressor):
@@ -280,6 +343,7 @@ def get_lower_upper_reg(reg, train_feats, train_labels, quantile):
     else:
         raise KeyError
     return upper_reg, lower_reg
+
 
 @deprecated
 def get_lang_from_feats(row, ttt="tsf"):

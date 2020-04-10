@@ -1,5 +1,5 @@
 import os
-from collect_feats import get_file_pattern, build_lc_converter
+from preprocess.collect_feats import get_file_pattern, build_lc_converter
 import sys
 import pandas as pd
 

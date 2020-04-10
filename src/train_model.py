@@ -1,6 +1,6 @@
 from sklearn import gaussian_process
 from functools import partial
-from sklearn.gaussian_process.kernels import Matern, WhiteKernel, ConstantKernel
+from sklearn.gaussian_process.kernels import Matern, WhiteKernel
 from scipy.stats import norm
 import numpy as np
 import xgboost as xgb
@@ -15,7 +15,7 @@ from sklearn.linear_model import LinearRegression
 logger = getLogger()
 
 def train_regressor(train_feats, train_labels, regressor="xgboost", quantile=0.95, verbose=False, **kwargs):
-    logger.info(f"Training a {regressor} model with training data of shape [{', '.join(train_feats.shape)}]")
+    logger.info(f"Training a {regressor} model with training data of shape {train_feats.shape}.")
     if regressor == "xgboost":
         reg = xgb.XGBRegressor(objective ='reg:squarederror', learning_rate=0.1,
                                max_depth=10, n_estimators=100)
@@ -119,7 +119,7 @@ def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
             upper_preds = recover(mns, sstd, upper_preds)
     if get_rmse:
         rmse = calculate_rmse(test_labels, preds)
-    return preds, lower_preds, upper_preds, rmse
+    return preds, lower_preds, upper_preds, rmse, test_labels
 
 
 # Copy from https://towardsdatascience.com/regression-prediction-intervals-with-xgboost-428e0a018b

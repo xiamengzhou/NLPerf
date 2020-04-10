@@ -2,11 +2,11 @@ import numpy as np
 from xgboost import plot_importance
 import math
 
-from read_data import read_data
-from run_predictions import get_result, get_split_data, get_baselines
-from task_feats import task_eval_columns, get_tasks
-from train_model import calculate_rmse
-from logger import create_logger
+from src.read_data import read_data
+from src.run_predictions import get_result, get_split_data, get_baselines
+from src.task_feats import task_eval_columns, get_tasks
+from src.train_model import calculate_rmse
+from src.logger import create_logger
 from deprecated import deprecated
 
 @deprecated
@@ -202,7 +202,7 @@ def k_fold_evaluation(task,
                       quantile=0.95,
                       k=5,
                       num_running=5):
-    logger = create_logger(f"logs/{task}_{k}fold_MM.log")
+    logger = create_logger(f"logs/{task}_{k}fold.log")
 
     test_rmse_all = {}
     test_rmse_all_baseline = {}
@@ -219,11 +219,11 @@ def k_fold_evaluation(task,
         split_data = get_split_data(org_data, "k_fold_split", k=k)
         re = get_result(split_data, regressor, get_ci, quantile)
         aggregate_k_split_result(re)
-        log_results_for_one_run(split_data, re)
+        log_results_for_one_run(split_data, re, logger)
 
         baseline_re = get_baselines(split_data)
         aggregate_k_split_baseline_result(baseline_re)
-        log_results_for_baseline(baseline_re)
+        log_results_for_baseline(baseline_re, logger)
 
         for model in split_data:
             test_rmse_all_baseline[model] = {}
@@ -317,18 +317,14 @@ if __name__ == '__main__':
                       "Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, " \
                       "GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC".split(", ")
 
-
-
     # specific_evaluation(task, regressor="xgboost", get_ci=False)
 
+    k_fold_evaluation("bli",
+                      shuffle=True,
+                      selected_feats=None,
+                      combine_models=False,
+                      regressor="xgboost",
+                      k=5,
+                      num_running=10)
 
-
-    # k_fold_evaluation("monomt",
-    #                   shuffle=True,
-    #                   selected_feats=None,
-    #                   combine_models=True,
-    #                   regressor="xgboost",
-    #                   k=5,
-    #                   num_running=10)
-
-    get_re_from_all_langs()
+    # get_re_from_all_langs()

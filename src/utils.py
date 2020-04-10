@@ -1,9 +1,8 @@
 import pickle as pkl
-import numpy as np
 import lang2vec.lang2vec as l2v
 import glob
 from logging import getLogger
-from task_feats import task_eval_columns
+from src.task_feats import task_eval_columns
 import pandas as pd
 import os
 import sys

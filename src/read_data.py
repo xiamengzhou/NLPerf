@@ -5,7 +5,6 @@ import pandas as pd
 from task_feats import task_eval_columns, task_att
 import pickle as pkl
 from copy import deepcopy
-import sys
 import os
 from logging import getLogger
 import warnings
@@ -102,7 +101,7 @@ def read_data(task,
     #
     # return a data dictionary
 
-    data_folder = os.path.dirname(__file__) if folder is None else folder
+    data_folder = os.path.dirname(os.path.dirname(__file__)) if folder is None else folder
     data = pd.read_csv("{}/data/data_{}.csv".format(data_folder, task), thousands=',')
 
     eval_columns = task_eval_columns(task)
@@ -133,15 +132,10 @@ def read_data(task,
             for c in syntax_feats.columns:
                 v = syntax_feats.loc[data.loc[index, "Target Language Code"], c]
                 data.loc[index, c] = np.nan if v == "--" else float(v)
-                # v = df22.loc[lang_pairs.loc[index, "Source Language Code"], c]
-                # feats.loc[index, c + "_2"] = np.nan if v == "--" else float(v)
+                v = syntax_feats.loc[data.loc[index, "Source Language Code"], c]
+                data.loc[index, c + "_2"] = np.nan if v == "--" else float(v)
 
     langs = None
-    langvec_dict = None
-
-    # add langvec values
-    if task_att(task)[2]:
-        langvec_dict = load_l2v_features(task)
 
     # shuffle data
     if shuffle:
@@ -198,13 +192,16 @@ def read_data(task,
         data.drop(axis=1, labels=headers[:2], inplace=True)
         remove_c = [c for c in headers if "freq" in c]
         data = data.drop(axis=1, labels=remove_c)
-
-    # after fix_bli
-    if task == "bli":
-        # modeling the difference
-        data["diff1"] = data[eval_columns[0]] - data[eval_columns[1]]
-        data["diff2"] = data[eval_columns[0]] - data[eval_columns[2]]
-        data["diff3"] = data[eval_columns[1]] - data[eval_columns[2]]
+    elif task == "bli2":
+        langs = data.iloc[:, 1:3]
+        data = data.drop(axis=1, labels=headers[0:3])
+        for index in data.index:
+            for column in data.columns:
+                if data.loc[index, column] == "--":
+                    data.loc[index, column] = np.nan
+                else:
+                    data.loc[index, column] = float(data.loc[index, column])
+        data = data.astype(float)
 
     # remove columns with the same number
     data = remove_noinfo_columns(data)
@@ -512,7 +509,7 @@ class Specific_Spliter(Spliter):
                 test_lang_count = len(test_langs)
 
                 logger.info(f"Specific splitter splitting {lens} experimental records for model {model} into "
-                            f"{lens - test_lang_count} training experimental records and {test_lang_count} experimental records.")
+                            f"{lens - test_lang_count} training experimental records and {test_lang_count} test experimental records.")
 
                 # same as other spliter methods
                 self.run_assertion(train_feats, train_labels, test_feats, test_labels, test_lang_count)
@@ -546,6 +543,7 @@ class Group_Spliter(Spliter):
 
             data[model] = deepcopy(self.block)
             pass
+
 
 if __name__ == '__main__':
     data = read_data("ud", folder="/Users/mengzhouxia/dongdong/CMU/Neubig/nlppred", combine_models=False)

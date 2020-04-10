@@ -10,10 +10,13 @@ ATT = {"tsfmt": [False, False, False, False, False],
        "wiki": [False, False, False, True, False],
        "ma": [True, True, False, True, True],
        "lemma": [True, True, False, True, True],
-       "ud": [True, True, False, True, True]}
+       "ud": [True, True, False, True, True],
+       "bli2": [False, False, False, True, True]}
+
 
 def task_att(task):
     return ATT[task]
+
 
 eval_columns = {"sf": ["Keywords_Precision", "Keywords_Recall", "Keywords_F1", "NN_Precision", "NN_Recall", "NN_F1"],
                 "bli": ["Sinkhorn", "Artetxe17", "Artetxe16"],
@@ -39,7 +42,8 @@ eval_columns = {"sf": ["Keywords_Precision", "Keywords_Recall", "Keywords_F1", "
                        "Unknown", "CARNEGIEMELLON-02-2"],
                 "ud": ["HIT-SCIR", "Stanford", "TurkuNLP", "UDPipe", "ICS", "NLP-Cube", "CEA", "LATTICE", "SLT-Interactions",
                        "ParisNLP", "AntNLP", "LeisureX", "IBM", "Uppsala", "UniMelb", "KParse", "BASELINE",
-                       "Fudan", "Phoenix", "CUNI", "ONLP", "BOUN"]}
+                       "Fudan", "Phoenix", "CUNI", "ONLP", "BOUN"],
+                "bli2": ["Vecmap", "Muse"]}
 
 
 def task_eval_columns(task):

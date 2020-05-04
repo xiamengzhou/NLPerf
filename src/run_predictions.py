@@ -1,7 +1,7 @@
 from train_model import train_regressor, test_regressor
 from utils import convert_label, recover
 from task_feats import task_att
-from read_data import read_data, K_Fold_Spliter, Random_Spliter, Specific_Spliter
+from read_data import read_data, K_Fold_Spliter, Random_Spliter, Specific_Spliter, MM_K_fold_Spliter
 import xgboost as xgb
 from sklearn.ensemble import GradientBoostingRegressor
 import pandas as pd
@@ -52,12 +52,16 @@ def run_once(train_feats,
                                         quantile=quantile)
 
     train_preds, _, _, train_rmse, train_labels = test_regressor(reg, train_feats, train_labels, mns=mns, sstd=sstd)
-    test_preds, test_lower_preds, test_upper_preds, test_rmse, test_labels = test_regressor(reg, test_feats,
-                                                                               test_labels,
-                                                                               quantile=quantile,
-                                                                               lower_reg=lower_reg,
-                                                                               upper_reg=upper_reg,
-                                                                               mns=mns, sstd=sstd)
+
+    if len(test_feats) == 0:
+        test_preds, test_lower_preds, test_upper_preds, test_rmse, test_labels = None, None, None, None, None
+    else:
+        test_preds, test_lower_preds, test_upper_preds, test_rmse, test_labels = test_regressor(reg, test_feats,
+                                                                                               test_labels,
+                                                                                               quantile=quantile,
+                                                                                               lower_reg=lower_reg,
+                                                                                               upper_reg=upper_reg,
+                                                                                               mns=mns, sstd=sstd)
 
     return train_rmse, train_preds, test_rmse, test_preds, train_labels, test_labels, \
            test_upper_preds, test_lower_preds, reg
@@ -104,6 +108,8 @@ def get_split_data(org_data, split_method="k_fold_split", **kwargs):
         splitter = K_Fold_Spliter(org_data, k=kwargs["k"])
     elif split_method == "specific_split":
         splitter = Specific_Spliter(org_data, kwargs["train_ids"], kwargs["test_ids"])
+    elif split_method == "rep_k_fold_split":
+        splitter = MM_K_fold_Spliter(org_data, k=kwargs["k"])
     else:
         return
     return splitter.split()

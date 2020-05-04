@@ -85,8 +85,7 @@ def test_regressor(reg, test_feats, test_labels=None, get_rmse=True,
                    get_ci=False, quantile=0.95, lower_reg=None, upper_reg=None,
                    mns=None, sstd=None):
     preds = None; lower_preds = None; upper_preds = None; rmse = None
-    # print(len(reg) == 2)
-    # print(isinstance(reg[0], ExactGPModel))
+
     if get_ci:
         if isinstance(reg, xgb.XGBRegressor):
             preds = reg.predict(test_feats)

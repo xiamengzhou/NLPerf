@@ -11,12 +11,10 @@ from src.utils import log_args
 from src.logger import create_logger
 import argparse
 import numpy as np
-import random
 from src.train_model import calculate_rmse
 from src.read_data import Specific_Spliter
 from collections import defaultdict
 from random import sample
-
 
 
 def init_logging():
@@ -24,8 +22,9 @@ def init_logging():
     logger.info("python3 " + " ".join(sys.argv))
     log_args(params)
 
+
 def each_baseline(train_labels, test_labels):
-    test_labels = test_labels.to_numpy()
+    test_labels = test_labels.values
     test_preds = np.full_like(test_labels, train_labels.mean()[0])
     rmse = calculate_rmse(test_preds, test_labels)
     return rmse
@@ -126,7 +125,7 @@ def run_ex(task, n=3, regressor="xgboost", portion=0.5):
     logger.info("All experiments done!")
 
     for model in models:
-        logger.info("Model: {}, RMSE@{}: {:.2f}".format(model, n, np.mean(test_rmses[model])))
+        logger.info("Model: {}, ex: {}  RMSE@{}: {:.2f}".format(model, len(test_rmses[model]), n, np.mean(test_rmses[model])))
 
     logger.info("All models, RMSE@{}: {:.2f}".format(n, np.mean([np.mean(test_rmses[model]) for model in models])))
     for baseline in baseline_rmses[models[0]]:

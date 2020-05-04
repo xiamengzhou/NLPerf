@@ -1,3 +1,7 @@
+"""
+    Paper Section 5
+"""
+
 import numpy as np
 from run_predictions import run_once
 from read_data import read_data, Specific_Spliter
@@ -182,11 +186,20 @@ def find_nbest(task="tsfmt", n=2, beam_size=5, regressor="xgboost"):
             cc += 1
 
 
-def random_search(task="tsfmt", n=2, sample=1, regressor='xgboost'):
+def random_search(task="tsfmt", n=2, sample=100, regressor='xgboost'):
     paras = {"mean_module": {"name": "constant_mean", "paras": {}}, "covar_module": {"name": "rbf", "paras": {}}}
     # Read data
     re = {}
     org_data = read_data(task, shuffle=False, combine_models=True)
+
+    model_data = org_data["all"]
+    feats = model_data["feats"]
+    labels = model_data["labels"]
+    langs = model_data["langs"]
+
+    d = defaultdict(list)
+    for i, (index, lang) in enumerate(zip(langs.index, langs.values)):
+        d[tuple(lang)].append(index)
 
     logger.info("Starting random search for the representative languages for {}.".format(task))
     model_data = org_data["all"]
@@ -198,7 +211,10 @@ def random_search(task="tsfmt", n=2, sample=1, regressor='xgboost'):
     logger.info("There are {} experiments running for n={}...".format(sample, n))
     for kk in range(sample):
         test_ids = list(ids)
-        train_ids = random.sample(test_ids, n)
+        train_ids = []
+        for lang in random.sample(list(d), n):
+            train_ids += d[lang]
+
         for i in train_ids:
             test_ids.remove(i)
 
@@ -242,7 +258,7 @@ if __name__ == '__main__':
     # most representative datasets search
     if params.type == "random_search":
         # random search
-        for kk in range(2, 6):
+        for kk in range(1, 6):
             random_search(task, n=kk)
     else:
         n = params.n

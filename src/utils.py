@@ -2,7 +2,7 @@ import pickle as pkl
 import lang2vec.lang2vec as l2v
 import glob
 from logging import getLogger
-from src.task_feats import task_eval_columns
+from task_feats import task_eval_columns
 import pandas as pd
 import os
 import sys

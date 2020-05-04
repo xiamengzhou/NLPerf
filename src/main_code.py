@@ -1,13 +1,16 @@
 import numpy as np
 from xgboost import plot_importance
 import math
+import sys
+sys.path.append("../")
 
-from src.read_data import read_data
-from src.run_predictions import get_result, get_split_data, get_baselines
-from src.task_feats import task_eval_columns, get_tasks
-from src.train_model import calculate_rmse
-from src.logger import create_logger
+from read_data import read_data
+from run_predictions import get_result, get_split_data, get_baselines
+from task_feats import task_eval_columns, get_tasks
+from train_model import calculate_rmse
+from logger import create_logger
 from deprecated import deprecated
+from collections import defaultdict
 
 @deprecated
 def aget_result(regressor="xgboost", tasks="all", split_method="k_split", get_rmse=True,
@@ -201,8 +204,9 @@ def k_fold_evaluation(task,
                       get_ci=False,
                       quantile=0.95,
                       k=5,
-                      num_running=5):
-    logger = create_logger(f"logs/{task}_{k}fold.log")
+                      num_running=5,
+                      reorg_data=True):
+    logger = create_logger(f"logs/{task}_{k}fold{'_reorg' if reorg_data else ''}.log")
 
     test_rmse_all = {}
     test_rmse_all_baseline = {}
@@ -216,7 +220,12 @@ def k_fold_evaluation(task,
                              selected_feats=selected_feats,
                              combine_models=combine_models)
 
-        split_data = get_split_data(org_data, "k_fold_split", k=k)
+        if reorg_data:
+            assert combine_models
+            split_data = get_split_data(org_data, "rep_k_fold_split", k=k)
+        else:
+            split_data = get_split_data(org_data, "k_fold_split", k=k)
+
         re = get_result(split_data, regressor, get_ci, quantile)
         aggregate_k_split_result(re)
         log_results_for_one_run(split_data, re, logger)
@@ -317,14 +326,22 @@ if __name__ == '__main__':
                       "Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, " \
                       "GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC".split(", ")
 
+    # ted evaluation versus human performance
     # specific_evaluation(task, regressor="xgboost", get_ci=False)
 
+    # SM/MM k fold evaluation
+    # combine_models=True, MM
+    # combine_models=False, SM
+    # combine_models=True, reorg_data=True, rep
     k_fold_evaluation("bli",
                       shuffle=True,
                       selected_feats=None,
-                      combine_models=False,
+                      combine_models=True,
                       regressor="xgboost",
                       k=5,
-                      num_running=10)
+                      num_running=10,
+                      reorg_data=False)
 
     # get_re_from_all_langs()
+
+

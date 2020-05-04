@@ -1,5 +1,6 @@
 import xgboost as xgb
 import numpy as np
+from collections import defaultdict
 from deprecated import deprecated
 import pandas as pd
 from task_feats import task_eval_columns, task_att
@@ -275,9 +276,9 @@ def read_data(task,
             langs.append(org_data[model]["langs"])
 
         # concatenate experiment records from all models
-        feats = pd.concat(feats, sort=False).reset_index(drop=True)
-        labels = pd.concat(labels, sort=False).reset_index(drop=True)
-        langs = pd.concat(langs, sort=False).reset_index(drop=True)
+        feats = pd.concat(feats).reset_index(drop=True)
+        labels = pd.concat(labels).reset_index(drop=True)
+        langs = pd.concat(langs).reset_index(drop=True)
 
         # shuffle the data
         idx = np.random.permutation(feats.index)
@@ -439,6 +440,69 @@ class K_Fold_Spliter(Spliter):
         return k_fold_data
 
 
+class MM_K_fold_Spliter(Spliter):
+    def __init__(self, org_data, standardize=False, k=5):
+        Spliter.__init__(self, org_data, standardize)
+        self.k = k
+
+    def split(self):
+        k_fold_data = {"all": deepcopy(self.block)}
+
+        model_data = self.org_data["all"]
+        feats = model_data["feats"]
+        labels = model_data["labels"]
+        langs = model_data["langs"]
+
+        d = defaultdict(list)
+        for i, (index, lang) in enumerate(zip(langs.index, langs.values)):
+            d[tuple(lang)].append(index)
+        keys = list(d)
+
+        df_lens = len(feats)
+        lens = len(d)
+        logger.info(f"MM K fold splitter splitting {lens} * model experimental records for model all into {self.k} folds.")
+
+        # main logic
+        ex_per_fold = int(np.ceil(lens / self.k))
+        for j in range(self.k):
+            start = ex_per_fold * j
+            end = ex_per_fold * (j + 1)
+            if start < lens:
+                test_langs_key = keys[start: end]
+
+                test_ids = []
+                for lang in test_langs_key:
+                    test_ids += d[lang]
+
+                train_ids = list(langs.index)
+                for test_id in test_ids:
+                    train_ids.remove(test_id)
+
+                train_feats, train_labels, train_langs = feats.loc[train_ids], labels.loc[train_ids], langs.loc[train_ids]
+                test_feats, test_labels, test_langs = feats.loc[test_ids], labels.loc[test_ids], langs.loc[test_ids]
+
+                test_lang_count = len(test_langs)
+                logger.info(f"Fold {j} has {df_lens - test_lang_count} training experimental records "
+                            f"and {test_lang_count} testing experimental records.")
+
+                # same as other spliter methods
+                self.run_assertion(train_feats, train_labels, test_feats, test_labels, test_lang_count)
+
+                train_feats, train_labels, test_feats, test_labels, mns, sstd = \
+                    self.standardize_data(train_feats, train_labels, test_feats, test_labels)
+
+                # place all the k folds data
+                self.augment(k_fold_data["all"], train_feats, train_labels, test_feats, test_labels,
+                             train_langs, test_langs, mns, sstd)
+
+        actual_k = len(k_fold_data["all"]["train_feats"])
+        if actual_k < self.k:
+            logger.info(
+                f"Actually split {df_lens} experimental records into {actual_k < self.k} folds.")
+
+        return k_fold_data
+
+
 # random_split for data
 class Random_Spliter(Spliter):
     def __init__(self, org_data, percentage=10, standardize=False):
@@ -486,6 +550,11 @@ class Specific_Spliter(Spliter):
         Spliter.__init__(self, org_data, standardize)
         self.train_ids = train_ids
         self.test_ids = test_ids
+
+    def run_assertion(self, train_feats, train_labels, test_feats, test_labels, lang_count):
+        assert type(train_feats) == pd.DataFrame, type(train_labels) == pd.DataFrame
+        assert type(test_feats) == pd.DataFrame, type(test_labels) == pd.DataFrame
+        assert len(test_feats) == len(test_labels) == lang_count
 
     def split(self):
         data = {}

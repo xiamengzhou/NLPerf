@@ -205,7 +205,7 @@ def k_fold_evaluation(task,
                       quantile=0.95,
                       k=5,
                       num_running=5,
-                      reorg_data=True):
+                      reorg_data=False):
     logger = create_logger(f"logs/{task}_{k}fold{'_reorg' if reorg_data else ''}.log")
 
     test_rmse_all = {}
@@ -333,14 +333,23 @@ if __name__ == '__main__':
     # combine_models=True, MM
     # combine_models=False, SM
     # combine_models=True, reorg_data=True, rep
-    k_fold_evaluation("bli",
+    # Tasks:
+    #   TED-MT: monomt
+    #   Wiki-MT: wiki
+    #   BLI: bli
+    #   MA: ma
+    #   UD: ud
+    #   TSFMT: tsfmt
+    #   TSFEL: tsfel
+    #   TSFPOS: tsfpos
+    #   TSFPARSING: tsfparsing
+    k_fold_evaluation("monomt",
                       shuffle=True,
                       selected_feats=None,
-                      combine_models=True,
+                      combine_models=False,
                       regressor="xgboost",
                       k=5,
-                      num_running=10,
-                      reorg_data=False)
+                      num_running=10)
 
     # get_re_from_all_langs()
 

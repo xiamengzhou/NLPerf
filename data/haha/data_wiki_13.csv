@@ -1,0 +1,12 @@
+,Source,Target,BLEU,"Data Size (parallel sentences, K)",dataset size (sent),Source lang word TTR,Source lang subword TTR,Target lang word TTR,Target lang subword TTR,Source lang vocab size,Source lang subword vocab size,Target lang vocab size,Target lang subword vocab size,Source lang Average Sent. Length,Target lang average sent. length,Source lang word Count,Source lang subword Count,Target lang word Count,Target lang subword Count,geographic,genetic,inventory,syntactic,phonological,featural
+1300,zh-tw,por,6.3,,,,,,,,,,,,,,,,,,,,,,
+1301,zh-tw,pt-br,6.9,,,,,,,,,,,,,,,,,,,,,,
+1302,zh-tw,ron,3.5,,,,,,,,,,,,,,,,,,,,,,
+1303,zh-tw,rus,3.9,,,,,,,,,,,,,,,,,,,,,,
+1304,zh-tw,slk,1.4,,,,,,,,,,,,,,,,,,,,,,
+1305,zh-tw,slv,2.1,,,,,,,,,,,,,,,,,,,,,,
+1306,zh-tw,srp,0.9,,,,,,,,,,,,,,,,,,,,,,
+1307,zh-tw,swe,3.0,,,,,,,,,,,,,,,,,,,,,,
+1308,zh-tw,tur,2.4,,,,,,,,,,,,,,,,,,,,,,
+1309,zh-tw,ukr,2.9,,,,,,,,,,,,,,,,,,,,,,
+1310,zh-tw,vie,10.0,,,,,,,,,,,,,,,,,,,,,,

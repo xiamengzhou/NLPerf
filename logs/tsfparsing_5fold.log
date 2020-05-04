@@ -1,0 +1,274 @@
+INFO - 04/02/20 11:38:21 - 0:00:00 - **************************************************
+INFO - 04/02/20 11:38:21 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 11:38:21 - 0:00:00 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:21 - 0:00:00 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:21 - 0:00:00 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:21 - 0:00:00 - Target lang: 30
+INFO - 04/02/20 11:38:21 - 0:00:00 - Transfer lang: 30
+INFO - 04/02/20 11:38:21 - 0:00:00 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:21 - 0:00:00 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:21 - 0:00:00 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:21 - 0:00:00 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:21 - 0:00:01 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:22 - 0:00:01 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.729771196532327
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.191238467291875
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 5.969615704867101
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.266824817243239
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 5.846696293066139
+INFO - 04/02/20 11:38:22 - 0:00:01 - Model: Accuracy, Overall test rmse: 6.208293108636476
+INFO - 04/02/20 11:38:25 - 0:00:04 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.574383167002505 
+INFO - 04/02/20 11:38:25 - 0:00:04 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.074082488033179 
+INFO - 04/02/20 11:38:25 - 0:00:04 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.611612876785136 
+INFO - 04/02/20 11:38:25 - 0:00:04 - **************************************************
+INFO - 04/02/20 11:38:25 - 0:00:04 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 11:38:25 - 0:00:04 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:25 - 0:00:04 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:25 - 0:00:04 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:25 - 0:00:04 - Target lang: 30
+INFO - 04/02/20 11:38:25 - 0:00:04 - Transfer lang: 30
+INFO - 04/02/20 11:38:25 - 0:00:04 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:25 - 0:00:04 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:25 - 0:00:04 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:25 - 0:00:04 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:25 - 0:00:04 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:25 - 0:00:05 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 5.529983800043285
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.544374285204115
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.199542630142942
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 7.055730336286899
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 6.879693374179936
+INFO - 04/02/20 11:38:26 - 0:00:05 - Model: Accuracy, Overall test rmse: 6.464632950720037
+INFO - 04/02/20 11:38:28 - 0:00:08 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.626362809649937 
+INFO - 04/02/20 11:38:28 - 0:00:08 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.144497641427089 
+INFO - 04/02/20 11:38:28 - 0:00:08 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.433753963671139 
+INFO - 04/02/20 11:38:28 - 0:00:08 - **************************************************
+INFO - 04/02/20 11:38:28 - 0:00:08 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 11:38:28 - 0:00:08 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:28 - 0:00:08 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:28 - 0:00:08 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:28 - 0:00:08 - Target lang: 30
+INFO - 04/02/20 11:38:28 - 0:00:08 - Transfer lang: 30
+INFO - 04/02/20 11:38:28 - 0:00:08 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:28 - 0:00:08 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:29 - 0:00:08 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:29 - 0:00:08 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:29 - 0:00:08 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:29 - 0:00:08 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 7.109126745674042
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 5.819241776341459
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 7.259819950547428
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 5.211142739335975
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 6.623707559170562
+INFO - 04/02/20 11:38:29 - 0:00:08 - Model: Accuracy, Overall test rmse: 6.451941632269924
+INFO - 04/02/20 11:38:32 - 0:00:11 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.606598207901644 
+INFO - 04/02/20 11:38:32 - 0:00:11 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.05522516624213 
+INFO - 04/02/20 11:38:32 - 0:00:11 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.519975855684194 
+INFO - 04/02/20 11:38:32 - 0:00:11 - **************************************************
+INFO - 04/02/20 11:38:32 - 0:00:11 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 11:38:32 - 0:00:11 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:32 - 0:00:11 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:32 - 0:00:11 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:32 - 0:00:11 - Target lang: 30
+INFO - 04/02/20 11:38:32 - 0:00:11 - Transfer lang: 30
+INFO - 04/02/20 11:38:32 - 0:00:11 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:32 - 0:00:11 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:32 - 0:00:11 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:32 - 0:00:12 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:33 - 0:00:12 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:33 - 0:00:12 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.178895768404584
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.062032411249523
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.13592268574652
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.073944879614157
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 5.790451693074418
+INFO - 04/02/20 11:38:33 - 0:00:12 - Model: Accuracy, Overall test rmse: 6.0497714715140445
+INFO - 04/02/20 11:38:36 - 0:00:15 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.590508556926 
+INFO - 04/02/20 11:38:36 - 0:00:15 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.10448803902592 
+INFO - 04/02/20 11:38:36 - 0:00:15 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.533953735483488 
+INFO - 04/02/20 11:38:36 - 0:00:15 - **************************************************
+INFO - 04/02/20 11:38:36 - 0:00:15 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 11:38:36 - 0:00:15 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:36 - 0:00:15 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:36 - 0:00:15 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:36 - 0:00:15 - Target lang: 30
+INFO - 04/02/20 11:38:36 - 0:00:15 - Transfer lang: 30
+INFO - 04/02/20 11:38:36 - 0:00:15 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:36 - 0:00:15 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:36 - 0:00:15 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:36 - 0:00:15 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:36 - 0:00:16 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:36 - 0:00:16 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.040649907444921
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.576410321547254
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.025835283259781
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.065840044023276
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 7.027479448485751
+INFO - 04/02/20 11:38:37 - 0:00:16 - Model: Accuracy, Overall test rmse: 6.359704359814408
+INFO - 04/02/20 11:38:39 - 0:00:19 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.591302656665572 
+INFO - 04/02/20 11:38:39 - 0:00:19 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.099628774288005 
+INFO - 04/02/20 11:38:39 - 0:00:19 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.458333548983639 
+INFO - 04/02/20 11:38:39 - 0:00:19 - **************************************************
+INFO - 04/02/20 11:38:39 - 0:00:19 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 11:38:39 - 0:00:19 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:39 - 0:00:19 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:39 - 0:00:19 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:39 - 0:00:19 - Target lang: 30
+INFO - 04/02/20 11:38:39 - 0:00:19 - Transfer lang: 30
+INFO - 04/02/20 11:38:39 - 0:00:19 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:39 - 0:00:19 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:40 - 0:00:19 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:40 - 0:00:19 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:40 - 0:00:19 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:40 - 0:00:19 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 5.954343847167851
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.259182011001821
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.009795831897904
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 5.547952725114277
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 6.870679790240449
+INFO - 04/02/20 11:38:40 - 0:00:20 - Model: Accuracy, Overall test rmse: 6.143862567772383
+INFO - 04/02/20 11:38:44 - 0:00:23 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.562554932834896 
+INFO - 04/02/20 11:38:44 - 0:00:23 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.156393958821404 
+INFO - 04/02/20 11:38:44 - 0:00:23 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.426365007659014 
+INFO - 04/02/20 11:38:44 - 0:00:23 - **************************************************
+INFO - 04/02/20 11:38:44 - 0:00:23 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 11:38:44 - 0:00:23 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:44 - 0:00:23 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:44 - 0:00:23 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:44 - 0:00:23 - Target lang: 30
+INFO - 04/02/20 11:38:44 - 0:00:23 - Transfer lang: 30
+INFO - 04/02/20 11:38:44 - 0:00:23 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:44 - 0:00:23 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:44 - 0:00:23 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:44 - 0:00:24 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:45 - 0:00:24 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:45 - 0:00:24 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.156845970414789
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.508871152087047
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 5.6925196138053185
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 7.049222768069517
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 6.101805304044843
+INFO - 04/02/20 11:38:45 - 0:00:24 - Model: Accuracy, Overall test rmse: 6.3182355944326964
+INFO - 04/02/20 11:38:48 - 0:00:27 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.566005727865054 
+INFO - 04/02/20 11:38:48 - 0:00:27 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.083333451974836 
+INFO - 04/02/20 11:38:48 - 0:00:27 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.583865607947528 
+INFO - 04/02/20 11:38:48 - 0:00:27 - **************************************************
+INFO - 04/02/20 11:38:48 - 0:00:27 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 11:38:48 - 0:00:27 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:48 - 0:00:27 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:48 - 0:00:27 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:48 - 0:00:27 - Target lang: 30
+INFO - 04/02/20 11:38:48 - 0:00:27 - Transfer lang: 30
+INFO - 04/02/20 11:38:48 - 0:00:27 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:48 - 0:00:27 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:48 - 0:00:27 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:48 - 0:00:28 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:49 - 0:00:28 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:49 - 0:00:28 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.001807765404301
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 5.91217818393379
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.182576288954396
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.034764166341601
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 6.7316021971841185
+INFO - 04/02/20 11:38:49 - 0:00:28 - Model: Accuracy, Overall test rmse: 6.1795249588408625
+INFO - 04/02/20 11:38:52 - 0:00:31 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.598013781535396 
+INFO - 04/02/20 11:38:52 - 0:00:31 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.062742378703145 
+INFO - 04/02/20 11:38:52 - 0:00:31 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.421115189669363 
+INFO - 04/02/20 11:38:52 - 0:00:31 - **************************************************
+INFO - 04/02/20 11:38:52 - 0:00:31 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 11:38:52 - 0:00:31 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:52 - 0:00:31 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:52 - 0:00:31 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:52 - 0:00:31 - Target lang: 30
+INFO - 04/02/20 11:38:52 - 0:00:31 - Transfer lang: 30
+INFO - 04/02/20 11:38:52 - 0:00:31 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:52 - 0:00:31 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:52 - 0:00:31 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:52 - 0:00:32 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:53 - 0:00:32 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:53 - 0:00:32 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.321274895992403
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 6.361545361298755
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 5.379708714892576
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.255421731085177
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 5.610470280655596
+INFO - 04/02/20 11:38:53 - 0:00:32 - Model: Accuracy, Overall test rmse: 5.999611976711644
+INFO - 04/02/20 11:38:56 - 0:00:35 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.570661523235735 
+INFO - 04/02/20 11:38:56 - 0:00:35 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.066766458467653 
+INFO - 04/02/20 11:38:56 - 0:00:35 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.426806330632305 
+INFO - 04/02/20 11:38:56 - 0:00:35 - **************************************************
+INFO - 04/02/20 11:38:56 - 0:00:35 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 11:38:56 - 0:00:35 - Loaded 870 experiment records for 1 models: Accuracy
+INFO - 04/02/20 11:38:56 - 0:00:35 - Loaded 870 experiment records from Accuracy.
+INFO - 04/02/20 11:38:56 - 0:00:35 - 13 feats: Word overlap, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 11:38:56 - 0:00:35 - Target lang: 30
+INFO - 04/02/20 11:38:56 - 0:00:35 - Transfer lang: 30
+INFO - 04/02/20 11:38:56 - 0:00:35 - K fold splitter splitting 870 experimental records for model Accuracy into 5 folds.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Fold 0 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Fold 1 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Fold 2 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Fold 3 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Fold 4 has 696 training experimental records and 174 testing experimental records.
+INFO - 04/02/20 11:38:56 - 0:00:35 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:56 - 0:00:35 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:56 - 0:00:36 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:56 - 0:00:36 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:57 - 0:00:36 - Training a xgboost model with training data of shape (696, 13).
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Fold: 0, Training data: 696 Test data: 174 Test rmse: 6.605832774688521
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Fold: 1, Training data: 696 Test data: 174 Test rmse: 5.8425299298169815
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Fold: 2, Training data: 696 Test data: 174 Test rmse: 6.295978993357765
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Fold: 3, Training data: 696 Test data: 174 Test rmse: 6.533398471279589
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Fold: 4, Training data: 696 Test data: 174 Test rmse: 5.814166842619055
+INFO - 04/02/20 11:38:57 - 0:00:36 - Model: Accuracy, Overall test rmse: 6.227380922524136
+INFO - 04/02/20 11:39:00 - 0:00:39 - Model: Accuracy, Baseline: k_split, Overall test rmse: 17.577680513025914 
+INFO - 04/02/20 11:39:00 - 0:00:39 - Model: Accuracy, Baseline: Target lang, Overall test rmse: 12.04560180197482 
+INFO - 04/02/20 11:39:00 - 0:00:39 - Model: Accuracy, Baseline: Transfer lang, Overall test rmse: 15.676243722678047 
+INFO - 04/02/20 11:39:00 - 0:00:39 - The average rmse for 10 runs is 6.240295954323661
+INFO - 04/02/20 11:39:00 - 0:00:39 - The average k_split baseline rmse for 10 runs is 17.577680513025914
+INFO - 04/02/20 11:39:00 - 0:00:39 - The average Target lang baseline rmse for 10 runs is 12.04560180197482
+INFO - 04/02/20 11:39:00 - 0:00:39 - The average Transfer lang baseline rmse for 10 runs is 15.676243722678047

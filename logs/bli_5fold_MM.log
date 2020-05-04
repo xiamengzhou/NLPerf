@@ -1,0 +1,855 @@
+INFO - 04/02/20 12:40:48 - 0:00:00 - **************************************************
+INFO - 04/02/20 12:40:48 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 12:40:52 - 0:00:04 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:40:52 - 0:00:04 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:40:52 - 0:00:04 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:40:52 - 0:00:04 - Source Language Code: 44
+INFO - 04/02/20 12:40:52 - 0:00:04 - Target Language Code: 44
+INFO - 04/02/20 12:40:52 - 0:00:04 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:40:52 - 0:00:04 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:52 - 0:00:05 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:53 - 0:00:05 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:53 - 0:00:05 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:54 - 0:00:06 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.391398144479917
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.808592740697732
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 3.7846779426210144
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 2.98565492902587
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 4.868332589510021
+INFO - 04/02/20 12:40:54 - 0:00:06 - Model: all, Overall test rmse: 5.204640117983549
+INFO - 04/02/20 12:40:55 - 0:00:07 - Model: all, Baseline: k_split, Overall test rmse: 20.666827354551497 
+INFO - 04/02/20 12:40:55 - 0:00:07 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.906503069317473 
+INFO - 04/02/20 12:40:55 - 0:00:07 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.177546885460767 
+INFO - 04/02/20 12:40:55 - 0:00:07 - **************************************************
+INFO - 04/02/20 12:40:55 - 0:00:07 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 12:40:58 - 0:00:11 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:40:58 - 0:00:11 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:40:58 - 0:00:11 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:40:58 - 0:00:11 - Source Language Code: 44
+INFO - 04/02/20 12:40:58 - 0:00:11 - Target Language Code: 44
+INFO - 04/02/20 12:40:58 - 0:00:11 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:40:58 - 0:00:11 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:59 - 0:00:11 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:59 - 0:00:11 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:40:59 - 0:00:12 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:00 - 0:00:12 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.920941714694533
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.764282494401669
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 4.2654067590652565
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.2063525955072505
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.634456462472833
+INFO - 04/02/20 12:41:00 - 0:00:12 - Model: all, Overall test rmse: 4.779240836302958
+INFO - 04/02/20 12:41:01 - 0:00:13 - Model: all, Baseline: k_split, Overall test rmse: 20.555746121213115 
+INFO - 04/02/20 12:41:01 - 0:00:13 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.49976556099742 
+INFO - 04/02/20 12:41:01 - 0:00:13 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.73838943239507 
+INFO - 04/02/20 12:41:01 - 0:00:13 - **************************************************
+INFO - 04/02/20 12:41:01 - 0:00:13 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 12:41:05 - 0:00:17 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:05 - 0:00:17 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:05 - 0:00:17 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:05 - 0:00:17 - Source Language Code: 44
+INFO - 04/02/20 12:41:05 - 0:00:17 - Target Language Code: 44
+INFO - 04/02/20 12:41:05 - 0:00:17 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:05 - 0:00:17 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:05 - 0:00:18 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:06 - 0:00:18 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:06 - 0:00:18 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:07 - 0:00:19 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.242369961086434
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.330752898526482
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.194635157847761
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.98555297236692
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 2.802876186792778
+INFO - 04/02/20 12:41:07 - 0:00:19 - Model: all, Overall test rmse: 4.4020990234986455
+INFO - 04/02/20 12:41:08 - 0:00:20 - Model: all, Baseline: k_split, Overall test rmse: 20.545713603710936 
+INFO - 04/02/20 12:41:08 - 0:00:20 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.971716827272534 
+INFO - 04/02/20 12:41:08 - 0:00:20 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.892764778719373 
+INFO - 04/02/20 12:41:08 - 0:00:20 - **************************************************
+INFO - 04/02/20 12:41:08 - 0:00:20 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 12:41:12 - 0:00:24 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:12 - 0:00:24 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:12 - 0:00:24 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:12 - 0:00:24 - Source Language Code: 44
+INFO - 04/02/20 12:41:12 - 0:00:24 - Target Language Code: 44
+INFO - 04/02/20 12:41:12 - 0:00:24 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:12 - 0:00:24 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:12 - 0:00:24 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:12 - 0:00:25 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:13 - 0:00:25 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:13 - 0:00:25 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.292611879205572
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.0418444922174315
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 3.401208495110108
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 3.1241551353132757
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 3.4962879420549693
+INFO - 04/02/20 12:41:14 - 0:00:26 - Model: all, Overall test rmse: 3.937651624404598
+INFO - 04/02/20 12:41:15 - 0:00:27 - Model: all, Baseline: k_split, Overall test rmse: 20.64632646705521 
+INFO - 04/02/20 12:41:15 - 0:00:27 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.0283026640202 
+INFO - 04/02/20 12:41:15 - 0:00:27 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.168827930262673 
+INFO - 04/02/20 12:41:15 - 0:00:27 - **************************************************
+INFO - 04/02/20 12:41:15 - 0:00:27 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 12:41:19 - 0:00:31 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:19 - 0:00:31 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:19 - 0:00:31 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:19 - 0:00:31 - Source Language Code: 44
+INFO - 04/02/20 12:41:19 - 0:00:31 - Target Language Code: 44
+INFO - 04/02/20 12:41:19 - 0:00:31 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:19 - 0:00:31 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:19 - 0:00:31 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:19 - 0:00:32 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:20 - 0:00:32 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:20 - 0:00:32 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.367740090307219
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 3.742555589322853
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.291596478210321
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 5.595161858383216
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.500232964925991
+INFO - 04/02/20 12:41:21 - 0:00:33 - Model: all, Overall test rmse: 5.142613345226617
+INFO - 04/02/20 12:41:22 - 0:00:34 - Model: all, Baseline: k_split, Overall test rmse: 20.59964885567249 
+INFO - 04/02/20 12:41:22 - 0:00:34 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.496377056482753 
+INFO - 04/02/20 12:41:22 - 0:00:34 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.485011473849326 
+INFO - 04/02/20 12:41:22 - 0:00:34 - **************************************************
+INFO - 04/02/20 12:41:22 - 0:00:34 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 12:41:25 - 0:00:37 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:25 - 0:00:37 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:25 - 0:00:37 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:25 - 0:00:37 - Source Language Code: 44
+INFO - 04/02/20 12:41:25 - 0:00:37 - Target Language Code: 44
+INFO - 04/02/20 12:41:25 - 0:00:37 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:25 - 0:00:37 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:26 - 0:00:38 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:26 - 0:00:38 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:26 - 0:00:39 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:27 - 0:00:39 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 3.2066079208959732
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.5965831946002655
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.844856763823593
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.583351227644693
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.3226824786637
+INFO - 04/02/20 12:41:27 - 0:00:39 - Model: all, Overall test rmse: 4.999523758749564
+INFO - 04/02/20 12:41:28 - 0:00:40 - Model: all, Baseline: k_split, Overall test rmse: 20.59060187105413 
+INFO - 04/02/20 12:41:28 - 0:00:40 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.036292084454097 
+INFO - 04/02/20 12:41:28 - 0:00:40 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.847078052600022 
+INFO - 04/02/20 12:41:28 - 0:00:40 - **************************************************
+INFO - 04/02/20 12:41:28 - 0:00:40 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 12:41:31 - 0:00:44 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:31 - 0:00:44 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:31 - 0:00:44 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:31 - 0:00:44 - Source Language Code: 44
+INFO - 04/02/20 12:41:31 - 0:00:44 - Target Language Code: 44
+INFO - 04/02/20 12:41:31 - 0:00:44 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:31 - 0:00:44 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:32 - 0:00:44 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:32 - 0:00:44 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:33 - 0:00:45 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:33 - 0:00:45 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 3.6363315877419327
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.116695097677155
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 4.082588165643556
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.636346093264746
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.777347175481576
+INFO - 04/02/20 12:41:33 - 0:00:45 - Model: all, Overall test rmse: 4.499017770556458
+INFO - 04/02/20 12:41:34 - 0:00:46 - Model: all, Baseline: k_split, Overall test rmse: 20.62279720772321 
+INFO - 04/02/20 12:41:34 - 0:00:46 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.887110489834372 
+INFO - 04/02/20 12:41:34 - 0:00:46 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.347247806647655 
+INFO - 04/02/20 12:41:34 - 0:00:46 - **************************************************
+INFO - 04/02/20 12:41:34 - 0:00:46 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 12:41:37 - 0:00:50 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:37 - 0:00:50 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:37 - 0:00:50 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:37 - 0:00:50 - Source Language Code: 44
+INFO - 04/02/20 12:41:37 - 0:00:50 - Target Language Code: 44
+INFO - 04/02/20 12:41:37 - 0:00:50 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:37 - 0:00:50 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:38 - 0:00:50 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:38 - 0:00:50 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:39 - 0:00:51 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:39 - 0:00:51 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.157029670665125
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 7.85386548568036
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 4.555619544133103
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.736736751229663
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 4.466613051225556
+INFO - 04/02/20 12:41:39 - 0:00:52 - Model: all, Overall test rmse: 5.510347469046955
+INFO - 04/02/20 12:41:40 - 0:00:53 - Model: all, Baseline: k_split, Overall test rmse: 20.624697313567193 
+INFO - 04/02/20 12:41:40 - 0:00:53 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.14266080811517 
+INFO - 04/02/20 12:41:40 - 0:00:53 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.515650113065092 
+INFO - 04/02/20 12:41:40 - 0:00:53 - **************************************************
+INFO - 04/02/20 12:41:40 - 0:00:53 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 12:41:44 - 0:00:56 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:44 - 0:00:56 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:44 - 0:00:56 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:44 - 0:00:56 - Source Language Code: 44
+INFO - 04/02/20 12:41:44 - 0:00:56 - Target Language Code: 44
+INFO - 04/02/20 12:41:44 - 0:00:56 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:44 - 0:00:56 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:44 - 0:00:56 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:45 - 0:00:57 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:45 - 0:00:57 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:45 - 0:00:58 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 3.718522813883508
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.841636588537733
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 4.687670603024522
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 5.255448482605458
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 4.409881935992511
+INFO - 04/02/20 12:41:46 - 0:00:58 - Model: all, Overall test rmse: 4.612597007369588
+INFO - 04/02/20 12:41:47 - 0:00:59 - Model: all, Baseline: k_split, Overall test rmse: 20.60054542227895 
+INFO - 04/02/20 12:41:47 - 0:00:59 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.22600447388377 
+INFO - 04/02/20 12:41:47 - 0:00:59 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.304782615760796 
+INFO - 04/02/20 12:41:47 - 0:00:59 - **************************************************
+INFO - 04/02/20 12:41:47 - 0:00:59 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 12:41:50 - 0:01:02 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Loaded 258 experiment records for 1 models: all
+INFO - 04/02/20 12:41:50 - 0:01:02 - Loaded 258 experiment records from all.
+INFO - 04/02/20 12:41:50 - 0:01:02 - 99 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, diff1, diff2, diff3, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/02/20 12:41:50 - 0:01:02 - Source Language Code: 44
+INFO - 04/02/20 12:41:50 - 0:01:02 - Target Language Code: 44
+INFO - 04/02/20 12:41:50 - 0:01:02 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/02/20 12:41:50 - 0:01:02 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:50 - 0:01:02 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:50 - 0:01:03 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:51 - 0:01:03 - Training a xgboost model with training data of shape (206, 99).
+INFO - 04/02/20 12:41:51 - 0:01:03 - Training a xgboost model with training data of shape (208, 99).
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.280230324926621
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.078765586813127
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.689827523545877
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 3.8621421693844193
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.475916905718146
+INFO - 04/02/20 12:41:52 - 0:01:04 - Model: all, Overall test rmse: 4.731605036004468
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model: all, Baseline: k_split, Overall test rmse: 20.732552641675518 
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.04492663600667 
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.273650158115267 
+INFO - 04/02/20 12:41:53 - 0:01:05 - **************************************************
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model all: The average rmse for 10 runs is 4.78193359891434
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model all: The average k_split baseline rmse for 10 runs is 20.732552641675518
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model all: The average Source Language Code baseline rmse for 10 runs is 16.04492663600667
+INFO - 04/02/20 12:41:53 - 0:01:05 - Model all: The average Target Language Code baseline rmse for 10 runs is 16.273650158115267
+INFO - 04/08/20 09:56:00 - 0:00:00 - **************************************************
+INFO - 04/08/20 09:56:00 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/08/20 09:56:04 - 0:00:03 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:04 - 0:00:03 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:04 - 0:00:03 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:04 - 0:00:03 - Source Language Code: 44
+INFO - 04/08/20 09:56:04 - 0:00:03 - Target Language Code: 44
+INFO - 04/08/20 09:56:04 - 0:00:03 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:04 - 0:00:03 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:04 - 0:00:04 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:04 - 0:00:04 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:05 - 0:00:05 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:05 - 0:00:05 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.598233946116715
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.34081076930608
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 6.425055211089354
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 8.327630263856527
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.050900385188337
+INFO - 04/08/20 09:56:05 - 0:00:05 - Model: all, Overall test rmse: 6.854300230509037
+INFO - 04/08/20 09:56:06 - 0:00:06 - Model: all, Baseline: k_split, Overall test rmse: 20.562853859370424 
+INFO - 04/08/20 09:56:06 - 0:00:06 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.434198957357776 
+INFO - 04/08/20 09:56:06 - 0:00:06 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.215204073818512 
+INFO - 04/08/20 09:56:06 - 0:00:06 - **************************************************
+INFO - 04/08/20 09:56:06 - 0:00:06 - Running k fold evaulation [2/10]...
+INFO - 04/08/20 09:56:09 - 0:00:09 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:09 - 0:00:09 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:09 - 0:00:09 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:09 - 0:00:09 - Source Language Code: 44
+INFO - 04/08/20 09:56:09 - 0:00:09 - Target Language Code: 44
+INFO - 04/08/20 09:56:09 - 0:00:09 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:09 - 0:00:09 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:09 - 0:00:09 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:10 - 0:00:10 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:10 - 0:00:10 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:11 - 0:00:10 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 6.939956845480457
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 7.204946607839358
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 8.043959828323198
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 7.620212307315226
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.72103383868904
+INFO - 04/08/20 09:56:11 - 0:00:11 - Model: all, Overall test rmse: 7.159469489967142
+INFO - 04/08/20 09:56:12 - 0:00:12 - Model: all, Baseline: k_split, Overall test rmse: 20.565869187235073 
+INFO - 04/08/20 09:56:12 - 0:00:12 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.257504804325514 
+INFO - 04/08/20 09:56:12 - 0:00:12 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.87274930791327 
+INFO - 04/08/20 09:56:12 - 0:00:12 - **************************************************
+INFO - 04/08/20 09:56:12 - 0:00:12 - Running k fold evaulation [3/10]...
+INFO - 04/08/20 09:56:15 - 0:00:15 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:15 - 0:00:15 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:15 - 0:00:15 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:15 - 0:00:15 - Source Language Code: 44
+INFO - 04/08/20 09:56:15 - 0:00:15 - Target Language Code: 44
+INFO - 04/08/20 09:56:15 - 0:00:15 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:15 - 0:00:15 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:15 - 0:00:15 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:16 - 0:00:15 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:16 - 0:00:16 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:16 - 0:00:16 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.606367796554285
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.907407293627402
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 7.250135397202255
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 7.535902983833928
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 7.385179780464249
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Overall test rmse: 6.819339307388524
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Baseline: k_split, Overall test rmse: 20.67393698659642 
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.930897977546245 
+INFO - 04/08/20 09:56:17 - 0:00:17 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.63845519799996 
+INFO - 04/08/20 09:56:17 - 0:00:17 - **************************************************
+INFO - 04/08/20 09:56:17 - 0:00:17 - Running k fold evaulation [4/10]...
+INFO - 04/08/20 09:56:20 - 0:00:20 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:20 - 0:00:20 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:20 - 0:00:20 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:20 - 0:00:20 - Source Language Code: 44
+INFO - 04/08/20 09:56:20 - 0:00:20 - Target Language Code: 44
+INFO - 04/08/20 09:56:20 - 0:00:20 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:20 - 0:00:20 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:21 - 0:00:21 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:21 - 0:00:21 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:22 - 0:00:21 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:22 - 0:00:22 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.043339631694158
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.805129440430272
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 6.996764644291941
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 8.130807877598334
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 6.345912165366656
+INFO - 04/08/20 09:56:22 - 0:00:22 - Model: all, Overall test rmse: 6.91277929832072
+INFO - 04/08/20 09:56:23 - 0:00:23 - Model: all, Baseline: k_split, Overall test rmse: 20.671036684298112 
+INFO - 04/08/20 09:56:23 - 0:00:23 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.819657085851661 
+INFO - 04/08/20 09:56:23 - 0:00:23 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.178025048108168 
+INFO - 04/08/20 09:56:23 - 0:00:23 - **************************************************
+INFO - 04/08/20 09:56:23 - 0:00:23 - Running k fold evaulation [5/10]...
+INFO - 04/08/20 09:56:27 - 0:00:27 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:27 - 0:00:27 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:27 - 0:00:27 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:27 - 0:00:27 - Source Language Code: 44
+INFO - 04/08/20 09:56:27 - 0:00:27 - Target Language Code: 44
+INFO - 04/08/20 09:56:27 - 0:00:27 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:27 - 0:00:27 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:27 - 0:00:27 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:27 - 0:00:27 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:28 - 0:00:28 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:28 - 0:00:28 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 6.277957347876861
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.44909077271122
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 6.256987815302993
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 7.7057054550200705
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 6.3125004073718
+INFO - 04/08/20 09:56:28 - 0:00:28 - Model: all, Overall test rmse: 6.442743024930632
+INFO - 04/08/20 09:56:29 - 0:00:29 - Model: all, Baseline: k_split, Overall test rmse: 20.661972067224642 
+INFO - 04/08/20 09:56:29 - 0:00:29 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.074826505242207 
+INFO - 04/08/20 09:56:29 - 0:00:29 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.884912818835526 
+INFO - 04/08/20 09:56:29 - 0:00:29 - **************************************************
+INFO - 04/08/20 09:56:29 - 0:00:29 - Running k fold evaulation [6/10]...
+INFO - 04/08/20 09:56:33 - 0:00:33 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:33 - 0:00:33 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:33 - 0:00:33 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:33 - 0:00:33 - Source Language Code: 44
+INFO - 04/08/20 09:56:33 - 0:00:33 - Target Language Code: 44
+INFO - 04/08/20 09:56:33 - 0:00:33 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:33 - 0:00:33 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:33 - 0:00:33 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:33 - 0:00:33 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:34 - 0:00:34 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:34 - 0:00:34 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.663085722812857
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.591159724846674
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.99148804618567
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 6.560943877014476
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.433712516722822
+INFO - 04/08/20 09:56:35 - 0:00:35 - Model: all, Overall test rmse: 6.498059070800338
+INFO - 04/08/20 09:56:36 - 0:00:35 - Model: all, Baseline: k_split, Overall test rmse: 20.61019022344573 
+INFO - 04/08/20 09:56:36 - 0:00:35 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.496943437803367 
+INFO - 04/08/20 09:56:36 - 0:00:35 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.189302534661472 
+INFO - 04/08/20 09:56:36 - 0:00:35 - **************************************************
+INFO - 04/08/20 09:56:36 - 0:00:35 - Running k fold evaulation [7/10]...
+INFO - 04/08/20 09:56:39 - 0:00:39 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:39 - 0:00:39 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:39 - 0:00:39 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:39 - 0:00:39 - Source Language Code: 44
+INFO - 04/08/20 09:56:39 - 0:00:39 - Target Language Code: 44
+INFO - 04/08/20 09:56:39 - 0:00:39 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:39 - 0:00:39 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:39 - 0:00:39 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:39 - 0:00:39 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:40 - 0:00:40 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:40 - 0:00:40 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.096722040227106
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.47823776671157
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 8.030039399696786
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 5.0187899353559535
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 6.412021683221157
+INFO - 04/08/20 09:56:40 - 0:00:40 - Model: all, Overall test rmse: 6.49925656904941
+INFO - 04/08/20 09:56:41 - 0:00:41 - Model: all, Baseline: k_split, Overall test rmse: 20.568727273982805 
+INFO - 04/08/20 09:56:41 - 0:00:41 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.953786008546432 
+INFO - 04/08/20 09:56:41 - 0:00:41 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.98663310931233 
+INFO - 04/08/20 09:56:41 - 0:00:41 - **************************************************
+INFO - 04/08/20 09:56:41 - 0:00:41 - Running k fold evaulation [8/10]...
+INFO - 04/08/20 09:56:45 - 0:00:44 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:45 - 0:00:44 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:45 - 0:00:44 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:45 - 0:00:44 - Source Language Code: 44
+INFO - 04/08/20 09:56:45 - 0:00:44 - Target Language Code: 44
+INFO - 04/08/20 09:56:45 - 0:00:44 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:45 - 0:00:44 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:45 - 0:00:45 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:45 - 0:00:45 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:46 - 0:00:46 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:46 - 0:00:46 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.9302905810709605
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.937644891349818
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 7.225412138623207
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 8.079664889490463
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 6.806741600077393
+INFO - 04/08/20 09:56:46 - 0:00:46 - Model: all, Overall test rmse: 6.683091108051999
+INFO - 04/08/20 09:56:47 - 0:00:47 - Model: all, Baseline: k_split, Overall test rmse: 20.61498432219084 
+INFO - 04/08/20 09:56:47 - 0:00:47 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.550785551179764 
+INFO - 04/08/20 09:56:47 - 0:00:47 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.371585363462785 
+INFO - 04/08/20 09:56:47 - 0:00:47 - **************************************************
+INFO - 04/08/20 09:56:47 - 0:00:47 - Running k fold evaulation [9/10]...
+INFO - 04/08/20 09:56:50 - 0:00:50 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:50 - 0:00:50 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:50 - 0:00:50 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:50 - 0:00:50 - Source Language Code: 44
+INFO - 04/08/20 09:56:50 - 0:00:50 - Target Language Code: 44
+INFO - 04/08/20 09:56:50 - 0:00:50 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:50 - 0:00:50 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:51 - 0:00:50 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:51 - 0:00:51 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:51 - 0:00:51 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:52 - 0:00:51 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 6.537211898226302
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 7.3187227400492
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.893716163218195
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.805770064694814
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 9.223260900995882
+INFO - 04/08/20 09:56:52 - 0:00:52 - Model: all, Overall test rmse: 6.895733795803874
+INFO - 04/08/20 09:56:53 - 0:00:53 - Model: all, Baseline: k_split, Overall test rmse: 20.6570197250863 
+INFO - 04/08/20 09:56:53 - 0:00:53 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.266538419052083 
+INFO - 04/08/20 09:56:53 - 0:00:53 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.960489432061134 
+INFO - 04/08/20 09:56:53 - 0:00:53 - **************************************************
+INFO - 04/08/20 09:56:53 - 0:00:53 - Running k fold evaulation [10/10]...
+INFO - 04/08/20 09:56:56 - 0:00:56 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 09:56:56 - 0:00:56 - Loaded 258 experiment records from all.
+INFO - 04/08/20 09:56:56 - 0:00:56 - 96 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_1, syntax_2, syntax_3, syntax_4, syntax_5, syntax_6, syntax_7, syntax_8, syntax_9, syntax_12, syntax_13, syntax_14, syntax_15, syntax_16, syntax_17, syntax_19, syntax_20, syntax_21, syntax_22, syntax_23, syntax_24, syntax_25, syntax_26, syntax_27, syntax_30, syntax_31, syntax_32, syntax_33, syntax_35, syntax_37, syntax_38, syntax_39, syntax_40, syntax_41, syntax_42, syntax_43, syntax_44, syntax_46, syntax_47, syntax_48, syntax_50, syntax_51, syntax_52, syntax_53, syntax_54, syntax_55, syntax_56, syntax_57, syntax_58, syntax_59, syntax_60, syntax_62, syntax_63, syntax_65, syntax_66, syntax_67, syntax_68, syntax_69, syntax_70, syntax_71, syntax_72, syntax_73, syntax_74, syntax_75, syntax_76, syntax_77, syntax_78, syntax_79, syntax_80, syntax_81, syntax_82, syntax_83, syntax_84, syntax_85, syntax_86, syntax_87, syntax_88, syntax_89, syntax_90, syntax_91, syntax_92, syntax_93, syntax_95, syntax_97, syntax_99, syntax_100, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 09:56:56 - 0:00:56 - Source Language Code: 44
+INFO - 04/08/20 09:56:56 - 0:00:56 - Target Language Code: 44
+INFO - 04/08/20 09:56:56 - 0:00:56 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 09:56:56 - 0:00:56 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:56 - 0:00:56 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:56 - 0:00:56 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:57 - 0:00:57 - Training a xgboost model with training data of shape (206, 96).
+INFO - 04/08/20 09:56:57 - 0:00:57 - Training a xgboost model with training data of shape (208, 96).
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.868802641017106
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.230613451141555
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 12.29224454610791
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 7.300983483381253
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.812339266701767
+INFO - 04/08/20 09:56:58 - 0:00:57 - Model: all, Overall test rmse: 7.906392675800992
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model: all, Baseline: k_split, Overall test rmse: 20.573888487990033 
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.709157923064684 
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.086621221690578 
+INFO - 04/08/20 09:56:58 - 0:00:58 - **************************************************
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model all: The average rmse for 10 runs is 6.8671164570622665
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model all: The average k_split baseline rmse for 10 runs is 20.573888487990033
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model all: The average Source Language Code baseline rmse for 10 runs is 16.709157923064684
+INFO - 04/08/20 09:56:58 - 0:00:58 - Model all: The average Target Language Code baseline rmse for 10 runs is 16.086621221690578
+INFO - 04/08/20 10:38:24 - 0:00:00 - **************************************************
+INFO - 04/08/20 10:38:24 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/08/20 10:38:30 - 0:00:06 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:38:30 - 0:00:06 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:38:30 - 0:00:06 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:38:30 - 0:00:06 - Source Language Code: 44
+INFO - 04/08/20 10:38:30 - 0:00:06 - Target Language Code: 44
+INFO - 04/08/20 10:38:30 - 0:00:06 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:38:30 - 0:00:06 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:31 - 0:00:07 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:31 - 0:00:07 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:32 - 0:00:08 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:32 - 0:00:09 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.432875910111709
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.683443087683394
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 7.066146198786704
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.474472953813867
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.796787548795449
+INFO - 04/08/20 10:38:33 - 0:00:09 - Model: all, Overall test rmse: 6.383494150357562
+INFO - 04/08/20 10:38:34 - 0:00:10 - Model: all, Baseline: k_split, Overall test rmse: 20.604431554120385 
+INFO - 04/08/20 10:38:34 - 0:00:10 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.192236267326248 
+INFO - 04/08/20 10:38:34 - 0:00:10 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.552625442878124 
+INFO - 04/08/20 10:38:34 - 0:00:10 - **************************************************
+INFO - 04/08/20 10:38:34 - 0:00:10 - Running k fold evaulation [2/10]...
+INFO - 04/08/20 10:38:40 - 0:00:17 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:38:40 - 0:00:17 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:38:40 - 0:00:17 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:38:40 - 0:00:17 - Source Language Code: 44
+INFO - 04/08/20 10:38:40 - 0:00:17 - Target Language Code: 44
+INFO - 04/08/20 10:38:40 - 0:00:17 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:38:40 - 0:00:17 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:41 - 0:00:17 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:42 - 0:00:18 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:42 - 0:00:19 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:43 - 0:00:19 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.681533031464301
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.897332900704747
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 6.653646669013598
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 6.441870073714451
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 4.9543692218965765
+INFO - 04/08/20 10:38:44 - 0:00:20 - Model: all, Overall test rmse: 5.594187745400893
+INFO - 04/08/20 10:38:44 - 0:00:21 - Model: all, Baseline: k_split, Overall test rmse: 20.564819014256877 
+INFO - 04/08/20 10:38:44 - 0:00:21 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.932760633473146 
+INFO - 04/08/20 10:38:44 - 0:00:21 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.18138657857927 
+INFO - 04/08/20 10:38:44 - 0:00:21 - **************************************************
+INFO - 04/08/20 10:38:44 - 0:00:21 - Running k fold evaulation [3/10]...
+INFO - 04/08/20 10:38:51 - 0:00:27 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:38:51 - 0:00:27 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:38:51 - 0:00:27 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:38:51 - 0:00:27 - Source Language Code: 44
+INFO - 04/08/20 10:38:51 - 0:00:27 - Target Language Code: 44
+INFO - 04/08/20 10:38:51 - 0:00:27 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:38:51 - 0:00:27 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:52 - 0:00:28 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:52 - 0:00:29 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:53 - 0:00:29 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:38:54 - 0:00:30 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 3.761447558163723
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 7.603292207571373
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 9.97400713148807
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 6.375516027277334
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 3.1494988274929865
+INFO - 04/08/20 10:38:54 - 0:00:31 - Model: all, Overall test rmse: 6.68344837976246
+INFO - 04/08/20 10:38:55 - 0:00:32 - Model: all, Baseline: k_split, Overall test rmse: 20.57961042131186 
+INFO - 04/08/20 10:38:55 - 0:00:32 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.44746655771884 
+INFO - 04/08/20 10:38:55 - 0:00:32 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.429316944559975 
+INFO - 04/08/20 10:38:55 - 0:00:32 - **************************************************
+INFO - 04/08/20 10:38:55 - 0:00:32 - Running k fold evaulation [4/10]...
+INFO - 04/08/20 10:39:01 - 0:00:37 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:01 - 0:00:37 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:01 - 0:00:37 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:01 - 0:00:37 - Source Language Code: 44
+INFO - 04/08/20 10:39:01 - 0:00:37 - Target Language Code: 44
+INFO - 04/08/20 10:39:01 - 0:00:37 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:01 - 0:00:37 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:02 - 0:00:38 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:02 - 0:00:39 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:03 - 0:00:39 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:04 - 0:00:40 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.696081658408187
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.542985471940845
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.988796306791523
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 6.724852030459982
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 8.884596741369359
+INFO - 04/08/20 10:39:04 - 0:00:41 - Model: all, Overall test rmse: 6.841720981265202
+INFO - 04/08/20 10:39:05 - 0:00:42 - Model: all, Baseline: k_split, Overall test rmse: 20.620279503832062 
+INFO - 04/08/20 10:39:05 - 0:00:42 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.999260843135179 
+INFO - 04/08/20 10:39:05 - 0:00:42 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.587726028200937 
+INFO - 04/08/20 10:39:05 - 0:00:42 - **************************************************
+INFO - 04/08/20 10:39:05 - 0:00:42 - Running k fold evaulation [5/10]...
+INFO - 04/08/20 10:39:12 - 0:00:48 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:12 - 0:00:48 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:12 - 0:00:48 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:12 - 0:00:48 - Source Language Code: 44
+INFO - 04/08/20 10:39:12 - 0:00:48 - Target Language Code: 44
+INFO - 04/08/20 10:39:12 - 0:00:48 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:12 - 0:00:48 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:12 - 0:00:48 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:13 - 0:00:49 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:14 - 0:00:50 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:14 - 0:00:50 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 7.311650039473168
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.761127560587003
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.967052328014036
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.48103580924548
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 8.565371059513446
+INFO - 04/08/20 10:39:15 - 0:00:51 - Model: all, Overall test rmse: 6.386336205032437
+INFO - 04/08/20 10:39:16 - 0:00:52 - Model: all, Baseline: k_split, Overall test rmse: 20.553092881555138 
+INFO - 04/08/20 10:39:16 - 0:00:52 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.95704223367025 
+INFO - 04/08/20 10:39:16 - 0:00:52 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.121224355911053 
+INFO - 04/08/20 10:39:16 - 0:00:52 - **************************************************
+INFO - 04/08/20 10:39:16 - 0:00:52 - Running k fold evaulation [6/10]...
+INFO - 04/08/20 10:39:22 - 0:00:58 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:22 - 0:00:58 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:22 - 0:00:58 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:22 - 0:00:58 - Source Language Code: 44
+INFO - 04/08/20 10:39:22 - 0:00:58 - Target Language Code: 44
+INFO - 04/08/20 10:39:22 - 0:00:58 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:22 - 0:00:58 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:23 - 0:00:59 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:23 - 0:01:00 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:24 - 0:01:00 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:25 - 0:01:01 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.4777244773330445
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.957092018768331
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 9.812407256139007
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 7.448567091177777
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 3.8469607733416273
+INFO - 04/08/20 10:39:25 - 0:01:01 - Model: all, Overall test rmse: 6.682045462522458
+INFO - 04/08/20 10:39:26 - 0:01:02 - Model: all, Baseline: k_split, Overall test rmse: 20.693818244434166 
+INFO - 04/08/20 10:39:26 - 0:01:02 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.273310454046392 
+INFO - 04/08/20 10:39:26 - 0:01:02 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.977057014338946 
+INFO - 04/08/20 10:39:26 - 0:01:02 - **************************************************
+INFO - 04/08/20 10:39:26 - 0:01:02 - Running k fold evaulation [7/10]...
+INFO - 04/08/20 10:39:32 - 0:01:09 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:32 - 0:01:09 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:32 - 0:01:09 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:32 - 0:01:09 - Source Language Code: 44
+INFO - 04/08/20 10:39:32 - 0:01:09 - Target Language Code: 44
+INFO - 04/08/20 10:39:32 - 0:01:09 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:32 - 0:01:09 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:33 - 0:01:09 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:34 - 0:01:10 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:34 - 0:01:11 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:35 - 0:01:12 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 8.081200822133708
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.034061888339978
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.652427137096933
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 5.118040747900135
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 6.056548857758669
+INFO - 04/08/20 10:39:36 - 0:01:12 - Model: all, Overall test rmse: 6.271260994712779
+INFO - 04/08/20 10:39:37 - 0:01:13 - Model: all, Baseline: k_split, Overall test rmse: 20.62456545456771 
+INFO - 04/08/20 10:39:37 - 0:01:13 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.269654119510673 
+INFO - 04/08/20 10:39:37 - 0:01:13 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.825689481106544 
+INFO - 04/08/20 10:39:37 - 0:01:13 - **************************************************
+INFO - 04/08/20 10:39:37 - 0:01:13 - Running k fold evaulation [8/10]...
+INFO - 04/08/20 10:39:43 - 0:01:19 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:43 - 0:01:19 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:43 - 0:01:19 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:43 - 0:01:19 - Source Language Code: 44
+INFO - 04/08/20 10:39:43 - 0:01:19 - Target Language Code: 44
+INFO - 04/08/20 10:39:43 - 0:01:19 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:43 - 0:01:19 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:44 - 0:01:20 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:44 - 0:01:21 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:45 - 0:01:21 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:46 - 0:01:22 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 4.406027560863702
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 4.897469425474413
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 6.944062526820683
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 6.547392552443723
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.698369951522385
+INFO - 04/08/20 10:39:46 - 0:01:23 - Model: all, Overall test rmse: 5.779164744229222
+INFO - 04/08/20 10:39:47 - 0:01:23 - Model: all, Baseline: k_split, Overall test rmse: 20.58632048346406 
+INFO - 04/08/20 10:39:47 - 0:01:23 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.253878697815065 
+INFO - 04/08/20 10:39:47 - 0:01:23 - Model: all, Baseline: Target Language Code, Overall test rmse: 15.936002771549038 
+INFO - 04/08/20 10:39:47 - 0:01:23 - **************************************************
+INFO - 04/08/20 10:39:47 - 0:01:23 - Running k fold evaulation [9/10]...
+INFO - 04/08/20 10:39:53 - 0:01:30 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:39:53 - 0:01:30 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:39:53 - 0:01:30 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:39:53 - 0:01:30 - Source Language Code: 44
+INFO - 04/08/20 10:39:53 - 0:01:30 - Target Language Code: 44
+INFO - 04/08/20 10:39:53 - 0:01:30 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:39:53 - 0:01:30 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:54 - 0:01:30 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:55 - 0:01:31 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:55 - 0:01:32 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:39:56 - 0:01:32 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.770773347139743
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 6.738021230196214
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 4.301624606839376
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 9.915746539449337
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 7.314428733529842
+INFO - 04/08/20 10:39:57 - 0:01:33 - Model: all, Overall test rmse: 7.055301718449286
+INFO - 04/08/20 10:39:57 - 0:01:34 - Model: all, Baseline: k_split, Overall test rmse: 20.536668580494965 
+INFO - 04/08/20 10:39:57 - 0:01:34 - Model: all, Baseline: Source Language Code, Overall test rmse: 16.51704244376469 
+INFO - 04/08/20 10:39:57 - 0:01:34 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.110043984984486 
+INFO - 04/08/20 10:39:57 - 0:01:34 - **************************************************
+INFO - 04/08/20 10:39:57 - 0:01:34 - Running k fold evaulation [10/10]...
+INFO - 04/08/20 10:40:04 - 0:01:40 - Combined Sinkhorn, Artetxe17, Artetxe16 into all.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Loaded 258 experiment records for 1 models: all
+INFO - 04/08/20 10:40:04 - 0:01:40 - Loaded 258 experiment records from all.
+INFO - 04/08/20 10:40:04 - 0:01:40 - 183 feats: GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, syntax_0, syntax_0_2, syntax_1, syntax_1_2, syntax_2, syntax_2_2, syntax_3, syntax_3_2, syntax_4, syntax_4_2, syntax_5, syntax_5_2, syntax_6, syntax_6_2, syntax_7, syntax_7_2, syntax_8, syntax_8_2, syntax_9, syntax_9_2, syntax_12, syntax_12_2, syntax_13, syntax_13_2, syntax_14, syntax_14_2, syntax_15, syntax_15_2, syntax_16, syntax_16_2, syntax_17, syntax_17_2, syntax_19, syntax_19_2, syntax_20, syntax_20_2, syntax_21, syntax_21_2, syntax_22, syntax_22_2, syntax_23, syntax_23_2, syntax_24, syntax_24_2, syntax_25, syntax_25_2, syntax_26, syntax_26_2, syntax_27, syntax_27_2, syntax_30, syntax_30_2, syntax_31, syntax_31_2, syntax_32, syntax_32_2, syntax_33, syntax_33_2, syntax_35, syntax_35_2, syntax_37, syntax_37_2, syntax_38, syntax_38_2, syntax_39, syntax_39_2, syntax_40, syntax_40_2, syntax_41, syntax_41_2, syntax_42, syntax_42_2, syntax_43, syntax_43_2, syntax_44, syntax_44_2, syntax_46, syntax_46_2, syntax_47, syntax_47_2, syntax_48, syntax_48_2, syntax_50, syntax_50_2, syntax_51, syntax_51_2, syntax_52, syntax_52_2, syntax_53, syntax_53_2, syntax_54, syntax_54_2, syntax_55, syntax_55_2, syntax_56, syntax_56_2, syntax_57, syntax_57_2, syntax_58, syntax_58_2, syntax_59, syntax_59_2, syntax_60, syntax_60_2, syntax_62, syntax_62_2, syntax_63, syntax_63_2, syntax_65, syntax_65_2, syntax_66, syntax_66_2, syntax_67, syntax_67_2, syntax_68, syntax_68_2, syntax_69, syntax_69_2, syntax_70, syntax_70_2, syntax_71, syntax_71_2, syntax_72, syntax_72_2, syntax_73, syntax_73_2, syntax_74, syntax_74_2, syntax_75, syntax_75_2, syntax_76, syntax_76_2, syntax_77, syntax_77_2, syntax_78, syntax_78_2, syntax_79, syntax_79_2, syntax_80, syntax_80_2, syntax_81, syntax_81_2, syntax_82, syntax_82_2, syntax_83, syntax_83_2, syntax_84, syntax_84_2, syntax_85, syntax_85_2, syntax_86, syntax_86_2, syntax_87, syntax_87_2, syntax_88, syntax_88_2, syntax_89, syntax_89_2, syntax_90, syntax_90_2, syntax_91, syntax_91_2, syntax_92, syntax_92_2, syntax_93, syntax_93_2, syntax_95, syntax_95_2, syntax_97, syntax_97_2, syntax_99, syntax_99_2, syntax_100, syntax_100_2, model_Sinkhorn, model_Artetxe17, model_Artetxe16
+INFO - 04/08/20 10:40:04 - 0:01:40 - Source Language Code: 44
+INFO - 04/08/20 10:40:04 - 0:01:40 - Target Language Code: 44
+INFO - 04/08/20 10:40:04 - 0:01:40 - K fold splitter splitting 258 experimental records for model all into 5 folds.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Fold 0 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Fold 1 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Fold 2 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Fold 3 has 206 training experimental records and 52 testing experimental records.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Fold 4 has 208 training experimental records and 50 testing experimental records.
+INFO - 04/08/20 10:40:04 - 0:01:40 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:40:04 - 0:01:41 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:40:05 - 0:01:41 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:40:06 - 0:01:42 - Training a xgboost model with training data of shape (206, 183).
+INFO - 04/08/20 10:40:06 - 0:01:43 - Training a xgboost model with training data of shape (208, 183).
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Fold: 0, Training data: 206 Test data: 52 Test rmse: 5.182466803614303
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Fold: 1, Training data: 206 Test data: 52 Test rmse: 5.069840520430794
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Fold: 2, Training data: 206 Test data: 52 Test rmse: 5.868023386035937
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Fold: 3, Training data: 206 Test data: 52 Test rmse: 4.743332696786226
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Fold: 4, Training data: 208 Test data: 50 Test rmse: 5.251037183378719
+INFO - 04/08/20 10:40:07 - 0:01:43 - Model: all, Overall test rmse: 5.23567269931472
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model: all, Baseline: k_split, Overall test rmse: 20.64346571483113 
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model: all, Baseline: Source Language Code, Overall test rmse: 15.862815234291807 
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model: all, Baseline: Target Language Code, Overall test rmse: 16.050191672230174 
+INFO - 04/08/20 10:40:08 - 0:01:44 - **************************************************
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model all: The average rmse for 10 runs is 6.291263308104702
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model all: The average k_split baseline rmse for 10 runs is 20.64346571483113
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model all: The average Source Language Code baseline rmse for 10 runs is 15.862815234291807
+INFO - 04/08/20 10:40:08 - 0:01:44 - Model all: The average Target Language Code baseline rmse for 10 runs is 16.050191672230174

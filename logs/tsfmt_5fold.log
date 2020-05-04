@@ -1,0 +1,295 @@
+INFO - 04/02/20 11:33:07 - 0:00:00 - **************************************************
+INFO - 04/02/20 11:33:07 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 11:33:07 - 0:00:00 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:33:07 - 0:00:00 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:33:07 - 0:00:00 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:33:07 - 0:00:00 - Target lang: 1
+INFO - 04/02/20 11:33:07 - 0:00:00 -  Source lang: 54
+INFO - 04/02/20 11:33:07 - 0:00:00 - Transfer lang: 54
+INFO - 04/02/20 11:33:07 - 0:00:00 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:33:07 - 0:00:00 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:07 - 0:00:01 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:08 - 0:00:01 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:09 - 0:00:02 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:09 - 0:00:03 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.8447571803218197
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.5054783642847334
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.196942319608745
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.3763889273794403
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.0751954356436477
+INFO - 04/02/20 11:33:10 - 0:00:03 - Model: BLEU, Overall test rmse: 1.4252957690148478
+INFO - 04/02/20 11:33:26 - 0:00:20 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.783010600976818 
+INFO - 04/02/20 11:33:26 - 0:00:20 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.783010600976818 
+INFO - 04/02/20 11:33:26 - 0:00:20 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.221102877606695 
+INFO - 04/02/20 11:33:26 - 0:00:20 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.998465946792285 
+INFO - 04/02/20 11:33:26 - 0:00:20 - **************************************************
+INFO - 04/02/20 11:33:26 - 0:00:20 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 11:33:26 - 0:00:20 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:33:26 - 0:00:20 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:33:26 - 0:00:20 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:33:26 - 0:00:20 - Target lang: 1
+INFO - 04/02/20 11:33:26 - 0:00:20 -  Source lang: 54
+INFO - 04/02/20 11:33:26 - 0:00:20 - Transfer lang: 54
+INFO - 04/02/20 11:33:26 - 0:00:20 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:33:26 - 0:00:20 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:27 - 0:00:20 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:27 - 0:00:21 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:28 - 0:00:22 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:29 - 0:00:22 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.404468780661062
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.9481750910756948
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.2277053084449656
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.337361999047423
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.14882564313969
+INFO - 04/02/20 11:33:29 - 0:00:23 - Model: BLEU, Overall test rmse: 1.4413523883594093
+INFO - 04/02/20 11:33:45 - 0:00:38 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.769458631392261 
+INFO - 04/02/20 11:33:45 - 0:00:38 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.769458631392261 
+INFO - 04/02/20 11:33:45 - 0:00:38 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.238805841177983 
+INFO - 04/02/20 11:33:45 - 0:00:38 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.940936582697255 
+INFO - 04/02/20 11:33:45 - 0:00:38 - **************************************************
+INFO - 04/02/20 11:33:45 - 0:00:38 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 11:33:45 - 0:00:38 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:33:45 - 0:00:38 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:33:45 - 0:00:38 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:33:45 - 0:00:38 - Target lang: 1
+INFO - 04/02/20 11:33:45 - 0:00:38 -  Source lang: 54
+INFO - 04/02/20 11:33:45 - 0:00:38 - Transfer lang: 54
+INFO - 04/02/20 11:33:45 - 0:00:38 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:33:45 - 0:00:38 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:45 - 0:00:39 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:46 - 0:00:40 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:47 - 0:00:40 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:33:47 - 0:00:41 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.7426446977754921
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.2803299326804585
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.2323680208904217
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.5008301060517486
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.347241911146667
+INFO - 04/02/20 11:33:48 - 0:00:41 - Model: BLEU, Overall test rmse: 1.4327304186832874
+INFO - 04/02/20 11:34:03 - 0:00:57 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.771253132478547 
+INFO - 04/02/20 11:34:03 - 0:00:57 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.771253132478547 
+INFO - 04/02/20 11:34:03 - 0:00:57 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.242691294534699 
+INFO - 04/02/20 11:34:03 - 0:00:57 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.962528455738862 
+INFO - 04/02/20 11:34:03 - 0:00:57 - **************************************************
+INFO - 04/02/20 11:34:03 - 0:00:57 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 11:34:03 - 0:00:57 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:34:03 - 0:00:57 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:34:03 - 0:00:57 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:34:03 - 0:00:57 - Target lang: 1
+INFO - 04/02/20 11:34:03 - 0:00:57 -  Source lang: 54
+INFO - 04/02/20 11:34:03 - 0:00:57 - Transfer lang: 54
+INFO - 04/02/20 11:34:03 - 0:00:57 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:34:03 - 0:00:57 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:04 - 0:00:58 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:05 - 0:00:58 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:05 - 0:00:59 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:06 - 0:01:00 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.2564535263990395
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.2013291923140472
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.5572113189991301
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.6055794525575937
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.7048342908365126
+INFO - 04/02/20 11:34:07 - 0:01:00 - Model: BLEU, Overall test rmse: 1.4783331762584602
+INFO - 04/02/20 11:34:22 - 0:01:15 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.772420553220373 
+INFO - 04/02/20 11:34:22 - 0:01:15 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.772420553220373 
+INFO - 04/02/20 11:34:22 - 0:01:15 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.236899514283754 
+INFO - 04/02/20 11:34:22 - 0:01:15 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.972244498610292 
+INFO - 04/02/20 11:34:22 - 0:01:15 - **************************************************
+INFO - 04/02/20 11:34:22 - 0:01:15 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 11:34:22 - 0:01:16 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:34:22 - 0:01:16 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:34:22 - 0:01:16 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:34:22 - 0:01:16 - Target lang: 1
+INFO - 04/02/20 11:34:22 - 0:01:16 -  Source lang: 54
+INFO - 04/02/20 11:34:22 - 0:01:16 - Transfer lang: 54
+INFO - 04/02/20 11:34:22 - 0:01:16 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:34:22 - 0:01:16 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:23 - 0:01:16 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:23 - 0:01:17 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:24 - 0:01:17 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:25 - 0:01:18 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.648106420928343
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.6581595808383207
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.097914352696725
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.5438771130349422
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.279751263327531
+INFO - 04/02/20 11:34:25 - 0:01:19 - Model: BLEU, Overall test rmse: 1.4625394436652623
+INFO - 04/02/20 11:34:40 - 0:01:34 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.771630012059143 
+INFO - 04/02/20 11:34:40 - 0:01:34 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.771630012059143 
+INFO - 04/02/20 11:34:40 - 0:01:34 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.237844438580698 
+INFO - 04/02/20 11:34:40 - 0:01:34 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.97758262038239 
+INFO - 04/02/20 11:34:40 - 0:01:34 - **************************************************
+INFO - 04/02/20 11:34:40 - 0:01:34 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 11:34:40 - 0:01:34 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:34:40 - 0:01:34 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:34:40 - 0:01:34 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:34:40 - 0:01:34 - Target lang: 1
+INFO - 04/02/20 11:34:40 - 0:01:34 -  Source lang: 54
+INFO - 04/02/20 11:34:40 - 0:01:34 - Transfer lang: 54
+INFO - 04/02/20 11:34:40 - 0:01:34 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:34:40 - 0:01:34 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:41 - 0:01:35 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:42 - 0:01:35 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:42 - 0:01:36 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:43 - 0:01:37 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.422513676019851
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.5042226814776807
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.3980435511658234
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.1756061414489976
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.4761061531820083
+INFO - 04/02/20 11:34:44 - 0:01:37 - Model: BLEU, Overall test rmse: 1.400039323660173
+INFO - 04/02/20 11:34:59 - 0:01:52 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.772632870853366 
+INFO - 04/02/20 11:34:59 - 0:01:52 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.772632870853366 
+INFO - 04/02/20 11:34:59 - 0:01:52 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.2250160489376034 
+INFO - 04/02/20 11:34:59 - 0:01:52 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.961910566782256 
+INFO - 04/02/20 11:34:59 - 0:01:52 - **************************************************
+INFO - 04/02/20 11:34:59 - 0:01:52 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 11:34:59 - 0:01:52 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:34:59 - 0:01:52 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:34:59 - 0:01:52 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:34:59 - 0:01:52 - Target lang: 1
+INFO - 04/02/20 11:34:59 - 0:01:52 -  Source lang: 54
+INFO - 04/02/20 11:34:59 - 0:01:52 - Transfer lang: 54
+INFO - 04/02/20 11:34:59 - 0:01:52 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:34:59 - 0:01:52 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:34:59 - 0:01:53 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:00 - 0:01:54 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:01 - 0:01:54 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:01 - 0:01:55 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.1441773010879384
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.2891984476671083
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.327547015883272
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.699183073688566
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.414805697517391
+INFO - 04/02/20 11:35:02 - 0:01:56 - Model: BLEU, Overall test rmse: 1.387230994628537
+INFO - 04/02/20 11:35:17 - 0:02:11 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.769523649133603 
+INFO - 04/02/20 11:35:17 - 0:02:11 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.769523649133603 
+INFO - 04/02/20 11:35:17 - 0:02:11 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.2334047637198275 
+INFO - 04/02/20 11:35:17 - 0:02:11 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.961409131998106 
+INFO - 04/02/20 11:35:17 - 0:02:11 - **************************************************
+INFO - 04/02/20 11:35:17 - 0:02:11 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 11:35:17 - 0:02:11 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:35:17 - 0:02:11 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:35:17 - 0:02:11 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:35:17 - 0:02:11 - Target lang: 1
+INFO - 04/02/20 11:35:17 - 0:02:11 -  Source lang: 54
+INFO - 04/02/20 11:35:17 - 0:02:11 - Transfer lang: 54
+INFO - 04/02/20 11:35:17 - 0:02:11 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:35:17 - 0:02:11 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:18 - 0:02:11 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:18 - 0:02:12 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:19 - 0:02:13 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:20 - 0:02:13 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.4470245370603447
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.6423595768687265
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.3994122621689185
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.2238654195213658
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.2271676160174816
+INFO - 04/02/20 11:35:20 - 0:02:14 - Model: BLEU, Overall test rmse: 1.3968319497016717
+INFO - 04/02/20 11:35:36 - 0:02:30 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.770957120789936 
+INFO - 04/02/20 11:35:36 - 0:02:30 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.770957120789936 
+INFO - 04/02/20 11:35:36 - 0:02:30 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.2456494718151414 
+INFO - 04/02/20 11:35:36 - 0:02:30 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.94869673680791 
+INFO - 04/02/20 11:35:36 - 0:02:30 - **************************************************
+INFO - 04/02/20 11:35:36 - 0:02:30 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 11:35:36 - 0:02:30 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:35:36 - 0:02:30 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:35:36 - 0:02:30 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:35:36 - 0:02:30 - Target lang: 1
+INFO - 04/02/20 11:35:36 - 0:02:30 -  Source lang: 54
+INFO - 04/02/20 11:35:36 - 0:02:30 - Transfer lang: 54
+INFO - 04/02/20 11:35:36 - 0:02:30 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:35:36 - 0:02:30 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:37 - 0:02:30 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:38 - 0:02:31 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:38 - 0:02:32 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:39 - 0:02:32 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.0466002451931635
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.296712228534291
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.5611769408704943
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.7543005130953184
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.3166349242625448
+INFO - 04/02/20 11:35:39 - 0:02:33 - Model: BLEU, Overall test rmse: 1.4160952622751242
+INFO - 04/02/20 11:35:55 - 0:02:48 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.774236379978962 
+INFO - 04/02/20 11:35:55 - 0:02:48 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.774236379978962 
+INFO - 04/02/20 11:35:55 - 0:02:48 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.2279822084886436 
+INFO - 04/02/20 11:35:55 - 0:02:48 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.938078788972337 
+INFO - 04/02/20 11:35:55 - 0:02:48 - **************************************************
+INFO - 04/02/20 11:35:55 - 0:02:48 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 11:35:55 - 0:02:48 - Loaded 2862 experiment records for 1 models: BLEU
+INFO - 04/02/20 11:35:55 - 0:02:48 - Loaded 2862 experiment records from BLEU.
+INFO - 04/02/20 11:35:55 - 0:02:48 - 20 feats: Overlap word-level, Overlap subword-level, Transfer lang dataset size, Target lang dataset size, Transfer over target size ratio, Transfer lang TTR, Target lang TTR, Transfer target TTR distance, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, GENETIC_2, SYNTACTIC_2, FEATURAL_2, PHONOLOGICAL_2, INVENTORY_2, GEOGRAPHIC_2
+INFO - 04/02/20 11:35:55 - 0:02:48 - Target lang: 1
+INFO - 04/02/20 11:35:55 - 0:02:48 -  Source lang: 54
+INFO - 04/02/20 11:35:55 - 0:02:48 - Transfer lang: 54
+INFO - 04/02/20 11:35:55 - 0:02:48 - K fold splitter splitting 2862 experimental records for model BLEU into 5 folds.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Fold 0 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Fold 1 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Fold 2 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Fold 3 has 2289 training experimental records and 573 testing experimental records.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Fold 4 has 2292 training experimental records and 570 testing experimental records.
+INFO - 04/02/20 11:35:55 - 0:02:48 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:55 - 0:02:49 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:56 - 0:02:50 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:57 - 0:02:50 - Training a xgboost model with training data of shape (2289, 20).
+INFO - 04/02/20 11:35:57 - 0:02:51 - Training a xgboost model with training data of shape (2292, 20).
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Fold: 0, Training data: 2289 Test data: 573 Test rmse: 1.4637801891368953
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Fold: 1, Training data: 2289 Test data: 573 Test rmse: 1.3146986934529912
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Fold: 2, Training data: 2289 Test data: 573 Test rmse: 1.7266055110697782
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Fold: 3, Training data: 2289 Test data: 573 Test rmse: 1.4464675453688864
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Fold: 4, Training data: 2292 Test data: 570 Test rmse: 1.1873313534350927
+INFO - 04/02/20 11:35:58 - 0:02:52 - Model: BLEU, Overall test rmse: 1.4392873703204403
+INFO - 04/02/20 11:36:13 - 0:03:07 - Model: BLEU, Baseline: k_split, Overall test rmse: 10.781724567453425 
+INFO - 04/02/20 11:36:13 - 0:03:07 - Model: BLEU, Baseline: Target lang, Overall test rmse: 10.781724567453425 
+INFO - 04/02/20 11:36:13 - 0:03:07 - Model: BLEU, Baseline:  Source lang, Overall test rmse: 2.2379275834808947 
+INFO - 04/02/20 11:36:13 - 0:03:07 - Model: BLEU, Baseline: Transfer lang, Overall test rmse: 10.960408544914976 
+INFO - 04/02/20 11:36:13 - 0:03:07 - The average rmse for 10 runs is 1.4279736096567213
+INFO - 04/02/20 11:36:13 - 0:03:07 - The average k_split baseline rmse for 10 runs is 10.781724567453425
+INFO - 04/02/20 11:36:13 - 0:03:07 - The average Target lang baseline rmse for 10 runs is 10.781724567453425
+INFO - 04/02/20 11:36:13 - 0:03:07 - The average  Source lang baseline rmse for 10 runs is 2.2379275834808947
+INFO - 04/02/20 11:36:13 - 0:03:07 - The average Transfer lang baseline rmse for 10 runs is 10.960408544914976

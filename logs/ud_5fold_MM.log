@@ -1,0 +1,528 @@
+INFO - 04/02/20 12:51:57 - 0:00:00 - **************************************************
+INFO - 04/02/20 12:51:57 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 12:51:59 - 0:00:01 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:51:59 - 0:00:01 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:51:59 - 0:00:01 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:51:59 - 0:00:01 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:51:59 - 0:00:01 - Language: 72
+INFO - 04/02/20 12:51:59 - 0:00:01 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:51:59 - 0:00:02 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:51:59 - 0:00:02 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:00 - 0:00:03 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:01 - 0:00:04 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:01 - 0:00:04 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 10.430879236721676
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 8.113021832495374
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 5.986686754811064
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.738704818624988
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 7.6129732700477915
+INFO - 04/02/20 12:52:02 - 0:00:05 - Model: all, Overall test rmse: 8.304060538355557
+INFO - 04/02/20 12:52:05 - 0:00:08 - Model: all, Baseline: k_split, Overall test rmse: 19.878681302607877 
+INFO - 04/02/20 12:52:05 - 0:00:08 - Model: all, Baseline: Language, Overall test rmse: 10.475094398808162 
+INFO - 04/02/20 12:52:05 - 0:00:08 - **************************************************
+INFO - 04/02/20 12:52:05 - 0:00:08 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 12:52:07 - 0:00:09 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:07 - 0:00:09 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:07 - 0:00:09 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:07 - 0:00:09 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:07 - 0:00:09 - Language: 72
+INFO - 04/02/20 12:52:07 - 0:00:09 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:07 - 0:00:09 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:07 - 0:00:09 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:07 - 0:00:09 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:07 - 0:00:09 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:07 - 0:00:10 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:07 - 0:00:10 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:07 - 0:00:10 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:08 - 0:00:11 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:09 - 0:00:12 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:09 - 0:00:12 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 7.0724442103957355
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 8.410914527045303
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 8.788304864640237
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 7.640780000956337
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 7.297851810250817
+INFO - 04/02/20 12:52:10 - 0:00:13 - Model: all, Overall test rmse: 7.86940166406159
+INFO - 04/02/20 12:52:13 - 0:00:16 - Model: all, Baseline: k_split, Overall test rmse: 19.883077000733824 
+INFO - 04/02/20 12:52:13 - 0:00:16 - Model: all, Baseline: Language, Overall test rmse: 10.431859251643347 
+INFO - 04/02/20 12:52:13 - 0:00:16 - **************************************************
+INFO - 04/02/20 12:52:13 - 0:00:16 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 12:52:15 - 0:00:18 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:15 - 0:00:18 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:15 - 0:00:18 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:15 - 0:00:18 - Language: 72
+INFO - 04/02/20 12:52:15 - 0:00:18 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:15 - 0:00:18 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:15 - 0:00:18 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:16 - 0:00:19 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:17 - 0:00:20 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:18 - 0:00:21 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 7.115066402349485
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 11.205576542704746
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 6.865560241444612
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.197192301259031
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 6.896131417338058
+INFO - 04/02/20 12:52:19 - 0:00:21 - Model: all, Overall test rmse: 8.222841639508566
+INFO - 04/02/20 12:52:22 - 0:00:24 - Model: all, Baseline: k_split, Overall test rmse: 19.888807398753563 
+INFO - 04/02/20 12:52:22 - 0:00:24 - Model: all, Baseline: Language, Overall test rmse: 10.483236774316829 
+INFO - 04/02/20 12:52:22 - 0:00:24 - **************************************************
+INFO - 04/02/20 12:52:22 - 0:00:24 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 12:52:23 - 0:00:26 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:23 - 0:00:26 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:23 - 0:00:26 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:23 - 0:00:26 - Language: 72
+INFO - 04/02/20 12:52:23 - 0:00:26 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:23 - 0:00:26 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:24 - 0:00:27 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:24 - 0:00:27 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:25 - 0:00:28 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:26 - 0:00:29 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 6.022160254682631
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 7.877477456399296
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 7.301130856296151
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.979758431961997
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 10.061118072776761
+INFO - 04/02/20 12:52:27 - 0:00:29 - Model: all, Overall test rmse: 8.166881110444375
+INFO - 04/02/20 12:52:30 - 0:00:33 - Model: all, Baseline: k_split, Overall test rmse: 19.877743561374444 
+INFO - 04/02/20 12:52:30 - 0:00:33 - Model: all, Baseline: Language, Overall test rmse: 10.488888219517746 
+INFO - 04/02/20 12:52:30 - 0:00:33 - **************************************************
+INFO - 04/02/20 12:52:30 - 0:00:33 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 12:52:31 - 0:00:34 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:31 - 0:00:34 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:31 - 0:00:34 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:31 - 0:00:34 - Language: 72
+INFO - 04/02/20 12:52:31 - 0:00:34 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:31 - 0:00:34 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:32 - 0:00:35 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:33 - 0:00:36 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:34 - 0:00:37 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:34 - 0:00:37 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 7.592861642674336
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 10.507197896868258
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 6.8815468348062945
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 7.878011747089012
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 7.945666265720531
+INFO - 04/02/20 12:52:35 - 0:00:38 - Model: all, Overall test rmse: 8.253546194235083
+INFO - 04/02/20 12:52:38 - 0:00:41 - Model: all, Baseline: k_split, Overall test rmse: 19.916605160045176 
+INFO - 04/02/20 12:52:38 - 0:00:41 - Model: all, Baseline: Language, Overall test rmse: 10.516576222248123 
+INFO - 04/02/20 12:52:38 - 0:00:41 - **************************************************
+INFO - 04/02/20 12:52:38 - 0:00:41 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 12:52:40 - 0:00:42 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:40 - 0:00:42 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:40 - 0:00:42 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:40 - 0:00:42 - Language: 72
+INFO - 04/02/20 12:52:40 - 0:00:42 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:40 - 0:00:42 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:40 - 0:00:43 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:41 - 0:00:44 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:42 - 0:00:44 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:42 - 0:00:45 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 7.513319868845351
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 9.076676130040095
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 7.99781552948235
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 7.809916977365066
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 8.326163951648585
+INFO - 04/02/20 12:52:43 - 0:00:46 - Model: all, Overall test rmse: 8.162363476443849
+INFO - 04/02/20 12:52:46 - 0:00:49 - Model: all, Baseline: k_split, Overall test rmse: 19.879973364835145 
+INFO - 04/02/20 12:52:46 - 0:00:49 - Model: all, Baseline: Language, Overall test rmse: 10.531654212424149 
+INFO - 04/02/20 12:52:46 - 0:00:49 - **************************************************
+INFO - 04/02/20 12:52:46 - 0:00:49 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 12:52:48 - 0:00:50 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:48 - 0:00:50 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:48 - 0:00:50 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:48 - 0:00:50 - Language: 72
+INFO - 04/02/20 12:52:48 - 0:00:50 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:48 - 0:00:50 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:48 - 0:00:51 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:49 - 0:00:52 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:50 - 0:00:53 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:50 - 0:00:53 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 8.577463038531572
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 6.368156533195343
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 8.887746439636093
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.384753330847289
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 8.969444179445851
+INFO - 04/02/20 12:52:51 - 0:00:54 - Model: all, Overall test rmse: 8.293049425769361
+INFO - 04/02/20 12:52:54 - 0:00:57 - Model: all, Baseline: k_split, Overall test rmse: 19.882823512243426 
+INFO - 04/02/20 12:52:54 - 0:00:57 - Model: all, Baseline: Language, Overall test rmse: 10.48713419438267 
+INFO - 04/02/20 12:52:54 - 0:00:57 - **************************************************
+INFO - 04/02/20 12:52:54 - 0:00:57 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 12:52:56 - 0:00:58 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:52:56 - 0:00:58 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:52:56 - 0:00:58 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:52:56 - 0:00:58 - Language: 72
+INFO - 04/02/20 12:52:56 - 0:00:58 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:52:56 - 0:00:58 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:56 - 0:00:59 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:57 - 0:01:00 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:58 - 0:01:00 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:58 - 0:01:01 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 8.909697195360103
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 8.279564479556063
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 7.045923365102359
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.852631164752232
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 8.039354468466854
+INFO - 04/02/20 12:52:59 - 0:01:02 - Model: all, Overall test rmse: 8.253232420813434
+INFO - 04/02/20 12:53:02 - 0:01:05 - Model: all, Baseline: k_split, Overall test rmse: 19.881264609466477 
+INFO - 04/02/20 12:53:02 - 0:01:05 - Model: all, Baseline: Language, Overall test rmse: 10.47758024946012 
+INFO - 04/02/20 12:53:02 - 0:01:05 - **************************************************
+INFO - 04/02/20 12:53:02 - 0:01:05 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 12:53:03 - 0:01:06 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:53:03 - 0:01:06 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:53:03 - 0:01:06 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:53:03 - 0:01:06 - Language: 72
+INFO - 04/02/20 12:53:03 - 0:01:06 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:03 - 0:01:06 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:04 - 0:01:07 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:05 - 0:01:08 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:05 - 0:01:08 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:06 - 0:01:09 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 6.585223959291875
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 10.330288281199296
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 11.000339185917769
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 7.3351539067641065
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 6.822853166801924
+INFO - 04/02/20 12:53:07 - 0:01:10 - Model: all, Overall test rmse: 8.619086969553202
+INFO - 04/02/20 12:53:10 - 0:01:13 - Model: all, Baseline: k_split, Overall test rmse: 19.881002109585584 
+INFO - 04/02/20 12:53:10 - 0:01:13 - Model: all, Baseline: Language, Overall test rmse: 10.529156718851121 
+INFO - 04/02/20 12:53:10 - 0:01:13 - **************************************************
+INFO - 04/02/20 12:53:10 - 0:01:13 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 12:53:12 - 0:01:15 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, iParse, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN, HUJI, ArmParser into all.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Loaded 1800 experiment records for 1 models: all
+INFO - 04/02/20 12:53:12 - 0:01:15 - Loaded 1800 experiment records from all.
+INFO - 04/02/20 12:53:12 - 0:01:15 - 47 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_iParse, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN, model_HUJI, model_ArmParser
+INFO - 04/02/20 12:53:12 - 0:01:15 - Language: 72
+INFO - 04/02/20 12:53:12 - 0:01:15 - K fold splitter splitting 1800 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Fold 0 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Fold 1 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Fold 2 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Fold 3 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Fold 4 has 1440 training experimental records and 360 testing experimental records.
+INFO - 04/02/20 12:53:12 - 0:01:15 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:13 - 0:01:16 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:14 - 0:01:16 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:14 - 0:01:17 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:15 - 0:01:18 - Training a xgboost model with training data of shape (1440, 47).
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Fold: 0, Training data: 1440 Test data: 360 Test rmse: 8.211029114042837
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Fold: 1, Training data: 1440 Test data: 360 Test rmse: 8.20107160417149
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Fold: 2, Training data: 1440 Test data: 360 Test rmse: 8.544654079554716
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Fold: 3, Training data: 1440 Test data: 360 Test rmse: 8.149629462337952
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Fold: 4, Training data: 1440 Test data: 360 Test rmse: 7.638440288400378
+INFO - 04/02/20 12:53:16 - 0:01:18 - Model: all, Overall test rmse: 8.154163578449024
+INFO - 04/02/20 12:53:19 - 0:01:21 - Model: all, Baseline: k_split, Overall test rmse: 19.879432160699846 
+INFO - 04/02/20 12:53:19 - 0:01:21 - Model: all, Baseline: Language, Overall test rmse: 10.485420708760937 
+INFO - 04/02/20 12:53:19 - 0:01:21 - **************************************************
+INFO - 04/02/20 12:53:19 - 0:01:21 - Model all: The average rmse for 10 runs is 8.229862701763405
+INFO - 04/02/20 12:53:19 - 0:01:21 - Model all: The average k_split baseline rmse for 10 runs is 19.879432160699846
+INFO - 04/02/20 12:53:19 - 0:01:21 - Model all: The average Language baseline rmse for 10 runs is 10.485420708760937
+INFO - 04/02/20 15:48:17 - 0:00:00 - **************************************************
+INFO - 04/02/20 15:48:17 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 15:48:18 - 0:00:01 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:18 - 0:00:01 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:18 - 0:00:01 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:18 - 0:00:01 - Language: 72
+INFO - 04/02/20 15:48:18 - 0:00:01 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:18 - 0:00:01 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:19 - 0:00:02 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:19 - 0:00:03 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:20 - 0:00:03 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:20 - 0:00:04 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.825095214959244
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.4144007255469466
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 2.8493059179247613
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 4.3365038030753045
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 2.9206777878977555
+INFO - 04/02/20 15:48:21 - 0:00:04 - Model: all, Overall test rmse: 3.5144190657602032
+INFO - 04/02/20 15:48:24 - 0:00:07 - Model: all, Baseline: k_split, Overall test rmse: 17.92938290210988 
+INFO - 04/02/20 15:48:24 - 0:00:07 - Model: all, Baseline: Language, Overall test rmse: 5.50050500881638 
+INFO - 04/02/20 15:48:24 - 0:00:07 - **************************************************
+INFO - 04/02/20 15:48:24 - 0:00:07 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 15:48:25 - 0:00:08 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:25 - 0:00:08 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:25 - 0:00:08 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:25 - 0:00:08 - Language: 72
+INFO - 04/02/20 15:48:25 - 0:00:08 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:25 - 0:00:08 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:26 - 0:00:09 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:26 - 0:00:09 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:27 - 0:00:10 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:27 - 0:00:11 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.9301328394183037
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.455668994773247
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.4474065782758165
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.9056423805371376
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 2.860495476961104
+INFO - 04/02/20 15:48:28 - 0:00:11 - Model: all, Overall test rmse: 3.5418199178894127
+INFO - 04/02/20 15:48:31 - 0:00:14 - Model: all, Baseline: k_split, Overall test rmse: 17.936618063947844 
+INFO - 04/02/20 15:48:31 - 0:00:14 - Model: all, Baseline: Language, Overall test rmse: 5.499986332809329 
+INFO - 04/02/20 15:48:31 - 0:00:14 - **************************************************
+INFO - 04/02/20 15:48:31 - 0:00:14 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 15:48:32 - 0:00:15 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:32 - 0:00:15 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:32 - 0:00:15 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:32 - 0:00:15 - Language: 72
+INFO - 04/02/20 15:48:32 - 0:00:15 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:32 - 0:00:15 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:32 - 0:00:16 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:33 - 0:00:16 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:34 - 0:00:17 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:34 - 0:00:17 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.038534506640268
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.410767557176212
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.3647028459960406
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.905667767403136
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.9431644886212553
+INFO - 04/02/20 15:48:35 - 0:00:18 - Model: all, Overall test rmse: 3.549104840513082
+INFO - 04/02/20 15:48:37 - 0:00:21 - Model: all, Baseline: k_split, Overall test rmse: 17.930368654110577 
+INFO - 04/02/20 15:48:37 - 0:00:21 - Model: all, Baseline: Language, Overall test rmse: 5.47362825299926 
+INFO - 04/02/20 15:48:37 - 0:00:21 - **************************************************
+INFO - 04/02/20 15:48:37 - 0:00:21 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 15:48:39 - 0:00:22 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:39 - 0:00:22 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:39 - 0:00:22 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:39 - 0:00:22 - Language: 72
+INFO - 04/02/20 15:48:39 - 0:00:22 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:39 - 0:00:22 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:39 - 0:00:23 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:40 - 0:00:23 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:41 - 0:00:24 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:41 - 0:00:24 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.3206389262442912
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.330950814063938
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 4.006212675914604
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.8066276861314545
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.2772120980566033
+INFO - 04/02/20 15:48:42 - 0:00:25 - Model: all, Overall test rmse: 3.561131123779937
+INFO - 04/02/20 15:48:44 - 0:00:27 - Model: all, Baseline: k_split, Overall test rmse: 17.938803839002755 
+INFO - 04/02/20 15:48:44 - 0:00:27 - Model: all, Baseline: Language, Overall test rmse: 5.484329554711059 
+INFO - 04/02/20 15:48:44 - 0:00:27 - **************************************************
+INFO - 04/02/20 15:48:44 - 0:00:27 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 15:48:46 - 0:00:29 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:46 - 0:00:29 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:46 - 0:00:29 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:46 - 0:00:29 - Language: 72
+INFO - 04/02/20 15:48:46 - 0:00:29 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:46 - 0:00:29 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:46 - 0:00:29 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:47 - 0:00:30 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:47 - 0:00:31 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:48 - 0:00:31 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 4.157818389776984
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 4.021486878370266
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 2.8601404012812335
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.5552543955412674
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.528971966918692
+INFO - 04/02/20 15:48:49 - 0:00:32 - Model: all, Overall test rmse: 3.6533959452412734
+INFO - 04/02/20 15:48:51 - 0:00:34 - Model: all, Baseline: k_split, Overall test rmse: 17.943840015510208 
+INFO - 04/02/20 15:48:51 - 0:00:34 - Model: all, Baseline: Language, Overall test rmse: 5.444094628002633 
+INFO - 04/02/20 15:48:51 - 0:00:34 - **************************************************
+INFO - 04/02/20 15:48:51 - 0:00:34 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 15:48:53 - 0:00:36 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:48:53 - 0:00:36 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:48:53 - 0:00:36 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:48:53 - 0:00:36 - Language: 72
+INFO - 04/02/20 15:48:53 - 0:00:36 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:48:53 - 0:00:36 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:53 - 0:00:37 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:54 - 0:00:37 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:55 - 0:00:38 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:48:56 - 0:00:39 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.349507786524521
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.7352736090286682
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.680502929279816
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.1134899036521437
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.7035059511070094
+INFO - 04/02/20 15:48:56 - 0:00:39 - Model: all, Overall test rmse: 3.5248624189666544
+INFO - 04/02/20 15:48:59 - 0:00:42 - Model: all, Baseline: k_split, Overall test rmse: 17.94442476449192 
+INFO - 04/02/20 15:48:59 - 0:00:42 - Model: all, Baseline: Language, Overall test rmse: 5.497695318768064 
+INFO - 04/02/20 15:48:59 - 0:00:42 - **************************************************
+INFO - 04/02/20 15:48:59 - 0:00:42 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 15:49:00 - 0:00:43 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:49:00 - 0:00:43 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:49:00 - 0:00:43 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:49:00 - 0:00:43 - Language: 72
+INFO - 04/02/20 15:49:00 - 0:00:43 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:49:00 - 0:00:43 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:01 - 0:00:44 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:01 - 0:00:45 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:02 - 0:00:45 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:03 - 0:00:46 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.5118338547902277
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.8293913952663576
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.7860356745193693
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.0777873313582345
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.1877083257977494
+INFO - 04/02/20 15:49:03 - 0:00:46 - Model: all, Overall test rmse: 3.4920467863950244
+INFO - 04/02/20 15:49:07 - 0:00:50 - Model: all, Baseline: k_split, Overall test rmse: 17.9402582590035 
+INFO - 04/02/20 15:49:07 - 0:00:50 - Model: all, Baseline: Language, Overall test rmse: 5.436473526520174 
+INFO - 04/02/20 15:49:07 - 0:00:50 - **************************************************
+INFO - 04/02/20 15:49:07 - 0:00:50 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 15:49:08 - 0:00:51 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:49:08 - 0:00:51 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:49:08 - 0:00:51 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:49:08 - 0:00:51 - Language: 72
+INFO - 04/02/20 15:49:08 - 0:00:51 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:49:08 - 0:00:51 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:09 - 0:00:52 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:09 - 0:00:53 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:10 - 0:00:53 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:11 - 0:00:54 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 2.675146794207199
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.6510682709118116
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.97564793304022
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.0806931409121847
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.796868630879196
+INFO - 04/02/20 15:49:11 - 0:00:54 - Model: all, Overall test rmse: 3.469635915747817
+INFO - 04/02/20 15:49:14 - 0:00:57 - Model: all, Baseline: k_split, Overall test rmse: 17.939260146688888 
+INFO - 04/02/20 15:49:14 - 0:00:57 - Model: all, Baseline: Language, Overall test rmse: 5.533844944802904 
+INFO - 04/02/20 15:49:14 - 0:00:57 - **************************************************
+INFO - 04/02/20 15:49:14 - 0:00:57 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 15:49:15 - 0:00:58 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:49:15 - 0:00:58 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:49:15 - 0:00:58 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:49:15 - 0:00:58 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:49:15 - 0:00:58 - Language: 72
+INFO - 04/02/20 15:49:15 - 0:00:58 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:49:15 - 0:00:58 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:15 - 0:00:58 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:15 - 0:00:58 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:15 - 0:00:59 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:15 - 0:00:59 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:49:15 - 0:00:59 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:16 - 0:00:59 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:17 - 0:01:00 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:17 - 0:01:00 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:18 - 0:01:01 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 3.6272161316356573
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.6795602281141195
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.1746673039013613
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.5509764886684168
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.6133759242305272
+INFO - 04/02/20 15:49:19 - 0:01:02 - Model: all, Overall test rmse: 3.533793942601795
+INFO - 04/02/20 15:49:21 - 0:01:05 - Model: all, Baseline: k_split, Overall test rmse: 17.93618630532675 
+INFO - 04/02/20 15:49:21 - 0:01:05 - Model: all, Baseline: Language, Overall test rmse: 5.488711793347077 
+INFO - 04/02/20 15:49:21 - 0:01:05 - **************************************************
+INFO - 04/02/20 15:49:21 - 0:01:05 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 15:49:23 - 0:01:06 - Combined HIT-SCIR, Stanford, TurkuNLP, UDPipe, ICS, NLP-Cube, CEA, LATTICE, SLT-Interactions, ParisNLP, AntNLP, LeisureX, IBM, Uppsala, UniMelb, KParse, BASELINE, Fudan, Phoenix, CUNI, ONLP, BOUN into all.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Loaded 1584 experiment records for 1 models: all
+INFO - 04/02/20 15:49:23 - 0:01:06 - Loaded 1584 experiment records from all.
+INFO - 04/02/20 15:49:23 - 0:01:06 - 44 feats: num type fusion tag, num type tag, average type tag for word, word num, word type, data size, avg sent length, word type ratio, S_SVO, S_SOV, S_VSO, S_SUBJECT_AFTER_VERB, S_OBJECT_BEFORE_VERB, S_OBJECT_AFTER_VERB, S_POSSESSOR_BEFORE_NOUN, S_POSSESSOR_AFTER_NOUN, S_ADJECTIVE_BEFORE_NOUN, S_ADJECTIVE_AFTER_NOUN, S_NUMERAL_AFTER_NOUN, S_OBLIQUE_AFTER_VERB, S_OBLIQUE_BEFORE_VERB, S_OBLIQUE_BEFORE_OBJECT, model_HIT-SCIR, model_Stanford, model_TurkuNLP, model_UDPipe, model_ICS, model_NLP-Cube, model_CEA, model_LATTICE, model_SLT-Interactions, model_ParisNLP, model_AntNLP, model_LeisureX, model_IBM, model_Uppsala, model_UniMelb, model_KParse, model_BASELINE, model_Fudan, model_Phoenix, model_CUNI, model_ONLP, model_BOUN
+INFO - 04/02/20 15:49:23 - 0:01:06 - Language: 72
+INFO - 04/02/20 15:49:23 - 0:01:06 - K fold splitter splitting 1584 experimental records for model all into 5 folds.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Fold 0 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Fold 1 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Fold 2 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Fold 3 has 1267 training experimental records and 317 testing experimental records.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Fold 4 has 1268 training experimental records and 316 testing experimental records.
+INFO - 04/02/20 15:49:23 - 0:01:06 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:23 - 0:01:07 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:24 - 0:01:07 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:24 - 0:01:08 - Training a xgboost model with training data of shape (1267, 44).
+INFO - 04/02/20 15:49:25 - 0:01:08 - Training a xgboost model with training data of shape (1268, 44).
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Fold: 0, Training data: 1267 Test data: 317 Test rmse: 4.048645817100475
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Fold: 1, Training data: 1267 Test data: 317 Test rmse: 3.2425209840337565
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Fold: 2, Training data: 1267 Test data: 317 Test rmse: 3.4826932978624168
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Fold: 3, Training data: 1267 Test data: 317 Test rmse: 3.229373123872282
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Fold: 4, Training data: 1268 Test data: 316 Test rmse: 3.828586077646102
+INFO - 04/02/20 15:49:26 - 0:01:09 - Model: all, Overall test rmse: 3.580942938116545
+INFO - 04/02/20 15:49:28 - 0:01:11 - Model: all, Baseline: k_split, Overall test rmse: 17.942995073499894 
+INFO - 04/02/20 15:49:28 - 0:01:11 - Model: all, Baseline: Language, Overall test rmse: 5.431759301155495 
+INFO - 04/02/20 15:49:28 - 0:01:11 - **************************************************
+INFO - 04/02/20 15:49:28 - 0:01:11 - Model all: The average rmse for 10 runs is 3.5421152895011745
+INFO - 04/02/20 15:49:28 - 0:01:11 - Model all: The average k_split baseline rmse for 10 runs is 17.942995073499894
+INFO - 04/02/20 15:49:28 - 0:01:11 - Model all: The average Language baseline rmse for 10 runs is 5.431759301155495

@@ -1,0 +1,528 @@
+INFO - 04/02/20 12:43:08 - 0:00:00 - **************************************************
+INFO - 04/02/20 12:43:08 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 12:43:08 - 0:00:00 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:08 - 0:00:00 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:08 - 0:00:00 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:08 - 0:00:00 - language: 107
+INFO - 04/02/20 12:43:08 - 0:00:00 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:08 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:08 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:08 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:09 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:09 - 0:00:01 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.016946390893951
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.6983084785069633
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.673844020521182
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 3.849159955739288
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.928641440863819
+INFO - 04/02/20 12:43:09 - 0:00:01 - Model: all, Overall test rmse: 3.2866667480828893
+INFO - 04/02/20 12:43:10 - 0:00:02 - Model: all, Baseline: k_split, Overall test rmse: 10.112310305565925 
+INFO - 04/02/20 12:43:10 - 0:00:02 - Model: all, Baseline: language, Overall test rmse: 5.484021905818711 
+INFO - 04/02/20 12:43:10 - 0:00:02 - **************************************************
+INFO - 04/02/20 12:43:10 - 0:00:02 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 12:43:10 - 0:00:02 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:10 - 0:00:02 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:10 - 0:00:02 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:10 - 0:00:02 - language: 107
+INFO - 04/02/20 12:43:10 - 0:00:02 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:10 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:10 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:10 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:10 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:10 - 0:00:02 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.3648480619212298
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.938275563949485
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.850510338600883
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 3.9697943829353535
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.968811802974281
+INFO - 04/02/20 12:43:11 - 0:00:03 - Model: all, Overall test rmse: 3.0639135821310486
+INFO - 04/02/20 12:43:12 - 0:00:03 - Model: all, Baseline: k_split, Overall test rmse: 10.116004822289517 
+INFO - 04/02/20 12:43:12 - 0:00:03 - Model: all, Baseline: language, Overall test rmse: 5.71831732531257 
+INFO - 04/02/20 12:43:12 - 0:00:03 - **************************************************
+INFO - 04/02/20 12:43:12 - 0:00:03 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 12:43:12 - 0:00:04 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:12 - 0:00:04 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:12 - 0:00:04 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:12 - 0:00:04 - language: 107
+INFO - 04/02/20 12:43:12 - 0:00:04 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:12 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:12 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:12 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:12 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:12 - 0:00:04 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.425546600042808
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.0181469209174967
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 5.110467337932769
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.8406031679563606
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.182764235402685
+INFO - 04/02/20 12:43:12 - 0:00:04 - Model: all, Overall test rmse: 3.2888782239899244
+INFO - 04/02/20 12:43:13 - 0:00:05 - Model: all, Baseline: k_split, Overall test rmse: 10.120549112900681 
+INFO - 04/02/20 12:43:13 - 0:00:05 - Model: all, Baseline: language, Overall test rmse: 5.769472744608368 
+INFO - 04/02/20 12:43:13 - 0:00:05 - **************************************************
+INFO - 04/02/20 12:43:13 - 0:00:05 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 12:43:13 - 0:00:05 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:13 - 0:00:05 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:13 - 0:00:05 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:13 - 0:00:05 - language: 107
+INFO - 04/02/20 12:43:13 - 0:00:05 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:13 - 0:00:05 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:13 - 0:00:05 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:14 - 0:00:06 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:14 - 0:00:06 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:14 - 0:00:06 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.2640089935275736
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.7393926636878008
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.0158181301411817
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 4.403804340189955
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.8357158812928067
+INFO - 04/02/20 12:43:14 - 0:00:06 - Model: all, Overall test rmse: 3.1369342995392127
+INFO - 04/02/20 12:43:15 - 0:00:07 - Model: all, Baseline: k_split, Overall test rmse: 10.13464223623363 
+INFO - 04/02/20 12:43:15 - 0:00:07 - Model: all, Baseline: language, Overall test rmse: 5.494357005741624 
+INFO - 04/02/20 12:43:15 - 0:00:07 - **************************************************
+INFO - 04/02/20 12:43:15 - 0:00:07 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 12:43:15 - 0:00:07 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:15 - 0:00:07 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:15 - 0:00:07 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:15 - 0:00:07 - language: 107
+INFO - 04/02/20 12:43:15 - 0:00:07 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:15 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:15 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:15 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:15 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:16 - 0:00:08 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.748977561642458
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 4.3739872045954
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.2977793499576484
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.9219595735914536
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.7220222396069924
+INFO - 04/02/20 12:43:16 - 0:00:08 - Model: all, Overall test rmse: 3.097304395461345
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Baseline: k_split, Overall test rmse: 10.14520131787651 
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Baseline: language, Overall test rmse: 5.525167511451126 
+INFO - 04/02/20 12:43:17 - 0:00:09 - **************************************************
+INFO - 04/02/20 12:43:17 - 0:00:09 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 12:43:17 - 0:00:09 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:17 - 0:00:09 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:17 - 0:00:09 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:17 - 0:00:09 - language: 107
+INFO - 04/02/20 12:43:17 - 0:00:09 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:17 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:17 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:17 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:17 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:17 - 0:00:09 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.073721956390201
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.0775647074638237
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.520210140949225
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.447317214306028
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 4.265951615990038
+INFO - 04/02/20 12:43:17 - 0:00:09 - Model: all, Overall test rmse: 3.386281878118326
+INFO - 04/02/20 12:43:18 - 0:00:10 - Model: all, Baseline: k_split, Overall test rmse: 10.130517317677484 
+INFO - 04/02/20 12:43:18 - 0:00:10 - Model: all, Baseline: language, Overall test rmse: 5.765149214704588 
+INFO - 04/02/20 12:43:18 - 0:00:10 - **************************************************
+INFO - 04/02/20 12:43:18 - 0:00:10 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 12:43:19 - 0:00:10 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:19 - 0:00:10 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:19 - 0:00:10 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:19 - 0:00:10 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:19 - 0:00:10 - language: 107
+INFO - 04/02/20 12:43:19 - 0:00:10 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:19 - 0:00:10 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:19 - 0:00:11 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:19 - 0:00:11 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:19 - 0:00:11 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:19 - 0:00:11 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:19 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:19 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:19 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:19 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:19 - 0:00:11 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.745037561524292
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.0207974140502207
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 4.250852802357994
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.5700110998616874
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 4.6267951637242835
+INFO - 04/02/20 12:43:19 - 0:00:11 - Model: all, Overall test rmse: 3.536535254806755
+INFO - 04/02/20 12:43:20 - 0:00:12 - Model: all, Baseline: k_split, Overall test rmse: 10.12237961070072 
+INFO - 04/02/20 12:43:20 - 0:00:12 - Model: all, Baseline: language, Overall test rmse: 5.672166719689237 
+INFO - 04/02/20 12:43:20 - 0:00:12 - **************************************************
+INFO - 04/02/20 12:43:20 - 0:00:12 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 12:43:20 - 0:00:12 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:20 - 0:00:12 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:20 - 0:00:12 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:20 - 0:00:12 - language: 107
+INFO - 04/02/20 12:43:20 - 0:00:12 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:20 - 0:00:12 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:20 - 0:00:12 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:21 - 0:00:13 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:21 - 0:00:13 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:21 - 0:00:13 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.4384619569826915
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.1678156137718805
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.529419715069688
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 3.551967914675504
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.2772519351718308
+INFO - 04/02/20 12:43:21 - 0:00:13 - Model: all, Overall test rmse: 3.288348694999352
+INFO - 04/02/20 12:43:22 - 0:00:14 - Model: all, Baseline: k_split, Overall test rmse: 10.11710682406654 
+INFO - 04/02/20 12:43:22 - 0:00:14 - Model: all, Baseline: language, Overall test rmse: 5.654858330617682 
+INFO - 04/02/20 12:43:22 - 0:00:14 - **************************************************
+INFO - 04/02/20 12:43:22 - 0:00:14 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 12:43:22 - 0:00:14 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:22 - 0:00:14 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:22 - 0:00:14 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:22 - 0:00:14 - language: 107
+INFO - 04/02/20 12:43:22 - 0:00:14 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:22 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:22 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:22 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:22 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:23 - 0:00:15 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 3.2950427364839294
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.6786375691734374
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.9060747111045018
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 3.479037036349899
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.8999113960356513
+INFO - 04/02/20 12:43:23 - 0:00:15 - Model: all, Overall test rmse: 3.2820098394725887
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Baseline: k_split, Overall test rmse: 10.146772839098974 
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Baseline: language, Overall test rmse: 5.632282176049404 
+INFO - 04/02/20 12:43:24 - 0:00:16 - **************************************************
+INFO - 04/02/20 12:43:24 - 0:00:16 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 12:43:24 - 0:00:16 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:43:24 - 0:00:16 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:43:24 - 0:00:16 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:43:24 - 0:00:16 - language: 107
+INFO - 04/02/20 12:43:24 - 0:00:16 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:43:24 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:24 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:24 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:24 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:43:24 - 0:00:16 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.506755194296167
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.4249242940957205
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 4.476358103335834
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.4037645567016095
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 4.436493820311152
+INFO - 04/02/20 12:43:24 - 0:00:16 - Model: all, Overall test rmse: 3.5594714973567325
+INFO - 04/02/20 12:43:25 - 0:00:17 - Model: all, Baseline: k_split, Overall test rmse: 10.119309470914638 
+INFO - 04/02/20 12:43:25 - 0:00:17 - Model: all, Baseline: language, Overall test rmse: 5.581535277594898 
+INFO - 04/02/20 12:43:25 - 0:00:17 - **************************************************
+INFO - 04/02/20 12:43:25 - 0:00:17 - Model all: The average rmse for 10 runs is 3.2926344413958177
+INFO - 04/02/20 12:43:25 - 0:00:17 - Model all: The average k_split baseline rmse for 10 runs is 10.119309470914638
+INFO - 04/02/20 12:43:25 - 0:00:17 - Model all: The average language baseline rmse for 10 runs is 5.581535277594898
+INFO - 04/02/20 12:51:10 - 0:00:00 - **************************************************
+INFO - 04/02/20 12:51:10 - 0:00:00 - Running k fold evaulation [1/10]...
+INFO - 04/02/20 12:51:10 - 0:00:00 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:10 - 0:00:00 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:10 - 0:00:00 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:10 - 0:00:00 - language: 107
+INFO - 04/02/20 12:51:10 - 0:00:00 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:10 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:10 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:10 - 0:00:00 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:10 - 0:00:01 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:10 - 0:00:01 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.9214246795684478
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.9262501257425795
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.6342169142934777
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.2893451284434003
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 4.021487678182205
+INFO - 04/02/20 12:51:10 - 0:00:01 - Model: all, Overall test rmse: 3.00947670694034
+INFO - 04/02/20 12:51:11 - 0:00:02 - Model: all, Baseline: k_split, Overall test rmse: 10.110382025922034 
+INFO - 04/02/20 12:51:11 - 0:00:02 - Model: all, Baseline: language, Overall test rmse: 5.46347716156695 
+INFO - 04/02/20 12:51:11 - 0:00:02 - **************************************************
+INFO - 04/02/20 12:51:11 - 0:00:02 - Running k fold evaulation [2/10]...
+INFO - 04/02/20 12:51:12 - 0:00:02 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:12 - 0:00:02 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:12 - 0:00:02 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:12 - 0:00:02 - language: 107
+INFO - 04/02/20 12:51:12 - 0:00:02 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:12 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:12 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:12 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:12 - 0:00:02 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:12 - 0:00:02 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.534341786737834
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.4690280448970614
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.329861413480585
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.168643443712582
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.837104761087523
+INFO - 04/02/20 12:51:12 - 0:00:03 - Model: all, Overall test rmse: 3.179446813604075
+INFO - 04/02/20 12:51:13 - 0:00:04 - Model: all, Baseline: k_split, Overall test rmse: 10.132501745094785 
+INFO - 04/02/20 12:51:13 - 0:00:04 - Model: all, Baseline: language, Overall test rmse: 5.527546015341112 
+INFO - 04/02/20 12:51:13 - 0:00:04 - **************************************************
+INFO - 04/02/20 12:51:13 - 0:00:04 - Running k fold evaulation [3/10]...
+INFO - 04/02/20 12:51:13 - 0:00:04 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:13 - 0:00:04 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:13 - 0:00:04 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:13 - 0:00:04 - language: 107
+INFO - 04/02/20 12:51:13 - 0:00:04 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:13 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:13 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:14 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:14 - 0:00:04 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:14 - 0:00:04 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 3.2796047150627667
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.5394812869094503
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.1155212216480463
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.975035616365568
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 4.008830454815809
+INFO - 04/02/20 12:51:14 - 0:00:04 - Model: all, Overall test rmse: 3.4002028604958925
+INFO - 04/02/20 12:51:15 - 0:00:05 - Model: all, Baseline: k_split, Overall test rmse: 10.11227233213625 
+INFO - 04/02/20 12:51:15 - 0:00:05 - Model: all, Baseline: language, Overall test rmse: 5.842572974877636 
+INFO - 04/02/20 12:51:15 - 0:00:05 - **************************************************
+INFO - 04/02/20 12:51:15 - 0:00:05 - Running k fold evaulation [4/10]...
+INFO - 04/02/20 12:51:15 - 0:00:05 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:15 - 0:00:05 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:15 - 0:00:05 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:15 - 0:00:05 - language: 107
+INFO - 04/02/20 12:51:15 - 0:00:05 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:15 - 0:00:05 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:15 - 0:00:05 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:15 - 0:00:06 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:15 - 0:00:06 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:16 - 0:00:06 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 3.196967236853514
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.669858467444471
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.462028297743053
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 3.755808527009395
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 3.1349082005162177
+INFO - 04/02/20 12:51:16 - 0:00:06 - Model: all, Overall test rmse: 3.076871470184882
+INFO - 04/02/20 12:51:17 - 0:00:07 - Model: all, Baseline: k_split, Overall test rmse: 10.135887978498369 
+INFO - 04/02/20 12:51:17 - 0:00:07 - Model: all, Baseline: language, Overall test rmse: 5.668484945614696 
+INFO - 04/02/20 12:51:17 - 0:00:07 - **************************************************
+INFO - 04/02/20 12:51:17 - 0:00:07 - Running k fold evaulation [5/10]...
+INFO - 04/02/20 12:51:17 - 0:00:07 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:17 - 0:00:07 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:17 - 0:00:07 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:17 - 0:00:07 - language: 107
+INFO - 04/02/20 12:51:17 - 0:00:07 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:17 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:17 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:17 - 0:00:07 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:17 - 0:00:08 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:17 - 0:00:08 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 3.0455211690173587
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.1759951978646574
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.4412252623765514
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.7817474300717637
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 3.7969682411233117
+INFO - 04/02/20 12:51:17 - 0:00:08 - Model: all, Overall test rmse: 3.264100485246138
+INFO - 04/02/20 12:51:19 - 0:00:09 - Model: all, Baseline: k_split, Overall test rmse: 10.14282210239869 
+INFO - 04/02/20 12:51:19 - 0:00:09 - Model: all, Baseline: language, Overall test rmse: 5.833428353542967 
+INFO - 04/02/20 12:51:19 - 0:00:09 - **************************************************
+INFO - 04/02/20 12:51:19 - 0:00:09 - Running k fold evaulation [6/10]...
+INFO - 04/02/20 12:51:19 - 0:00:09 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:19 - 0:00:09 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:19 - 0:00:09 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:19 - 0:00:09 - language: 107
+INFO - 04/02/20 12:51:19 - 0:00:09 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:19 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:19 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:19 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:19 - 0:00:09 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:19 - 0:00:09 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.4528883051507013
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 4.37683951535298
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.749369421571017
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.7868005167649854
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 3.2009991980072
+INFO - 04/02/20 12:51:19 - 0:00:10 - Model: all, Overall test rmse: 3.1856803074824964
+INFO - 04/02/20 12:51:20 - 0:00:11 - Model: all, Baseline: k_split, Overall test rmse: 10.117590618439282 
+INFO - 04/02/20 12:51:20 - 0:00:11 - Model: all, Baseline: language, Overall test rmse: 5.67268439045093 
+INFO - 04/02/20 12:51:20 - 0:00:11 - **************************************************
+INFO - 04/02/20 12:51:20 - 0:00:11 - Running k fold evaulation [7/10]...
+INFO - 04/02/20 12:51:20 - 0:00:11 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:20 - 0:00:11 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:20 - 0:00:11 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:20 - 0:00:11 - language: 107
+INFO - 04/02/20 12:51:20 - 0:00:11 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:20 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:20 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:21 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:21 - 0:00:11 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:21 - 0:00:11 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.263005651992897
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.1013999499576377
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 3.044860375516024
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.2762345954879226
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.7505345630662097
+INFO - 04/02/20 12:51:21 - 0:00:11 - Model: all, Overall test rmse: 3.1580294841346905
+INFO - 04/02/20 12:51:22 - 0:00:12 - Model: all, Baseline: k_split, Overall test rmse: 10.11835142593324 
+INFO - 04/02/20 12:51:22 - 0:00:12 - Model: all, Baseline: language, Overall test rmse: 5.460652831061604 
+INFO - 04/02/20 12:51:22 - 0:00:12 - **************************************************
+INFO - 04/02/20 12:51:22 - 0:00:12 - Running k fold evaulation [8/10]...
+INFO - 04/02/20 12:51:22 - 0:00:12 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:22 - 0:00:12 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:22 - 0:00:12 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:22 - 0:00:12 - language: 107
+INFO - 04/02/20 12:51:22 - 0:00:12 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:22 - 0:00:12 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:22 - 0:00:13 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:22 - 0:00:13 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:22 - 0:00:13 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:23 - 0:00:13 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.055694426885512
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.227997574545156
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.6955173234782297
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.507106947681637
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 3.489897812883244
+INFO - 04/02/20 12:51:23 - 0:00:13 - Model: all, Overall test rmse: 3.242241131955961
+INFO - 04/02/20 12:51:24 - 0:00:14 - Model: all, Baseline: k_split, Overall test rmse: 10.119906089220468 
+INFO - 04/02/20 12:51:24 - 0:00:14 - Model: all, Baseline: language, Overall test rmse: 5.839549332152951 
+INFO - 04/02/20 12:51:24 - 0:00:14 - **************************************************
+INFO - 04/02/20 12:51:24 - 0:00:14 - Running k fold evaulation [9/10]...
+INFO - 04/02/20 12:51:24 - 0:00:14 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:24 - 0:00:14 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:24 - 0:00:14 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:24 - 0:00:14 - language: 107
+INFO - 04/02/20 12:51:24 - 0:00:14 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:24 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:24 - 0:00:14 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:24 - 0:00:15 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:24 - 0:00:15 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:24 - 0:00:15 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 2.7452147854914055
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 3.8700062276933975
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.564476242337667
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.8619333099488506
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 3.7239265681321383
+INFO - 04/02/20 12:51:25 - 0:00:15 - Model: all, Overall test rmse: 3.1957153005536507
+INFO - 04/02/20 12:51:26 - 0:00:16 - Model: all, Baseline: k_split, Overall test rmse: 10.12510285353364 
+INFO - 04/02/20 12:51:26 - 0:00:16 - Model: all, Baseline: language, Overall test rmse: 5.596080718558204 
+INFO - 04/02/20 12:51:26 - 0:00:16 - **************************************************
+INFO - 04/02/20 12:51:26 - 0:00:16 - Running k fold evaulation [10/10]...
+INFO - 04/02/20 12:51:26 - 0:00:16 - Combined OHIOSTATE-01-2, EDINBURGH-01-2, CMU-01-2-DataAug, CHARLES-SAARLAND-02-2, Unknown, CARNEGIEMELLON-02-2 into all.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Loaded 642 experiment records for 1 models: all
+INFO - 04/02/20 12:51:26 - 0:00:16 - Loaded 642 experiment records from all.
+INFO - 04/02/20 12:51:26 - 0:00:16 - 17 feats: data size, sentence length, tag per word, num type fusion tag, num type tag, average tag type length, average type tag for word, word num, word type, avg sent length, word type ratio, model_OHIOSTATE-01-2, model_EDINBURGH-01-2, model_CMU-01-2-DataAug, model_CHARLES-SAARLAND-02-2, model_Unknown, model_CARNEGIEMELLON-02-2
+INFO - 04/02/20 12:51:26 - 0:00:16 - language: 107
+INFO - 04/02/20 12:51:26 - 0:00:16 - K fold splitter splitting 642 experimental records for model all into 5 folds.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Fold 0 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Fold 1 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Fold 2 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Fold 3 has 513 training experimental records and 129 testing experimental records.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Fold 4 has 516 training experimental records and 126 testing experimental records.
+INFO - 04/02/20 12:51:26 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:26 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:26 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:26 - 0:00:16 - Training a xgboost model with training data of shape (513, 17).
+INFO - 04/02/20 12:51:26 - 0:00:17 - Training a xgboost model with training data of shape (516, 17).
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Fold: 0, Training data: 513 Test data: 129 Test rmse: 4.512032005632712
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Fold: 1, Training data: 513 Test data: 129 Test rmse: 2.928506410416314
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Fold: 2, Training data: 513 Test data: 129 Test rmse: 2.781727270093059
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Fold: 3, Training data: 513 Test data: 129 Test rmse: 2.468750869909993
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Fold: 4, Training data: 516 Test data: 126 Test rmse: 2.4846298462604914
+INFO - 04/02/20 12:51:26 - 0:00:17 - Model: all, Overall test rmse: 3.1312988506020227
+INFO - 04/02/20 12:51:27 - 0:00:18 - Model: all, Baseline: k_split, Overall test rmse: 10.150484741468203 
+INFO - 04/02/20 12:51:27 - 0:00:18 - Model: all, Baseline: language, Overall test rmse: 5.494745247284402 
+INFO - 04/02/20 12:51:27 - 0:00:18 - **************************************************
+INFO - 04/02/20 12:51:27 - 0:00:18 - Model all: The average rmse for 10 runs is 3.1843063411200148
+INFO - 04/02/20 12:51:27 - 0:00:18 - Model all: The average k_split baseline rmse for 10 runs is 10.150484741468203
+INFO - 04/02/20 12:51:27 - 0:00:18 - Model all: The average language baseline rmse for 10 runs is 5.494745247284402

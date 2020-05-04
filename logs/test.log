@@ -1,0 +1,648 @@
+INFO - 04/10/20 14:02:27 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 14:02:27 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 14:02:27 - 0:00:00 - task: monomt
+INFO - 04/10/20 14:02:27 - 0:00:00 - verbose: 2
+INFO - 04/10/20 14:02:27 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 14:02:27 - 0:00:00 - n: 5
+INFO - 04/10/20 14:02:27 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 14:02:27 - 0:00:00 - type: random_search
+INFO - 04/10/20 14:02:27 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records for 1 models: all
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records from all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, model_BLEU
+INFO - 04/10/20 14:02:27 - 0:00:00 - Source Language: 54
+INFO - 04/10/20 14:02:27 - 0:00:00 - Target Language: 1
+INFO - 04/10/20 14:02:27 - 0:00:00 - Starting random search for the representative languages for monomt.
+INFO - 04/10/20 14:02:27 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 14:02:27 - 0:00:00 - Specific splitter splitting 54 experimental records for model all into 2 training experimental records and 52 experimental records.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Training a xgboost model with training data of shape (2, 22).
+INFO - 04/10/20 14:02:27 - 0:00:00 - Progress: 1/1, 12.32.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Finished n=2 experiments. The average rmse is 12.319235720672935.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records for 1 models: all
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records from all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, model_BLEU
+INFO - 04/10/20 14:02:27 - 0:00:00 - Source Language: 54
+INFO - 04/10/20 14:02:27 - 0:00:00 - Target Language: 1
+INFO - 04/10/20 14:02:27 - 0:00:00 - Starting random search for the representative languages for monomt.
+INFO - 04/10/20 14:02:27 - 0:00:00 - There are 1 experiments running for n=3...
+INFO - 04/10/20 14:02:27 - 0:00:00 - Specific splitter splitting 54 experimental records for model all into 3 training experimental records and 51 experimental records.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Training a xgboost model with training data of shape (3, 22).
+INFO - 04/10/20 14:02:27 - 0:00:00 - Progress: 1/1, 9.56.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Finished n=3 experiments. The average rmse is 9.563674701620746.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records for 1 models: all
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records from all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, model_BLEU
+INFO - 04/10/20 14:02:27 - 0:00:00 - Source Language: 54
+INFO - 04/10/20 14:02:27 - 0:00:00 - Target Language: 1
+INFO - 04/10/20 14:02:27 - 0:00:00 - Starting random search for the representative languages for monomt.
+INFO - 04/10/20 14:02:27 - 0:00:00 - There are 1 experiments running for n=4...
+INFO - 04/10/20 14:02:27 - 0:00:00 - Specific splitter splitting 54 experimental records for model all into 4 training experimental records and 50 experimental records.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Training a xgboost model with training data of shape (4, 22).
+INFO - 04/10/20 14:02:27 - 0:00:00 - Progress: 1/1, 10.22.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Finished n=4 experiments. The average rmse is 10.219819368248645.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records for 1 models: all
+INFO - 04/10/20 14:02:27 - 0:00:00 - Loaded 54 experiment records from all.
+INFO - 04/10/20 14:02:27 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC, model_BLEU
+INFO - 04/10/20 14:02:27 - 0:00:00 - Source Language: 54
+INFO - 04/10/20 14:02:27 - 0:00:00 - Target Language: 1
+INFO - 04/10/20 14:02:27 - 0:00:00 - Starting random search for the representative languages for monomt.
+INFO - 04/10/20 14:02:27 - 0:00:00 - There are 1 experiments running for n=5...
+INFO - 04/10/20 14:02:27 - 0:00:00 - Specific splitter splitting 54 experimental records for model all into 5 training experimental records and 49 experimental records.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Training a xgboost model with training data of shape (5, 22).
+INFO - 04/10/20 14:02:27 - 0:00:00 - Progress: 1/1, 7.90.
+INFO - 04/10/20 14:02:27 - 0:00:00 - Finished n=5 experiments. The average rmse is 7.903355617428949.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 14:03:22 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 14:03:22 - 0:00:00 - task: wiki
+INFO - 04/10/20 14:03:22 - 0:00:00 - verbose: 2
+INFO - 04/10/20 14:03:22 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 14:03:22 - 0:00:00 - n: 5
+INFO - 04/10/20 14:03:22 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 14:03:22 - 0:00:00 - type: random_search
+INFO - 04/10/20 14:03:22 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:03:22 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:03:22 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 14:03:22 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 2 training experimental records and 993 experimental records.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Training a xgboost model with training data of shape (2, 22).
+INFO - 04/10/20 14:03:22 - 0:00:00 - Progress: 1/1, 5.19.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Finished n=2 experiments. The average rmse is 5.1869163022613.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:03:22 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:03:22 - 0:00:00 - There are 1 experiments running for n=3...
+INFO - 04/10/20 14:03:22 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 3 training experimental records and 992 experimental records.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Training a xgboost model with training data of shape (3, 22).
+INFO - 04/10/20 14:03:22 - 0:00:00 - Progress: 1/1, 6.19.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Finished n=3 experiments. The average rmse is 6.186531945741114.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:03:22 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:03:22 - 0:00:00 - There are 1 experiments running for n=4...
+INFO - 04/10/20 14:03:22 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 4 training experimental records and 991 experimental records.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Training a xgboost model with training data of shape (4, 22).
+INFO - 04/10/20 14:03:22 - 0:00:00 - Progress: 1/1, 6.98.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Finished n=4 experiments. The average rmse is 6.9846355100578865.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:03:22 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:03:22 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:03:22 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:03:22 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:03:22 - 0:00:00 - There are 1 experiments running for n=5...
+INFO - 04/10/20 14:03:22 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 5 training experimental records and 990 experimental records.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Training a xgboost model with training data of shape (5, 22).
+INFO - 04/10/20 14:03:22 - 0:00:00 - Progress: 1/1, 6.78.
+INFO - 04/10/20 14:03:22 - 0:00:00 - Finished n=5 experiments. The average rmse is 6.775846231444563.
+INFO - 04/10/20 14:03:57 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 14:03:57 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 14:03:57 - 0:00:00 - task: wiki
+INFO - 04/10/20 14:03:57 - 0:00:00 - verbose: 2
+INFO - 04/10/20 14:03:57 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 14:03:57 - 0:00:00 - n: 5
+INFO - 04/10/20 14:03:57 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 14:03:57 - 0:00:00 - type: random_search
+INFO - 04/10/20 14:03:57 - 0:00:00 - Loaded 995 experiment records for 1 models: BLEU
+INFO - 04/10/20 14:03:57 - 0:00:00 - Loaded 995 experiment records from BLEU.
+INFO - 04/10/20 14:03:57 - 0:00:00 - 21 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural
+INFO - 04/10/20 14:03:57 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:03:57 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:03:57 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 14:04:26 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 14:04:26 - 0:00:00 - task: wiki
+INFO - 04/10/20 14:04:26 - 0:00:00 - verbose: 2
+INFO - 04/10/20 14:04:26 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 14:04:26 - 0:00:00 - n: 5
+INFO - 04/10/20 14:04:26 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 14:04:26 - 0:00:00 - type: random_search
+INFO - 04/10/20 14:04:26 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:04:26 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:04:26 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 14:04:26 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 2 training experimental records and 993 experimental records.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Training a xgboost model with training data of shape (2, 22).
+INFO - 04/10/20 14:04:26 - 0:00:00 - Progress: 1/1, 7.19.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Finished n=2 experiments. The average rmse is 7.187253965074637.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:04:26 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:04:26 - 0:00:00 - There are 1 experiments running for n=3...
+INFO - 04/10/20 14:04:26 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 3 training experimental records and 992 experimental records.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Training a xgboost model with training data of shape (3, 22).
+INFO - 04/10/20 14:04:26 - 0:00:00 - Progress: 1/1, 6.56.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Finished n=3 experiments. The average rmse is 6.563702246236877.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:04:26 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:04:26 - 0:00:00 - There are 1 experiments running for n=4...
+INFO - 04/10/20 14:04:26 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 4 training experimental records and 991 experimental records.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Training a xgboost model with training data of shape (4, 22).
+INFO - 04/10/20 14:04:26 - 0:00:00 - Progress: 1/1, 6.37.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Finished n=4 experiments. The average rmse is 6.372219789484172.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 14:04:26 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 14:04:26 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 14:04:26 - 0:00:00 - Source: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Target: 39
+INFO - 04/10/20 14:04:26 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 14:04:26 - 0:00:00 - There are 1 experiments running for n=5...
+INFO - 04/10/20 14:04:26 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 5 training experimental records and 990 experimental records.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Training a xgboost model with training data of shape (5, 22).
+INFO - 04/10/20 14:04:26 - 0:00:00 - Progress: 1/1, 4.93.
+INFO - 04/10/20 14:04:26 - 0:00:00 - Finished n=5 experiments. The average rmse is 4.927483349940695.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 16:23:59 - 0:00:00 - python3 representativeness.py
+INFO - 04/10/20 16:23:59 - 0:00:00 - task: wiki
+INFO - 04/10/20 16:23:59 - 0:00:00 - verbose: 2
+INFO - 04/10/20 16:23:59 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 16:23:59 - 0:00:00 - n: 5
+INFO - 04/10/20 16:23:59 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 16:23:59 - 0:00:00 - type: random_search
+INFO - 04/10/20 16:23:59 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:23:59 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:23:59 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 16:23:59 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 2 training experimental records and 993 test experimental records.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Training a xgboost model with training data of shape (2, 22).
+INFO - 04/10/20 16:23:59 - 0:00:00 - Progress: 1/1, 9.52.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Finished n=2 experiments. The average rmse is 9.524100997328889.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:23:59 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:23:59 - 0:00:00 - There are 1 experiments running for n=3...
+INFO - 04/10/20 16:23:59 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 3 training experimental records and 992 test experimental records.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Training a xgboost model with training data of shape (3, 22).
+INFO - 04/10/20 16:23:59 - 0:00:00 - Progress: 1/1, 8.13.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Finished n=3 experiments. The average rmse is 8.12875553477631.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:23:59 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:23:59 - 0:00:00 - There are 1 experiments running for n=4...
+INFO - 04/10/20 16:23:59 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 4 training experimental records and 991 test experimental records.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Training a xgboost model with training data of shape (4, 22).
+INFO - 04/10/20 16:23:59 - 0:00:00 - Progress: 1/1, 5.25.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Finished n=4 experiments. The average rmse is 5.2549035293501225.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:23:59 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:23:59 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:23:59 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:23:59 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:23:59 - 0:00:00 - There are 1 experiments running for n=5...
+INFO - 04/10/20 16:23:59 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 5 training experimental records and 990 test experimental records.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Training a xgboost model with training data of shape (5, 22).
+INFO - 04/10/20 16:23:59 - 0:00:00 - Progress: 1/1, 6.01.
+INFO - 04/10/20 16:23:59 - 0:00:00 - Finished n=5 experiments. The average rmse is 6.011476663502408.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 16:24:19 - 0:00:00 - python3 representativeness.py
+INFO - 04/10/20 16:24:19 - 0:00:00 - task: wiki
+INFO - 04/10/20 16:24:19 - 0:00:00 - verbose: 2
+INFO - 04/10/20 16:24:19 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 16:24:19 - 0:00:00 - n: 5
+INFO - 04/10/20 16:24:19 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 16:24:19 - 0:00:00 - type: random_search
+INFO - 04/10/20 16:24:19 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:24:19 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:24:19 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:24:19 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:24:19 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:24:19 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:24:19 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 16:24:19 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 2 training experimental records and 993 test experimental records.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Training a xgboost model with training data of shape (2, 22).
+INFO - 04/10/20 16:24:19 - 0:00:00 - Progress: 1/1, 5.58.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Finished n=2 experiments. The average rmse is 5.579779117909533.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:24:19 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:24:19 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:24:19 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:24:19 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:24:19 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:24:19 - 0:00:00 - There are 1 experiments running for n=3...
+INFO - 04/10/20 16:24:19 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 3 training experimental records and 992 test experimental records.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Training a xgboost model with training data of shape (3, 22).
+INFO - 04/10/20 16:24:19 - 0:00:00 - Progress: 1/1, 6.59.
+INFO - 04/10/20 16:24:19 - 0:00:00 - Finished n=3 experiments. The average rmse is 6.592176178673178.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:24:20 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:24:20 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:24:20 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:24:20 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:24:20 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:24:20 - 0:00:00 - There are 1 experiments running for n=4...
+INFO - 04/10/20 16:24:20 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 4 training experimental records and 991 test experimental records.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Training a xgboost model with training data of shape (4, 22).
+INFO - 04/10/20 16:24:20 - 0:00:00 - Progress: 1/1, 5.70.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Finished n=4 experiments. The average rmse is 5.700215811801305.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:24:20 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:24:20 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:24:20 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:24:20 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:24:20 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:24:20 - 0:00:00 - There are 1 experiments running for n=5...
+INFO - 04/10/20 16:24:20 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 5 training experimental records and 990 test experimental records.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Training a xgboost model with training data of shape (5, 22).
+INFO - 04/10/20 16:24:20 - 0:00:00 - Progress: 1/1, 5.20.
+INFO - 04/10/20 16:24:20 - 0:00:00 - Finished n=5 experiments. The average rmse is 5.199131624103307.
+INFO - 04/10/20 16:25:04 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 16:25:04 - 0:00:00 - python3 representativeness.py
+INFO - 04/10/20 16:25:04 - 0:00:00 - task: wiki
+INFO - 04/10/20 16:25:04 - 0:00:00 - verbose: 2
+INFO - 04/10/20 16:25:04 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 16:25:04 - 0:00:00 - n: 5
+INFO - 04/10/20 16:25:04 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 16:25:04 - 0:00:00 - type: random_search
+INFO - 04/10/20 16:25:04 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:25:04 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:25:04 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:25:04 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:25:04 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:25:04 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:25:04 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:25:04 - 0:00:00 - There are 1 experiments running for n=2...
+INFO - 04/10/20 16:25:17 - 0:00:13 - Specific splitter splitting 995 experimental records for model all into 2 training experimental records and 993 test experimental records.
+INFO - 04/10/20 16:44:31 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 16:44:31 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 16:44:31 - 0:00:00 - task: wiki
+INFO - 04/10/20 16:44:31 - 0:00:00 - verbose: 2
+INFO - 04/10/20 16:44:31 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 16:44:31 - 0:00:00 - n: 5
+INFO - 04/10/20 16:44:31 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 16:44:31 - 0:00:00 - type: random_search
+INFO - 04/10/20 16:44:31 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:44:31 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:44:31 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:44:31 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:44:31 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:44:31 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:44:31 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:44:31 - 0:00:00 - There are 1 experiments running for n=1...
+INFO - 04/10/20 16:44:31 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:31 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:31 - 0:00:00 - Progress: 1/1, 7.21.
+INFO - 04/10/20 16:44:31 - 0:00:00 - Finished n=1 experiments. The average rmse is 7.21320695786017.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Representativeness experiments running ...
+INFO - 04/10/20 16:44:42 - 0:00:00 - python3 /Users/mengzhouxia/dongdong/CMU/Neubig/nlppred/src/representativeness.py
+INFO - 04/10/20 16:44:42 - 0:00:00 - task: wiki
+INFO - 04/10/20 16:44:42 - 0:00:00 - verbose: 2
+INFO - 04/10/20 16:44:42 - 0:00:00 - log: ../logs/test.log
+INFO - 04/10/20 16:44:42 - 0:00:00 - n: 5
+INFO - 04/10/20 16:44:42 - 0:00:00 - beam_size: 100
+INFO - 04/10/20 16:44:42 - 0:00:00 - type: random_search
+INFO - 04/10/20 16:44:42 - 0:00:00 - Combined BLEU into all.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Loaded 995 experiment records for 1 models: all
+INFO - 04/10/20 16:44:42 - 0:00:00 - Loaded 995 experiment records from all.
+INFO - 04/10/20 16:44:42 - 0:00:00 - 22 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, geographic, genetic, inventory, syntactic, phonological, featural, model_BLEU
+INFO - 04/10/20 16:44:42 - 0:00:00 - Source: 39
+INFO - 04/10/20 16:44:42 - 0:00:00 - Target: 39
+INFO - 04/10/20 16:44:42 - 0:00:00 - Starting random search for the representative languages for wiki.
+INFO - 04/10/20 16:44:42 - 0:00:00 - There are 100 experiments running for n=1...
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 1/100, 6.75.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 2/100, 6.62.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 3/100, 6.90.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 4/100, 7.48.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 5/100, 7.64.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 6/100, 7.65.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 7/100, 7.60.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 8/100, 7.53.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 9/100, 7.52.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 10/100, 7.48.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 11/100, 7.46.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 12/100, 7.38.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 13/100, 7.48.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 14/100, 7.62.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 15/100, 7.54.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 16/100, 7.76.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 17/100, 7.75.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 18/100, 7.68.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 19/100, 7.62.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 20/100, 7.66.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 21/100, 7.71.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 22/100, 7.78.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 23/100, 7.73.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 24/100, 7.77.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 25/100, 7.72.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 26/100, 7.67.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 27/100, 7.62.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 28/100, 7.65.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 29/100, 7.61.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 30/100, 7.59.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 31/100, 7.55.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 32/100, 7.88.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:42 - 0:00:00 - Progress: 33/100, 8.32.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:42 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 34/100, 8.29.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 35/100, 8.26.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 36/100, 8.23.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 37/100, 8.19.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 38/100, 8.17.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 39/100, 8.19.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 40/100, 8.20.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:00 - Progress: 41/100, 8.18.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:00 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 42/100, 8.23.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 43/100, 8.20.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 44/100, 8.17.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 45/100, 8.15.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 46/100, 8.16.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 47/100, 8.17.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 48/100, 8.18.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 49/100, 8.35.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 50/100, 8.31.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 51/100, 8.50.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 52/100, 8.50.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 53/100, 8.63.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 54/100, 8.59.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 55/100, 8.85.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 56/100, 8.83.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 57/100, 8.79.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 58/100, 8.77.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 59/100, 8.73.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 60/100, 8.70.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 61/100, 8.66.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 62/100, 8.63.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 63/100, 8.59.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 64/100, 8.57.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 65/100, 8.57.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 66/100, 8.58.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 67/100, 8.56.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 68/100, 8.59.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 69/100, 8.60.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 70/100, 8.56.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 71/100, 8.63.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 72/100, 8.60.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 73/100, 8.58.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 74/100, 8.58.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 75/100, 8.55.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 76/100, 8.56.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 77/100, 8.54.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 78/100, 8.51.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 79/100, 8.50.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 80/100, 8.52.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 81/100, 8.51.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 82/100, 8.48.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 83/100, 8.47.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 84/100, 8.45.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 85/100, 8.43.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 86/100, 8.44.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 87/100, 8.46.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 88/100, 8.46.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 89/100, 8.49.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 90/100, 8.50.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 91/100, 8.49.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 92/100, 8.51.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 93/100, 8.51.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 94/100, 8.49.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 95/100, 8.50.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 96/100, 8.49.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 97/100, 8.47.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 98/100, 8.45.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 99/100, 8.44.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Specific splitter splitting 995 experimental records for model all into 1 training experimental records and 994 test experimental records.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Training a xgboost model with training data of shape (1, 22).
+INFO - 04/10/20 16:44:43 - 0:00:01 - Progress: 100/100, 8.47.
+INFO - 04/10/20 16:44:43 - 0:00:01 - Finished n=1 experiments. The average rmse is 8.465140418322811.

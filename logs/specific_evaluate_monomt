@@ -1,0 +1,137 @@
+INFO - 04/02/20 16:20:38 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:20:38 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:20:38 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:20:38 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:20:38 - 0:00:00 - 21 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:20:38 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:20:38 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:21:13 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:21:13 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:21:13 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:21:13 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:21:13 - 0:00:00 - 21 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:21:13 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:21:13 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:21:13 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:21:13 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:21:13 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:21:13 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:21:13 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 44 training experimental records and 10 experimental records.
+INFO - 04/02/20 16:21:13 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:21:13 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:21:13 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:21:13 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:21:13 - 0:00:00 - Training a xgboost model with training data of shape (44, 21).
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Fold: 0, Training data: 43 Test data: 11 Test rmse: 5.669399901409338
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Fold: 1, Training data: 43 Test data: 11 Test rmse: 4.478797430755807
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Fold: 2, Training data: 43 Test data: 11 Test rmse: 6.514886250554914
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Fold: 3, Training data: 43 Test data: 11 Test rmse: 7.814857101342083
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Fold: 4, Training data: 44 Test data: 10 Test rmse: 5.069928785279265
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Overall test rmse: 6.03988869672566
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Baseline: k_split, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Baseline: Source Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:21:13 - 0:00:00 - Model: BLEU, Baseline: Target Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:23:36 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:23:36 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:23:36 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:23:36 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:23:36 - 0:00:00 - 21 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:23:36 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:23:36 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:23:36 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:23:36 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:23:36 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:23:36 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:23:36 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 44 training experimental records and 10 experimental records.
+INFO - 04/02/20 16:23:36 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:23:36 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:23:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:23:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:23:37 - 0:00:00 - Training a xgboost model with training data of shape (44, 21).
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Fold: 0, Training data: 43 Test data: 11 Test rmse: 5.669399901409338
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Fold: 1, Training data: 43 Test data: 11 Test rmse: 4.478797430755807
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Fold: 2, Training data: 43 Test data: 11 Test rmse: 6.514886250554914
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Fold: 3, Training data: 43 Test data: 11 Test rmse: 7.814857101342083
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Fold: 4, Training data: 44 Test data: 10 Test rmse: 5.069928785279265
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Overall test rmse: 6.03988869672566
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Baseline: k_split, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Baseline: Source Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:23:37 - 0:00:00 - Model: BLEU, Baseline: Target Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:24:37 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:24:37 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:24:37 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:24:37 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:24:37 - 0:00:00 - 17 feats: dataset size (sent), Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:24:37 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:24:37 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:24:37 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:24:37 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:24:37 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:24:37 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:24:37 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 44 training experimental records and 10 experimental records.
+INFO - 04/02/20 16:24:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 17).
+INFO - 04/02/20 16:24:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 17).
+INFO - 04/02/20 16:24:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 17).
+INFO - 04/02/20 16:24:37 - 0:00:00 - Training a xgboost model with training data of shape (43, 17).
+INFO - 04/02/20 16:24:37 - 0:00:00 - Training a xgboost model with training data of shape (44, 17).
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Fold: 0, Training data: 43 Test data: 11 Test rmse: 6.471928710150548
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Fold: 1, Training data: 43 Test data: 11 Test rmse: 4.58745406930456
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Fold: 2, Training data: 43 Test data: 11 Test rmse: 6.523750257711285
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Fold: 3, Training data: 43 Test data: 11 Test rmse: 6.752778194303431
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Fold: 4, Training data: 44 Test data: 10 Test rmse: 4.861491751453812
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Overall test rmse: 5.929103073236243
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Baseline: k_split, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Baseline: Source Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:24:37 - 0:00:00 - Model: BLEU, Baseline: Target Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:25:57 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:25:57 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:25:57 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:25:57 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:25:57 - 0:00:00 - 12 feats: dataset size (sent), Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:25:57 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:25:57 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:25:57 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:25:57 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:25:57 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:25:57 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:25:57 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 44 training experimental records and 10 experimental records.
+INFO - 04/02/20 16:25:57 - 0:00:00 - Training a xgboost model with training data of shape (43, 12).
+INFO - 04/02/20 16:25:57 - 0:00:00 - Training a xgboost model with training data of shape (43, 12).
+INFO - 04/02/20 16:25:57 - 0:00:00 - Training a xgboost model with training data of shape (43, 12).
+INFO - 04/02/20 16:25:57 - 0:00:00 - Training a xgboost model with training data of shape (43, 12).
+INFO - 04/02/20 16:25:57 - 0:00:00 - Training a xgboost model with training data of shape (44, 12).
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Fold: 0, Training data: 43 Test data: 11 Test rmse: 7.696352249265093
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Fold: 1, Training data: 43 Test data: 11 Test rmse: 5.163516355908367
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Fold: 2, Training data: 43 Test data: 11 Test rmse: 6.0444400494727635
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Fold: 3, Training data: 43 Test data: 11 Test rmse: 6.879115461184327
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Fold: 4, Training data: 44 Test data: 10 Test rmse: 4.512524698537597
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Overall test rmse: 6.192758999078953
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Baseline: k_split, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Baseline: Source Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:25:57 - 0:00:00 - Model: BLEU, Baseline: Target Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:27:21 - 0:00:00 - **************************************************
+INFO - 04/02/20 16:27:21 - 0:00:00 - Running specific evaluation...
+INFO - 04/02/20 16:27:21 - 0:00:00 - Loaded 54 experiment records for 1 models: BLEU
+INFO - 04/02/20 16:27:21 - 0:00:00 - Loaded 54 experiment records from BLEU.
+INFO - 04/02/20 16:27:21 - 0:00:00 - 21 feats: dataset size (sent), Source lang word TTR, Source lang subword TTR, Target lang word TTR, Target lang subword TTR, Source lang vocab size, Source lang subword vocab size, Target lang vocab size, Target lang subword vocab size, Source lang Average Sent. Length, Target lang average sent. length, Source lang word Count, Source lang subword Count, Target lang word Count, Target lang subword Count, GENETIC, SYNTACTIC, FEATURAL, PHONOLOGICAL, INVENTORY, GEOGRAPHIC
+INFO - 04/02/20 16:27:21 - 0:00:00 - Source Language: 54
+INFO - 04/02/20 16:27:21 - 0:00:00 - Target Language: 1
+INFO - 04/02/20 16:27:21 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:27:21 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:27:21 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:27:21 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 43 training experimental records and 11 experimental records.
+INFO - 04/02/20 16:27:21 - 0:00:00 - Specific splitter splitting 54 experimental records for model BLEU into 44 training experimental records and 10 experimental records.
+INFO - 04/02/20 16:27:21 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:27:21 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:27:21 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:27:21 - 0:00:00 - Training a xgboost model with training data of shape (43, 21).
+INFO - 04/02/20 16:27:21 - 0:00:00 - Training a xgboost model with training data of shape (44, 21).
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Fold: 0, Training data: 43 Test data: 11 Test rmse: 5.669399901409338
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Fold: 1, Training data: 43 Test data: 11 Test rmse: 4.478797430755807
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Fold: 2, Training data: 43 Test data: 11 Test rmse: 6.514886250554914
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Fold: 3, Training data: 43 Test data: 11 Test rmse: 7.814857101342083
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Fold: 4, Training data: 44 Test data: 10 Test rmse: 5.069928785279265
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Overall test rmse: 6.03988869672566
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Baseline: k_split, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Baseline: Source Language, Overall test rmse: 12.640577262353212 
+INFO - 04/02/20 16:27:21 - 0:00:00 - Model: BLEU, Baseline: Target Language, Overall test rmse: 12.640577262353212 

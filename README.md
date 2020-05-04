@@ -3,6 +3,7 @@
 details, please refer to our paper:
 
 [Predicting Performance for Natural Language Processing Tasks](google.com)
+Mengzhou Xia, Antonios Anastasopoulos, Ruochen Xu, Yiming Yang, Graham Neubig
 
 ## Scripts
 

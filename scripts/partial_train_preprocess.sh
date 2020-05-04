@@ -105,17 +105,19 @@ make_bins() {
 
 debpe() {
   suffixes=(10k 50k 100k 200k 500k 1000k 1500k 2000k all)
-  SPM_DIR=$data2/wikimatrix/spm-model
+  SPM_DIR=$data4/wikimatrix/spm-model
   SRC_SPM_MODEL=$SPM_DIR/WikiMatrix.${SRC}-${TGT}.txt.${SRC}.tok.model
   TGT_SPM_MODEL=$SPM_DIR/WikiMatrix.${SRC}-${TGT}.txt.${TGT}.tok.model
   for i in `seq 0 $((${#suffixes[@]}-1))`; do
     suffix=${suffixes[$i]}
-    SRC_FILE=$DATA/WikiMatrix.en-${TGT}.txt.$suffix.${SRC}
-    TGT_FILE=$DATA/WikiMatrix.en-${TGT}.txt.$suffix.${TGT}
-    SRC_TOK_FILE=$DATA/WikiMatrix.en-${TGT}.txt.tok.$suffix.${SRC}
-    TGT_TOK_FILE=$DATA/WikiMatrix.en-${TGT}.txt.tok.$suffix.${TGT}
-    spm_decode --model $SRC_SPM_MODEL --output $SRC_TOK_FILE $SRC_FILE
-    spm_decode --model $TGT_SPM_MODEL --output $TGT_TOK_FILE $TGT_FILE
+    SRC_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.spm5k.$suffix.${SRC}
+    TGT_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.spm5k.$suffix.${TGT}
+    SRC_TOK_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.tok.$suffix.${SRC}
+    TGT_TOK_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.tok.$suffix.${TGT}
+    if [ -f $SRC_FILE ]; then
+      spm_decode --model $SRC_SPM_MODEL --output $SRC_TOK_FILE $SRC_FILE
+      spm_decode --model $TGT_SPM_MODEL --output $TGT_TOK_FILE $TGT_FILE
+    fi
   done
 }
 
@@ -130,25 +132,40 @@ vocab() {
 
 get_vocab() {
   suffixes=(10k 50k 100k 200k 500k 1000k 1500k 2000k all)
-  SPM_DIR=$data2/wikimatrix/spm-model
-  SRC_SPM_MODEL=$SPM_DIR/WikiMatrix.${SRC}-${TGT}.txt.${SRC}.tok.model
-  TGT_SPM_MODEL=$SPM_DIR/WikiMatrix.${SRC}-${TGT}.txt.${TGT}.tok.model
+  SPM_DIR=$data4/wikimatrix/spm-model
   for i in `seq 0 $((${#suffixes[@]}-1))`; do
     suffix=${suffixes[$i]}
-    SRC_FILE=$DATA/WikiMatrix.en-${TGT}.txt.$suffix.${SRC}
-    TGT_FILE=$DATA/WikiMatrix.en-${TGT}.txt.$suffix.${TGT}
-    SRC_TOK_FILE=$DATA/WikiMatrix.en-${TGT}.txt.tok.$suffix.${SRC}
-    TGT_TOK_FILE=$DATA/WikiMatrix.en-${TGT}.txt.tok.$suffix.${TGT}
-    vocab $SRC_FILE ${SRC_FILE}.vocab
-    vocab $TGT_FILE ${TGT_FILE}.vocab
-    vocab $SRC_TOK_FILE ${SRC_TOK_FILE}.vocab
-    vocab $TGT_TOK_FILE ${TGT_TOK_FILE}.vocab
+    SRC_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.spm5k.$suffix.${SRC}
+    TGT_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.spm5k.$suffix.${TGT}
+    SRC_TOK_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.tok.$suffix.${SRC}
+    TGT_TOK_FILE=$DATA/WikiMatrix.${SRC}-${TGT}.txt.tok.$suffix.${TGT}
+#    if [-f $SRC_FILE ]; then
+    # vocab $SRC_FILE ${SRC_FILE}.vocab
+    # vocab $TGT_FILE ${TGT_FILE}.vocab
+#    fi
+    if [ -f $SRC_TOK_FILE ]; then
+      vocab $SRC_TOK_FILE ${SRC_TOK_FILE}.vocab
+      vocab $TGT_TOK_FILE ${TGT_TOK_FILE}.vocab
+    fi
   done
 }
 
 delete_empty_file() {
    find $1 -size 0 -delete
 }
+
+collect_feats() {
+  declare -A lc=(["ar"]="ara" ["cs"]="ces" ["ko"]="kor" ["bs"]="bos" ["sr"]="srp" ["da"]="dan" ["de"]="deu"
+                 ["he"]="heb" ["el"]="ell" ["eo"]="epo" ["hu"]="hun" ["en"]="eng" ["pl"]="pol" ["fr"]="fra"
+                 ["pt"]="por" ["tr"]="tur")
+  echo $SRC
+  echo $TGT
+  echo ${lc[$SRC]}
+  echo ${lc[$TGT]}
+  CODE_DIR="/projects/tir2/users/mengzhox/data/software/nlppred"
+  python3 $CODE_DIR/src/preprocess/collect_feats.py process_multiple  --src=$SRC --tgt=$TGT --src3=${lc[$SRC]} --tgt3=${lc[$TGT]}
+}
+
 
 #SRC=en
 #TGT=pt
@@ -160,15 +177,15 @@ delete_empty_file() {
 #UTIL=/home/mengzhox/Scripts/py_scripts/utils.py
 #
 
-readarray pairs < /projects/tir4/users/mengzhox/wikimatrix/spm5k/pairs
+readarray pairs < /projects/tir4/users/mengzhox/wikimatrix/spm5k/run_pairs
 
 for i in `seq 0 $((${#pairs[@]}-1))`; do
   pair=${pairs[$i]}
-  set -- $(echo $pair | tr " " "\n")
+  set -- $(echo $pair | tr "_" "\n")
   SRC=$1
   TGT=$2
   LANG=${SRC}_${TGT}
   DATA=$data4/wikimatrix/spm5k/${LANG}
-  make_bins
+  collect_feats
 done
 

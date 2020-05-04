@@ -8,11 +8,12 @@ task=$1
 n=$2
 
 python3 $CODE/src/new_model.py \
+        --n $n \
         --task $task \
         --log ../logs/${task}_nm_${n}.log \
         --portion 0.5 \
-        --test_id_options_num 100 \
-        --sample_options_num 100
+        --test_id_options_num 50 \
+        --sample_options_num 50
 
 
 

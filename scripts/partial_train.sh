@@ -1,7 +1,8 @@
 #!/bin/sh
 #SBATCH -t 0
 #SBATCH --gres=gpu:1
-#SBATCH --mem=50g
+#SBATCH --mem=20g
+#SBATCH --job-name="train"
 
 SRC=$1
 TGT=$2

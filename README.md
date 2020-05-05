@@ -2,7 +2,7 @@
 **NLPerf** is an exploratory framework to evaluate performance for NLP tasks by training predictors using past experimental records. We provide data, code, experiment logs for 9 tasks in this repository. For more technical
 details, please refer to our paper:
 
-[Predicting Performance for Natural Language Processing Tasks](google.com)  
+[Predicting Performance for Natural Language Processing Tasks](https://arxiv.org/abs/2005.00870)  
   
 Mengzhou Xia, Antonios Anastasopoulos, Ruochen Xu, Yiming Yang, Graham Neubig
 
